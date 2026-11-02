@@ -1,6 +1,6 @@
 # Game design draft v0.1 (2026-11-02)
 
-Working title: **Gatebound** (placeholder). A Roblox action RPG: the RPGs we played on Roblox as kids, done properly.
+Working title: **Gatebound** (placeholder, kept). A Roblox action RPG: the RPGs we played on Roblox as kids, done properly.
 It draws on anime adventure (Sword Art Online's climb through bosses, the pastoral knights-and-taverns warmth of The
 Seven Deadly Sins) and classic loot RPGs. Everything here is a proposal to argue over, not a decision.
 
@@ -52,7 +52,41 @@ Each Land has:
 | 10 | **Duskhold** | A cursed kingdom at eternal sunset, a haunted castle | revenants, cursed knights, shadow beasts | **The Hollow King** |
 | ... | **The Last Gate** | Endgame: a celestial ruin, repeatable scaling floors | everything, remixed | rotating |
 
-Ten Lands is the long-term target. **Launch with 3** (1-3), each finished properly, and add a Land per update. Each new
+### Guardian arenas: the Gate is the anchor, never the whole idea
+
+A stone arch with a boss in front of it would get old by Land 3. So the Gate is always there, but each Guardian fight has
+its **own place, its own movement, and one twist** that changes the arena during the fight. Rules:
+- **No flat circle twice.** Every arena has height, hazards or a shape that matters.
+- **The arena changes mid-fight** (a phase 2 that breaks, floods, lifts or moves the ground). That change is the moment
+  players remember and clip.
+- **The Gate takes part**: it's the boss's body, a weapon, a shield, a timer, or the way out that slams shut.
+- **The walk-up builds it up**: a shrinking path, a view of the arena from above, a mural in the village showing the boss.
+
+| Land | Arena | Twist |
+|---|---|---|
+| Ashen Vale | A ring of ruined watchtowers on a hill; the Gate is half-swallowed by the Mossback Warden's body | Phase 2: the Warden tears the Gate out of the ground and uses it as a club; towers fall and become cover/ramps |
+| Hollowmere | A sunken temple roof in the marsh, lily pads and stone islands | The water rises each phase; islands sink, and the Matron hides beneath you |
+| Brightwheat Downs | A burning windmill on a hilltop at dusk | The mill's sails sweep the arena like clock hands; jump the sails, fight on the mill's roof in phase 2 |
+| Fae Hollow | A giant flower; the Gate is woven from thorns | The arena shrinks as thorns close in; cut flowers to open space |
+| Rimefell | A frozen lake under a cliff | The ice cracks where big attacks land; the Drake drags the fight to the cliff face in phase 2 |
+| Sunscar | On the back of the Sleeping Colossus as it wakes and walks | The arena moves; the Gate is carved in its chest, the final weak point |
+| Emberdeep | A forge-bridge over lava | Bridge segments drop; forge hammers slam on a rhythm you can use against the boss |
+| Drowned Crown | A throne room in an air bubble | The bubble shrinks; swim phases between air pockets |
+| Skyreach | Floating platforms around the Gate in a storm | The Roc's wind shoves platforms around; ride griffons between them in phase 2 |
+| Duskhold | The Hollow King's castle, room to room | The fight moves through the castle; the last phase is in the throne room as the sun finally sets |
+
+### Beyond the world (the long road)
+
+The Gates chain doesn't end at Land 10. **The Last Gate opens upward**: the Gates were never only between Lands, they're
+between **worlds**. Later chapters, as big updates:
+- **The Moon Reach**: low gravity, silver ruins, the old Gate-builders' outpost (higher jumps, slow falls: movement changes).
+- **Other realms and planets**: a crystal world, a giant-beast world, a dead star's forge, each a new set of Lands with the
+  same village/zones/dungeon/Guardian frame.
+- **A ship or sky-vessel** hub between worlds once space opens up: your own base to decorate, show off pets and trophies.
+- Each new world keeps the old-world fantasy heart (knights, taverns, relics) but in a stranger setting, so it feels like the
+  same game going somewhere bigger, not a new game.
+
+Ten Lands is the long-term target for the first world. **Launch with 3** (1-3), each finished properly, and add a Land per update. Each new
 Land is the update's headline.
 
 ## 3. Combat
@@ -173,11 +207,13 @@ YouTube videos about.
 4. **Ashen Vale vertical slice**: village, 3 zones, its enemies, a dungeon, the Mossback Warden, first quests.
 5. Pets, armour sets, a hidden skill, then Lands 2 and 3.
 
-## 13. Open questions for the user
+## 13. Decisions (user, 2026-11-02)
 
-- Name, and does the Gates idea work for you?
-- Camera: over-the-shoulder like the reference, or the classic free Roblox camera?
-- Which weapon types matter most to you at launch?
-- Should the player's avatar be their own Roblox avatar wearing our armour, or a fixed hero look?
-- How much story: light (a thread through Guardians) or real characters and cutscenes?
-- Monetisation stance: cosmetics and convenience only (my recommendation) or more?
+- **Name**: Gatebound stays as the placeholder.
+- **Gates**: yes, but the Guardian fights must not feel one-note (section 2, "Guardian arenas"). Far along, travel goes
+  beyond this world: other realms, space, other planets (section 2, "Beyond the world").
+- **Camera**: over the shoulder.
+- **Avatars**: the player's own Roblox avatar, wearing our armour.
+- **Launch weapons**: Sword & Shield, Greatsword, Dual Blades, Spear.
+- **Story**: a light thread through the Guardians, told mostly through NPC dialogue. No long cutscenes.
+- **Money**: cosmetics and convenience only, never power.
