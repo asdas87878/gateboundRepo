@@ -19,3 +19,14 @@ Rules
 - Keep triangle counts small: trees ~150-300, rocks ~40-80, tufts ~30-60. Low-end PCs and mobile are targets.
 - In Roblox: MeshPart `Material = SmoothPlastic`, `Color` white (so the vertex colours show as they are),
   grass/banners `DoubleSided = true`, small props `CastShadow = false`, `CanCollide`/`CanQuery` off on decoration.
+
+## Gaps after the first render (user review 2026-11-02, for the matching passes)
+- Light: the reference is backlit. The sun sits in the sky ahead, there's a warm glow at the horizon around it, shadows are
+  lifted (low contrast) and fall toward the camera. Ours is front-lit with dark, contrasty shadows.
+- Colour: the reference's greens are sage/olive and warm (yellow-leaning, lower saturation); its pines are a lighter, softer
+  blue-teal. Ours are too saturated and too dark. Its rocks and stone are a lighter warm grey with a pale edge on each block;
+  sunlit grass has pale yellow-green patches.
+- Terrain: the reference is never flat. The road runs in a shallow trough, ground rises into mounds and banks on both sides,
+  the gate sits on a rise and the land falls away beyond it. Ours is a near-flat plane.
+- Scatter: grass grows in darker clumps with flower dots, not evenly spread spikes. Rocks cluster at the feet of slopes and
+  trees.
