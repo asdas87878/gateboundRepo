@@ -1,0 +1,4 @@
+*.blend1
+art/**/renders/*.tmp
+Packages/
+sourcemap.json
