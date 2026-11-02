@@ -26,3 +26,4 @@
 | p19 | 5.88 | 10.90 | narrower darker road rim (1.1 studs), road b back down 2 |
 | p20 | 5.86 | 10.99 | ragged drooping pine skirts (9 tiers, 11 spikes), subtler stone joints, short grass texture, bushes, mountains show through more |
 | p21 | 5.79 | 10.53 | pines +3 L (softer middle band), smooth lighter bushes |
+| c01 | 5.88 | 10.10 | card-branch pines (card_trees.py) in place of the solid ones |

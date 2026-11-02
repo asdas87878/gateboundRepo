@@ -1,0 +1,657 @@
+{
+ "Frame": [
+  1336,
+  752
+ ],
+ "Camera": {
+  "Height": 8.05,
+  "Pitch": 0.0,
+  "FovV": 70.0,
+  "HorizonPx": 262
+ },
+ "Render": {
+  "Res": [
+   1336,
+   752
+  ],
+  "Samples": 48,
+  "Exposure": 0.0,
+  "DepthRange": 3000.0
+ },
+ "Sky": {
+  "Size": [
+   4096,
+   2048
+  ],
+  "Gradient": [
+   [
+    -2,
+    "c8d2cc"
+   ],
+   [
+    3,
+    "cdd8d6"
+   ],
+   [
+    10,
+    "accacf"
+   ],
+   [
+    18,
+    "90b6c3"
+   ],
+   [
+    28,
+    "7aa5bf"
+   ],
+   [
+    50,
+    "6693b2"
+   ],
+   [
+    90,
+    "5d8cae"
+   ]
+  ],
+  "SunSide": {
+   "Colour": "e9e3c9",
+   "Radius": 45,
+   "Strength": 0.35,
+   "Power": 1.6
+  },
+  "Sun": {
+   "Px": [
+    629,
+    77
+   ],
+   "Disc": 1.3,
+   "DiscColour": "fffdf3",
+   "DiscStrength": 2.2,
+   "Glow": [
+    {
+     "Colour": "ffe9b8",
+     "Radius": 3.0,
+     "Strength": 0.95,
+     "Power": 1.5
+    },
+    {
+     "Colour": "f7e5bb",
+     "Radius": 8,
+     "Strength": 0.22
+    },
+    {
+     "Colour": "efe1bf",
+     "Radius": 35,
+     "Strength": 0.07
+    }
+   ]
+  },
+  "Clouds": {
+   "Seed": 4,
+   "Count": 60,
+   "Azimuth": [
+    10,
+    170
+   ],
+   "Elevation": [
+    8,
+    40
+   ],
+   "Width": [
+    6,
+    18
+   ],
+   "Height": [
+    1.2,
+    3.0
+   ],
+   "Opacity": [
+    0.4,
+    0.8
+   ],
+   "Colour": "f6f7f2",
+   "Belly": "dde4e4",
+   "FadeLow": 3,
+   "FadeHigh": 10,
+   "BellyAmount": 0.35
+  },
+  "Below": "a7b29b"
+ },
+ "Light": {
+  "Sun": {
+   "Azimuth": -85,
+   "Elevation": 45,
+   "Colour": "ffe8c2",
+   "Strength": 2.4,
+   "Angle": 6
+  },
+  "Ambient": {
+   "Strength": 1.85,
+   "Tint": "fff4ea"
+  }
+ },
+ "Palette": {
+  "pine": "7ea495",
+  "pine_dark": "5b7e72",
+  "rock": "b3b7b0",
+  "rock_dark": "9ca19c",
+  "stone": "cccac2",
+  "stone_dark": "b6b4ac",
+  "golem": "858680",
+  "blade": "62903f",
+  "blade_tip": "b0c870",
+  "banner": "9f2c1d",
+  "banner_dark": "63170e",
+  "mountain": "7f90a3",
+  "leaf": "5d8a4c"
+ },
+ "Post": {
+  "Haze": {
+   "Density": 0.0038461538461538464,
+   "Power": 2.0,
+   "Start": 40,
+   "Max": 0.65,
+   "Colour": "d2d8d0",
+   "GlowColour": "efe8d2",
+   "Glow": 0.5,
+   "GlowPower": 6,
+   "FarColour": "d3dad5",
+   "FarAt": 1500
+  },
+  "Bloom": {
+   "Threshold": 1.0,
+   "Intensity": 0.35,
+   "Layers": [
+    [
+     4,
+     0.5
+    ],
+    [
+     16,
+     0.35
+    ],
+    [
+     50,
+     0.15
+    ]
+   ]
+  },
+  "Grade": {
+   "Saturation": 0.0,
+   "Contrast": -0.06
+  }
+ },
+ "_note": "Card-tree test grove (tools/blender/card_trees.py) in the Ashen look; same camera as the reference copy.",
+ "Terrain": {
+  "Extent": [
+   -220,
+   -10,
+   240,
+   260
+  ],
+  "Step": 1.0,
+  "FarZ": -14,
+  "Noise": {
+   "Amp": 0.7,
+   "Scale": 45,
+   "Seed": 3
+  },
+  "Features": [
+   {
+    "Kind": "Hill",
+    "At": [
+     -30,
+     60
+    ],
+    "Radius": 40,
+    "Height": 4
+   },
+   {
+    "Kind": "Hill",
+    "At": [
+     40,
+     90
+    ],
+    "Radius": 50,
+    "Height": 6
+   }
+  ],
+  "Colour": {
+   "GrassA": "898646",
+   "GrassB": "757b42",
+   "GrassC": "5c6137",
+   "PatchScale": 16,
+   "PatchDark": 0.5,
+   "Grain": 0.06,
+   "Road": "96825d",
+   "RoadEdge": "796c46",
+   "RoadVar": 0.14,
+   "EdgeSoft": 1.0,
+   "EdgeWobble": 0.7,
+   "EdgeScale": 5,
+   "Worn": 0.3,
+   "WornWidth": 2.0,
+   "WornColour": "8f875c",
+   "Far": "919058",
+   "GrassLight": "999652",
+   "PatchLight": 0.45,
+   "Ruts": 0.12,
+   "EdgeBand": 1.1
+  }
+ },
+ "Roads": [
+  {
+   "Name": "Path",
+   "Line": [
+    [
+     4,
+     -5
+    ],
+    [
+     3,
+     30
+    ],
+    [
+     -6,
+     70
+    ],
+    [
+     -2,
+     140
+    ]
+   ],
+   "Width": [
+    6,
+    4
+   ],
+   "Depth": 0.4,
+   "Bank": 4
+  }
+ ],
+ "Place": [
+  {
+   "Kit": "CardPine",
+   "At": [
+    -14,
+    20
+   ],
+   "Height": 30,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 500,
+   "Yaw": 0
+  },
+  {
+   "Kit": "CardPine",
+   "At": [
+    -22,
+    34
+   ],
+   "Height": 34,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 501,
+   "Yaw": 47
+  },
+  {
+   "Kit": "CardPine",
+   "At": [
+    -9,
+    46
+   ],
+   "Height": 26,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 502,
+   "Yaw": 94
+  },
+  {
+   "Kit": "CardPine",
+   "At": [
+    15,
+    26
+   ],
+   "Height": 32,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 503,
+   "Yaw": 141
+  },
+  {
+   "Kit": "CardPine",
+   "At": [
+    26,
+    40
+   ],
+   "Height": 36,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 504,
+   "Yaw": 188
+  },
+  {
+   "Kit": "CardPine",
+   "At": [
+    12,
+    60
+   ],
+   "Height": 28,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 505,
+   "Yaw": 235
+  },
+  {
+   "Kit": "CardPine",
+   "At": [
+    -30,
+    60
+   ],
+   "Height": 30,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 506,
+   "Yaw": 282
+  },
+  {
+   "Kit": "CardPine",
+   "At": [
+    34,
+    70
+   ],
+   "Height": 34,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 507,
+   "Yaw": 329
+  },
+  {
+   "Kit": "CardLeafy",
+   "At": [
+    -6,
+    30
+   ],
+   "Height": 16,
+   "Args": {
+    "height": 18
+   },
+   "Seed": 520,
+   "Yaw": 0
+  },
+  {
+   "Kit": "CardLeafy",
+   "At": [
+    22,
+    52
+   ],
+   "Height": 18,
+   "Args": {
+    "height": 18
+   },
+   "Seed": 521,
+   "Yaw": 80
+  },
+  {
+   "Kit": "CardLeafy",
+   "At": [
+    -18,
+    75
+   ],
+   "Height": 17,
+   "Args": {
+    "height": 18
+   },
+   "Seed": 522,
+   "Yaw": 160
+  },
+  {
+   "Kit": "CardLeafy",
+   "At": [
+    8,
+    40
+   ],
+   "Height": 15,
+   "Args": {
+    "height": 18,
+    "autumn": true
+   },
+   "Seed": 530
+  },
+  {
+   "Kit": "Pine",
+   "At": [
+    -30,
+    26
+   ],
+   "Height": 30,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 110,
+   "_": "the old solid pine, for comparison"
+  },
+  {
+   "Kit": "Boulder",
+   "At": [
+    9,
+    18
+   ],
+   "Height": 2.6,
+   "Args": {
+    "size": [
+     5,
+     4,
+     3
+    ]
+   },
+   "Seed": 22
+  },
+  {
+   "Kit": "Hero",
+   "At": [
+    1,
+    12
+   ],
+   "Height": 5.2,
+   "Face": "camera",
+   "Yaw": 180,
+   "Seed": 7
+  }
+ ],
+ "Forests": [
+  {
+   "Name": "Back",
+   "Poly": [
+    [
+     -160,
+     100
+    ],
+    [
+     160,
+     100
+    ],
+    [
+     160,
+     320
+    ],
+    [
+     -160,
+     320
+    ]
+   ],
+   "Spacing": 12,
+   "Height": [
+    24,
+    36
+   ],
+   "RoadClear": 5,
+   "Seed": 7,
+   "Fill": 0.8,
+   "Kinds": [
+    {
+     "Kit": "CardPine",
+     "Args": {
+      "height": 30
+     },
+     "Weight": 3
+    },
+    {
+     "Kit": "CardLeafy",
+     "Args": {
+      "height": 18
+     },
+     "Weight": 1,
+     "HeightMul": 0.6
+    },
+    {
+     "Kit": "CardLeafy",
+     "Args": {
+      "height": 18,
+      "autumn": true
+     },
+     "Weight": 0.25,
+     "HeightMul": 0.55
+    }
+   ]
+  }
+ ],
+ "Scatter": [
+  {
+   "Name": "GrassOpen",
+   "Density": 0.05,
+   "MaxDist": 130,
+   "ThinFrom": 60,
+   "RoadClear": 0.3,
+   "Seed": 9,
+   "Kinds": [
+    {
+     "Kit": "Grass",
+     "Args": {
+      "blades": 16,
+      "height": 1.9
+     },
+     "Variants": 6,
+     "SeedBase": 300,
+     "Scale": [
+      0.7,
+      1.3
+     ]
+    }
+   ]
+  },
+  {
+   "Name": "GrassEdges",
+   "Density": 0.45,
+   "MaxDist": 110,
+   "ThinFrom": 50,
+   "RoadClear": -0.3,
+   "Seed": 19,
+   "Near": {
+    "Road": [
+     -0.3,
+     2.2
+    ],
+    "Foot": 1.6,
+    "FootAdd": 2.5
+   },
+   "Kinds": [
+    {
+     "Kit": "Grass",
+     "Args": {
+      "blades": 16,
+      "height": 1.9
+     },
+     "Variants": 6,
+     "SeedBase": 300,
+     "Scale": [
+      0.7,
+      1.3
+     ]
+    }
+   ]
+  },
+  {
+   "Name": "GrassSmall",
+   "Density": 0.35,
+   "MaxDist": 70,
+   "ThinFrom": 40,
+   "RoadClear": 0.2,
+   "Seed": 21,
+   "Kinds": [
+    {
+     "Kit": "Grass",
+     "Args": {
+      "blades": 10,
+      "height": 0.8
+     },
+     "Variants": 6,
+     "SeedBase": 330,
+     "Scale": [
+      0.7,
+      1.2
+     ]
+    }
+   ]
+  },
+  {
+   "Name": "WhiteFlowers",
+   "Density": 0.25,
+   "MaxDist": 110,
+   "RoadClear": 0.6,
+   "Seed": 10,
+   "Kinds": [
+    {
+     "Kit": "Flowers",
+     "Args": {
+      "kind": "white",
+      "count": 14
+     },
+     "Variants": 4,
+     "SeedBase": 400,
+     "Scale": [
+      0.8,
+      1.2
+     ]
+    }
+   ],
+   "Near": {
+    "Road": [
+     0.0,
+     3.0
+    ],
+    "Foot": 1.6,
+    "FootAdd": 2.0
+   }
+  },
+  {
+   "Name": "WhiteFlowersOpen",
+   "Density": 0.04,
+   "MaxDist": 110,
+   "RoadClear": 0.6,
+   "Seed": 13,
+   "Kinds": [
+    {
+     "Kit": "Flowers",
+     "Args": {
+      "kind": "white",
+      "count": 14
+     },
+     "Variants": 4,
+     "SeedBase": 400,
+     "Scale": [
+      0.8,
+      1.2
+     ]
+    }
+   ]
+  }
+ ]
+}

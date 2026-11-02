@@ -26,6 +26,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(ROOT, "tools", "art"))
+import card_trees  # noqa: E402
 import kit  # noqa: E402
 import sky_paint  # noqa: E402
 
@@ -410,6 +411,7 @@ def master(kind, args, seed):
 		"Pine": kit.pine, "Boulder": kit.boulder, "Grass": kit.grass_clump, "Flowers": kit.flowers, "Bush": kit.bush,
 		"Mountain": kit.mountain, "Tower": kit.tower, "Arch": kit.arch, "RuinArches": kit.ruin_arches, "Stele": kit.stele,
 		"Banner": kit.banner, "BannerPole": kit.banner_pole, "Hero": kit.hero, "Golem": kit.golem,
+		"CardPine": card_trees.card_pine, "CardLeafy": card_trees.card_leafy,
 	}[kind]
 	obj = fn(name, seed, coll=MASTER_COLL, **args)
 	obj.hide_render = True
@@ -621,9 +623,12 @@ def forest(G, f, coll, ao_spots, foot):
 			z = float(G.height(px, py))
 			h = rng.uniform(hmin, hmax)
 			seed = f.get("SeedBase", 100) + rng.randrange(variants)
-			args = f.get("Args", {})
-			_, top, _ = master("Pine", args, seed)
-			instance("Pine", args, seed, Vector((px, py, z - 0.2)), rng.uniform(0, math.tau), h / top, coll, None, "ForestPine")
+			kinds = f.get("Kinds", [{"Kit": f.get("Kit", "Pine"), "Args": f.get("Args", {})}])
+			pick = rng.choices(kinds, weights=[k.get("Weight", 1.0) for k in kinds])[0]
+			args = pick.get("Args", {})
+			_, top, _ = master(pick["Kit"], args, seed)
+			hh = h * pick.get("HeightMul", 1.0)
+			instance(pick["Kit"], args, seed, Vector((px, py, z - 0.2)), rng.uniform(0, math.tau), hh / top, coll, None, "Forest" + pick["Kit"])
 			ao_spots.append((px, py, h * 0.14, f.get("AOStrength", 0.3)))
 			count += 1
 		y += sp

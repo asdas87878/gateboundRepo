@@ -136,3 +136,21 @@ of them.
 - The tower shadow falls on the road through the arch; the reference's road there is sunlit.
 - The mountains show a little less than in the reference.
 - Hero and golems are placeholders.
+
+## 13. Card-branch trees (test, 2026-11-02)
+
+`tools/blender/card_trees.py`, textures by `tools/art/foliage_textures.py` (`art/kit/textures`). The trunk is a real mesh;
+the foliage is flat cards with painted cut-out textures, with normals bent outward from the crown so it shades as one
+soft shape.
+- Spruce: whorls of 3 crossed cards per branch, lower branches droop, 564 triangles.
+- Leafy tree: limbs ending in clusters of leaf cards facing every way, 218 triangles. There's a green and an autumn
+  version.
+
+Test renders: `art/look/grove/r02/final.png` (a grove) and pass `c01` (card pines in the reference copy). With card
+pines the middle band's brightness and contrast match the reference better (L 40.4 / spread 11.6 vs 40.0 / 10.9), but
+the image is much busier (detail 1.83 vs 0.99) and reads more realistic than the reference's stylised cones. A forest
+should mix species and include young trees, snags and the odd autumn tree.
+
+For Roblox each tree splits into `<Name>_Trunk.glb` (collides) and `<Name>_Crown.glb` (a SurfaceAppearance with
+transparent cut-outs, no collision, ignored by the camera). Not yet tested in Studio: cut-out shadows, overdraw on
+phones. The Blender render of the reference copy took 80 s instead of 20 s, so cut-outs cost something; budget for it.
