@@ -1,0 +1,359 @@
+{
+ "_note": "Gate 1 layout, studs (x east, y south). Drawn by tools/art/land_map.py. Broad strokes only.",
+ "Size": [
+  1400,
+  1200
+ ],
+ "Zones": [
+  {
+   "Name": "Sunny Meadows",
+   "Levels": "1-3",
+   "At": [
+    700,
+    940
+   ],
+   "Radius": [
+    330,
+    190
+   ],
+   "Colour": "a9cf6a"
+  },
+  {
+   "Name": "Mossrock Hills",
+   "Levels": "3-5",
+   "At": [
+    1110,
+    680
+   ],
+   "Radius": [
+    210,
+    230
+   ],
+   "Colour": "9fb38a"
+  },
+  {
+   "Name": "Whisperwood",
+   "Levels": "5-8",
+   "At": [
+    640,
+    260
+   ],
+   "Radius": [
+    330,
+    190
+   ],
+   "Colour": "4f8a64"
+  },
+  {
+   "Name": "Bandit Ridge",
+   "Levels": "7-9",
+   "At": [
+    230,
+    560
+   ],
+   "Radius": [
+    170,
+    260
+   ],
+   "Colour": "b9a77a"
+  },
+  {
+   "Name": "Gatehill",
+   "Levels": "10",
+   "At": [
+    1150,
+    230
+   ],
+   "Radius": [
+    150,
+    130
+   ],
+   "Colour": "c9c2a8"
+  },
+  {
+   "Name": "Wayfarer's Rest",
+   "Levels": "1",
+   "At": [
+    230,
+    1060
+   ],
+   "Radius": [
+    120,
+    90
+   ],
+   "Colour": "c6d8a0"
+  }
+ ],
+ "River": [
+  [
+   300,
+   -20
+  ],
+  [
+   430,
+   250
+  ],
+  [
+   560,
+   470
+  ],
+  [
+   690,
+   600
+  ],
+  [
+   760,
+   720
+  ],
+  [
+   960,
+   860
+  ],
+  [
+   1180,
+   1000
+  ],
+  [
+   1420,
+   1080
+  ]
+ ],
+ "Paths": [
+  [
+   [
+    230,
+    1060
+   ],
+   [
+    380,
+    1010
+   ],
+   [
+    560,
+    960
+   ],
+   [
+    690,
+    820
+   ],
+   [
+    700,
+    700
+   ]
+  ],
+  [
+   [
+    700,
+    620
+   ],
+   [
+    880,
+    640
+   ],
+   [
+    1060,
+    660
+   ],
+   [
+    1150,
+    560
+   ],
+   [
+    1160,
+    380
+   ],
+   [
+    1150,
+    260
+   ]
+  ],
+  [
+   [
+    700,
+    560
+   ],
+   [
+    680,
+    430
+   ],
+   [
+    640,
+    300
+   ],
+   [
+    560,
+    160
+   ],
+   [
+    520,
+    110
+   ]
+  ],
+  [
+   [
+    640,
+    300
+   ],
+   [
+    430,
+    360
+   ],
+   [
+    280,
+    470
+   ],
+   [
+    230,
+    560
+   ]
+  ],
+  [
+   [
+    230,
+    560
+   ],
+   [
+    260,
+    760
+   ],
+   [
+    420,
+    880
+   ],
+   [
+    560,
+    960
+   ]
+  ],
+  [
+   [
+    1060,
+    660
+   ],
+   [
+    1000,
+    860
+   ],
+   [
+    860,
+    960
+   ]
+  ]
+ ],
+ "Places": [
+  {
+   "Name": "Brightwater (hub)",
+   "At": [
+    700,
+    620
+   ],
+   "Icon": "castle"
+  },
+  {
+   "Name": "Wake: gate-stone circle",
+   "At": [
+    230,
+    1060
+   ],
+   "Icon": "start"
+  },
+  {
+   "Name": "THE GATE: Mossback Warden",
+   "At": [
+    1150,
+    230
+   ],
+   "Icon": "gate"
+  },
+  {
+   "Name": "Rootdeep Hollow (dungeon)",
+   "At": [
+    520,
+    110
+   ],
+   "Icon": "dungeon"
+  },
+  {
+   "Name": "Old Tusk",
+   "At": [
+    820,
+    1010
+   ],
+   "Icon": "boss"
+  },
+  {
+   "Name": "Rockback",
+   "At": [
+    1190,
+    760
+   ],
+   "Icon": "boss"
+  },
+  {
+   "Name": "Hollowhorn",
+   "At": [
+    760,
+    200
+   ],
+   "Icon": "boss"
+  },
+  {
+   "Name": "Captain Redfang",
+   "At": [
+    190,
+    470
+   ],
+   "Icon": "boss"
+  },
+  {
+   "Name": "Twin Fang shrine (waterfall)",
+   "At": [
+    330,
+    360
+   ],
+   "Icon": "secret"
+  },
+  {
+   "Name": "Old gate towers + arcade",
+   "At": [
+    1020,
+    560
+   ],
+   "Icon": "ruin"
+  },
+  {
+   "Name": "Bandit camp",
+   "At": [
+    270,
+    620
+   ],
+   "Icon": "camp"
+  }
+ ],
+ "Waystones": [
+  [
+   700,
+   640
+  ],
+  [
+   640,
+   940
+  ],
+  [
+   1100,
+   700
+  ],
+  [
+   640,
+   300
+  ],
+  [
+   240,
+   580
+  ],
+  [
+   1120,
+   330
+  ]
+ ]
+}

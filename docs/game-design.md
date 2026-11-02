@@ -40,7 +40,7 @@ Each Land has:
 
 | # | Land | Mood | Enemies | Guardian |
 |---|---|---|---|---|
-| 1 | **Ashen Vale** | The style test: pine meadows, ruined watchtowers, old roads, a quiet village of millers | slimes, boars, bandits, moss golems | **Mossback Warden**, a golem grown into the Gate |
+| 1 | **Verdant Vale** (was Verdant Vale; full layout in `docs/lands/land1-verdant-vale.md`) | Lush anime meadows, mossy boulders, ruined watchtowers, a glowing forest; hub Brightwater, a castle town on a river island | slimes, hornhares, boars, moss golems, thornwolves, wisps, bandits | **Mossback Warden**, a golem grown into the Gate |
 | 2 | **Hollowmere** | Misty marsh, willows, stilt-house village, lanterns at dusk | frog-knights, will-o'-wisps, bog hounds | **The Mire Matron** |
 | 3 | **Brightwheat Downs** | 7DS-style rolling farmland, windmills, a tavern town on a hill, a castle in the distance | scarecrows, giant crows, rogue knights | **The Black Knight of the Mill** |
 | 4 | **Fae Hollow** | Giant mushrooms, glowing flowers, a fairy-king forest | sprites, thorn beasts, mushroom folk | **The Thorn Queen** |
@@ -64,7 +64,7 @@ its **own place, its own movement, and one twist** that changes the arena during
 
 | Land | Arena | Twist |
 |---|---|---|
-| Ashen Vale | A ring of ruined watchtowers on a hill; the Gate is half-swallowed by the Mossback Warden's body | Phase 2: the Warden tears the Gate out of the ground and uses it as a club; towers fall and become cover/ramps |
+| Verdant Vale | A ring of ruined watchtowers on a hill; the Gate is half-swallowed by the Mossback Warden's body | Phase 2: the Warden tears the Gate out of the ground and uses it as a club; towers fall and become cover/ramps |
 | Hollowmere | A sunken temple roof in the marsh, lily pads and stone islands | The water rises each phase; islands sink, and the Matron hides beneath you |
 | Brightwheat Downs | A burning windmill on a hilltop at dusk | The mill's sails sweep the arena like clock hands; jump the sails, fight on the mill's roof in phase 2 |
 | Fae Hollow | A giant flower; the Gate is woven from thorns | The arena shrinks as thorns close in; cut flowers to open space |
@@ -129,7 +129,7 @@ Only **Level** and **Gear** gate content. Everything else is power and pride, so
 | **Legendary** | gold | a unique **effect** (e.g. "every 5th hit releases a wind slash"); named, with a hand-made model |
 | **Mythic** | red/rainbow | the chase item: a unique effect, a unique model with glowing VFX, an **awakening** quest that upgrades it again. Announced to the whole server when it drops |
 
-- Each Land has its own weapon and armour **looks** and its own legendaries (Ashen Vale's moss-stone greatsword, Rimefell's
+- Each Land has its own weapon and armour **looks** and its own legendaries (Verdant Vale's moss-stone greatsword, Rimefell's
   frost spear). The look tells you where something came from.
 - **Drops are personal.** Everyone in a party gets their own roll. No loot stealing, ever. This makes co-op purely good.
 - **The drop moment** matters most: a beam of light in the rarity's colour, a rising sound, a pause before the reveal for
@@ -159,7 +159,7 @@ good gear looks good, and an optional **cosmetic overlay** lets players keep a f
 
 **Unique Skills**: rare, powerful abilities that aren't tied to a weapon type and are unlocked by secrets, not by grinding
 alone. Examples:
-- **Twin Fang** (fight with two weapons at once): hidden in Ashen Vale; you need a hidden mastery requirement on two weapon
+- **Twin Fang** (fight with two weapons at once): hidden in Verdant Vale; you need a hidden mastery requirement on two weapon
   types plus finding a ruined shrine.
 - **Blink Step** (a short teleport instead of a roll): beat the Storm Roc without taking a lightning hit.
 - **Sunbreaker** (a huge charged strike): collect 7 scattered sun-shards across three Lands.
@@ -201,10 +201,10 @@ YouTube videos about.
 
 ## 12. Build order (proposed)
 
-1. **Look**: match the reference (the matching passes), then build Ashen Vale's terrain from what we learn.
+1. **Look**: match the reference (the matching passes), then build Verdant Vale's terrain from what we learn.
 2. **Combat core**: movement, camera, one weapon type (Sword & Shield), one enemy (slime), damage numbers, hit feel.
 3. **Loot core**: drops, rarities, inventory, equip, the drop moment.
-4. **Ashen Vale vertical slice**: village, 3 zones, its enemies, a dungeon, the Mossback Warden, first quests.
+4. **Verdant Vale vertical slice**: village, 3 zones, its enemies, a dungeon, the Mossback Warden, first quests.
 5. Pets, armour sets, a hidden skill, then Lands 2 and 3.
 
 ## 13. Decisions (user, 2026-11-02)

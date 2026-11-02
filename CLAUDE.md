@@ -8,6 +8,8 @@ Plan for co-op from the start: server-authoritative, per-player state.
 - Toolchain as in the FPS project (`C:\Users\blast\New folder`): `rokit.toml`, `rojo serve`, `stylua src`, `selene src`.
 - `src/server` -> ServerScriptService.Server (`Main` loads `Services/`), `src/client` -> StarterPlayerScripts.Client
   (`Main` loads `Controllers/`), `src/shared` -> ReplicatedStorage.Shared. Modules have optional `Init` (no yield) / `Start`.
+- Lands: `docs/lands/` (Gate 1 = `land1-verdant-vale.md`; maps from `art/lands/<land>/map.json` by `tools/art/land_map.py`).
+  Trees: keep the solid kit pines; the card-branch trees (`card_trees.py`) are parked by the user's choice.
 - Game design draft: `docs/game-design.md` (fun-first rules, Lands/Gates, loot, pets, hidden skills, decisions).
 - The look: `docs/look-rules.md` (the numbers learned by copying the reference screenshot: camera, scale, light, sky,
   haze, palette, terrain, scatter, models, Roblox mapping). How the copy passes work: `docs/look-passes.md`
