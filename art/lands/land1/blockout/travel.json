@@ -1,0 +1,62 @@
+{
+ "Wake: gate-stone circle": {
+  "Straight": 644,
+  "Walk": 837,
+  "Seconds": 52,
+  "Climb": 47.4
+ },
+ "THE GATE: Mossback Warden": {
+  "Straight": 595,
+  "Walk": 774,
+  "Seconds": 48,
+  "Climb": 87.6
+ },
+ "Rootdeep Hollow (dungeon)": {
+  "Straight": 541,
+  "Walk": 703,
+  "Seconds": 44,
+  "Climb": 9.7
+ },
+ "Old Tusk": {
+  "Straight": 408,
+  "Walk": 530,
+  "Seconds": 33,
+  "Climb": 8.2
+ },
+ "Rockback": {
+  "Straight": 510,
+  "Walk": 662,
+  "Seconds": 41,
+  "Climb": 15.0
+ },
+ "Hollowhorn": {
+  "Straight": 424,
+  "Walk": 552,
+  "Seconds": 34,
+  "Climb": 12.0
+ },
+ "Captain Redfang": {
+  "Straight": 532,
+  "Walk": 691,
+  "Seconds": 43,
+  "Climb": 41.0
+ },
+ "Twin Fang shrine (waterfall)": {
+  "Straight": 452,
+  "Walk": 588,
+  "Seconds": 37,
+  "Climb": 12.1
+ },
+ "Old gate towers + arcade": {
+  "Straight": 326,
+  "Walk": 423,
+  "Seconds": 26,
+  "Climb": 16.4
+ },
+ "Bandit camp": {
+  "Straight": 430,
+  "Walk": 559,
+  "Seconds": 35,
+  "Climb": 44.3
+ }
+}

@@ -13,8 +13,8 @@
     940
    ],
    "Radius": [
-    330,
-    190
+    400,
+    240
    ],
    "Colour": "a9cf6a"
   },
@@ -26,8 +26,8 @@
     680
    ],
    "Radius": [
-    210,
-    230
+    260,
+    290
    ],
    "Colour": "9fb38a"
   },
@@ -39,8 +39,8 @@
     260
    ],
    "Radius": [
-    330,
-    190
+    400,
+    230
    ],
    "Colour": "4f8a64"
   },
@@ -52,8 +52,8 @@
     560
    ],
    "Radius": [
-    170,
-    260
+    210,
+    310
    ],
    "Colour": "b9a77a"
   },
@@ -65,8 +65,8 @@
     230
    ],
    "Radius": [
-    150,
-    130
+    190,
+    160
    ],
    "Colour": "c9c2a8"
   },
@@ -78,8 +78,8 @@
     1060
    ],
    "Radius": [
-    120,
-    90
+    150,
+    110
    ],
    "Colour": "c6d8a0"
   }
@@ -355,5 +355,173 @@
    1120,
    330
   ]
- ]
+ ],
+ "Blockout": {
+  "_note": "Heights and dressing for tools/blender/land_blockout.py. Shapes: rolling, plateau, hill, ridge.",
+  "Step": 4.0,
+  "Border": 300,
+  "Roll": 3.0,
+  "Wall": 170,
+  "RiverWidth": 26,
+  "Island": {
+   "Radius": 88,
+   "Height": 7,
+   "Moat": 24
+  },
+  "Zones": {
+   "Sunny Meadows": {
+    "Shape": "rolling",
+    "Noise": 4,
+    "NoiseScale": 120,
+    "Trees": 0.05,
+    "PineShare": 0.2,
+    "Rocks": 0.04
+   },
+   "Mossrock Hills": {
+    "Shape": "hill",
+    "Height": 18,
+    "Noise": 10,
+    "NoiseScale": 70,
+    "Trees": 0.08,
+    "PineShare": 0.6,
+    "Rocks": 0.35
+   },
+   "Whisperwood": {
+    "Shape": "rolling",
+    "Noise": 5,
+    "NoiseScale": 80,
+    "Trees": 0.75,
+    "PineShare": 0.5,
+    "Rocks": 0.05
+   },
+   "Bandit Ridge": {
+    "Shape": "ridge",
+    "Height": 30,
+    "Width": 120,
+    "Angle": 90,
+    "Noise": 4,
+    "Trees": 0.12,
+    "PineShare": 0.8,
+    "Rocks": 0.12
+   },
+   "Gatehill": {
+    "Shape": "hill",
+    "Height": 75,
+    "Plateau": 6,
+    "Noise": 3,
+    "Trees": 0.04,
+    "PineShare": 0.9,
+    "Rocks": 0.15
+   },
+   "Wayfarer's Rest": {
+    "Shape": "plateau",
+    "Height": 38,
+    "Top": 0.55,
+    "Noise": 2,
+    "Trees": 0.06,
+    "PineShare": 0.7,
+    "Rocks": 0.1
+   }
+  },
+  "Structures": [
+   {
+    "Kind": "castle_town",
+    "At": [
+     700,
+     620
+    ]
+   },
+   {
+    "Kind": "gate",
+    "At": [
+     1150,
+     230
+    ]
+   },
+   {
+    "Kind": "camp",
+    "At": [
+     270,
+     620
+    ]
+   },
+   {
+    "Kind": "ruins",
+    "At": [
+     990,
+     560
+    ]
+   },
+   {
+    "Kind": "cave",
+    "At": [
+     520,
+     110
+    ]
+   },
+   {
+    "Kind": "start",
+    "At": [
+     230,
+     1060
+    ]
+   },
+   {
+    "Kind": "shrine",
+    "At": [
+     330,
+     360
+    ]
+   }
+  ],
+  "Views": [
+   {
+    "Name": "start_overlook",
+    "From": [
+     250,
+     1045
+    ],
+    "To": [
+     700,
+     620
+    ]
+   },
+   {
+    "Name": "hub_to_gate",
+    "From": [
+     795,
+     600
+    ],
+    "To": [
+     1150,
+     230
+    ],
+    "LookUp": 25
+   },
+   {
+    "Name": "meadows_to_gate",
+    "From": [
+     640,
+     960
+    ],
+    "To": [
+     1150,
+     230
+    ],
+    "LookUp": 30
+   },
+   {
+    "Name": "whisperwood",
+    "From": [
+     660,
+     420
+    ],
+    "To": [
+     560,
+     160
+    ]
+   }
+  ],
+  "GapTrees": 0.05
+ }
 }

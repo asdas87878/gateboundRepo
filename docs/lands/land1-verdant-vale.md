@@ -157,3 +157,28 @@ cover. Beat it, the Gate wakes, and Land 2 opens.
 
 - A grey-box of the whole Land in Blender (heights, paths, the hub's footprint) to check distances and sightlines.
 - Weapon style (the user's next topic), then enemy and hub models, then look passes on each zone.
+
+## Block-out v1 (2026-11-02)
+
+Grey-box of the whole Land: `tools/blender/land_blockout.py -- art/lands/land1/map.json` (the heights and dressing
+are in map.json's `Blockout`).
+- **Renders** in `art/lands/land1/blockout/`: `aerial_labelled.png`, `top.png`, `eye_sheet.jpg` (start overlook, hub
+  to gate, meadows to gate, Whisperwood), `blockout.blend`.
+- **Walking times** in `travel.json`.
+
+What it showed and what changed:
+- **Walking times**: every key place is 26-52 s from the hub at Roblox's walk speed (16 studs/s, paths ~1.3x the straight
+  line). That's under the 60 s target. The longest are the start circle (52 s) and the Gate (48 s, a 45-stud climb).
+- **Empty gaps** between the zones: the zones were grown to fill the Vale, and the grassland between them gets sparse
+  trees.
+- **The Gate wasn't visible** from the hub or the meadows, hidden by the Mossrock hills. Gatehill was raised to 75 studs
+  and the Gate's towers to 30/38. It now shows from the hub and, small, from the meadows. It should be bigger or lit
+  (a glow or a beacon) when it's made properly.
+- **The keep** was raised to 60 plus a spire. It's now the landmark seen from the meadows and the start.
+- **The start overlook works**: the whole Vale, the town and the Gate in one view. The wake circle keeps a 60-stud clear
+  view.
+- Still rough:
+  - Whisperwood's eye view starts inside a tree.
+  - Wayfarer's Rest plateau reads as a rim, not a cliff edge.
+  - Paths cross the river without bridges yet.
+  - Mossrock's hills need shaping around the ruins.
