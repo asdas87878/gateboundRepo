@@ -20,7 +20,7 @@ Rules
 - In Roblox: MeshPart `Material = SmoothPlastic`, `Color` white (so the vertex colours show as they are),
   grass/banners `DoubleSided = true`, small props `CastShadow = false`, `CanCollide`/`CanQuery` off on decoration.
 
-## Gaps after the first render (user review 2026-11-02, for the matching passes)
+## Gaps after the first render (user review 2026-11-02; addressed by the look passes, see look-rules.md)
 - Light: the reference is backlit. The sun sits in the sky ahead, there's a warm glow at the horizon around it, shadows are
   lifted (low contrast) and fall toward the camera. Ours is front-lit with dark, contrasty shadows.
 - Colour: the reference's greens are sage/olive and warm (yellow-leaning, lower saturation); its pines are a lighter, softer

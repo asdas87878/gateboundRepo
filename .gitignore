@@ -2,3 +2,10 @@
 art/**/renders/*.tmp
 Packages/
 sourcemap.json
+
+# look passes: the raw 16-bit renders are rebuilt by tools/look_pass.py; final/sheet/side/stats/spec are kept
+art/look/*/passes/*/beauty.png
+art/look/*/passes/*/depth.png
+art/look/*/passes/*/scene.blend
+art/look/*/passes/*/final.png
+art/look/*/passes/*/placements.json

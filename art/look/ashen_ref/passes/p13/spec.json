@@ -1,0 +1,1311 @@
+{
+ "_note": "The reference copy (docs/look-passes.md). Px = where a thing's base touches the ground in the reference frame (1336 x 752), TopPx = the row of its top. Studs, Z up, camera looks along +Y.",
+ "Frame": [
+  1336,
+  752
+ ],
+ "Camera": {
+  "Height": 8.05,
+  "Pitch": 0.0,
+  "FovV": 70.0,
+  "HorizonPx": 262
+ },
+ "Render": {
+  "Res": [
+   1336,
+   752
+  ],
+  "Samples": 48,
+  "Exposure": 0.0,
+  "DepthRange": 3000.0
+ },
+ "Sky": {
+  "Size": [
+   4096,
+   2048
+  ],
+  "Gradient": [
+   [
+    -2,
+    "c8d2cc"
+   ],
+   [
+    3,
+    "cdd8d6"
+   ],
+   [
+    10,
+    "accacf"
+   ],
+   [
+    18,
+    "90b6c3"
+   ],
+   [
+    28,
+    "7aa5bf"
+   ],
+   [
+    50,
+    "6693b2"
+   ],
+   [
+    90,
+    "5d8cae"
+   ]
+  ],
+  "SunSide": {
+   "Colour": "e9e3c9",
+   "Radius": 45,
+   "Strength": 0.35,
+   "Power": 1.6
+  },
+  "Sun": {
+   "Px": [
+    629,
+    77
+   ],
+   "Disc": 1.3,
+   "DiscColour": "fffdf3",
+   "DiscStrength": 2.2,
+   "Glow": [
+    {
+     "Colour": "ffe9b8",
+     "Radius": 3.0,
+     "Strength": 0.95,
+     "Power": 1.5
+    },
+    {
+     "Colour": "f7e5bb",
+     "Radius": 8,
+     "Strength": 0.22
+    },
+    {
+     "Colour": "efe1bf",
+     "Radius": 35,
+     "Strength": 0.07
+    }
+   ]
+  },
+  "Clouds": {
+   "Seed": 4,
+   "Count": 60,
+   "Azimuth": [
+    10,
+    170
+   ],
+   "Elevation": [
+    8,
+    40
+   ],
+   "Width": [
+    6,
+    18
+   ],
+   "Height": [
+    1.2,
+    3.0
+   ],
+   "Opacity": [
+    0.4,
+    0.8
+   ],
+   "Colour": "f6f7f2",
+   "Belly": "b9c8cb",
+   "FadeLow": 3,
+   "FadeHigh": 10
+  },
+  "Below": "a7b29b"
+ },
+ "Light": {
+  "Sun": {
+   "Azimuth": -65,
+   "Elevation": 40,
+   "Colour": "ffe8c2",
+   "Strength": 2.1,
+   "Angle": 9
+  },
+  "Ambient": {
+   "Strength": 2.0,
+   "Tint": "fff4ea"
+  }
+ },
+ "Terrain": {
+  "Extent": [
+   -220,
+   -10,
+   240,
+   260
+  ],
+  "Step": 1.0,
+  "FarZ": -14,
+  "Noise": {
+   "Amp": 0.7,
+   "Scale": 45,
+   "Seed": 3
+  },
+  "Features": [
+   {
+    "Kind": "Hill",
+    "At": [
+     25,
+     52
+    ],
+    "Radius": 45,
+    "Height": 4.5,
+    "Squash": [
+     1.5,
+     1.0
+    ],
+    "Power": 0.8,
+    "_": "the rise the gate stands on"
+   },
+   {
+    "Kind": "Tilt",
+    "Dir": 90,
+    "At": [
+     0,
+     40
+    ],
+    "Slope": 0.06,
+    "Min": 0,
+    "Max": 120,
+    "_": "the land keeps climbing gently behind the gate"
+   },
+   {
+    "Kind": "Hill",
+    "At": [
+     -95,
+     160
+    ],
+    "Radius": 85,
+    "Height": 9,
+    "_": "the far-left rise under the ruined tower"
+   },
+   {
+    "Kind": "Hill",
+    "At": [
+     -55,
+     80
+    ],
+    "Radius": 40,
+    "Height": 3
+   },
+   {
+    "Kind": "Ridge",
+    "Line": [
+     [
+      14,
+      10
+     ],
+     [
+      28,
+      22
+     ],
+     [
+      44,
+      36
+     ]
+    ],
+    "Width": 18,
+    "Height": 2.0,
+    "_": "the bank on the right"
+   },
+   {
+    "Kind": "Hill",
+    "At": [
+     -24,
+     16
+    ],
+    "Radius": 14,
+    "Height": 1.5,
+    "_": "the slope up to the left rocks"
+   }
+  ],
+  "Colour": {
+   "GrassA": "898646",
+   "GrassB": "757b42",
+   "GrassC": "5c6137",
+   "PatchScale": 16,
+   "PatchDark": 0.5,
+   "Grain": 0.06,
+   "Road": "948360",
+   "RoadEdge": "867554",
+   "RoadVar": 0.14,
+   "EdgeSoft": 1.4,
+   "EdgeWobble": 0.7,
+   "EdgeScale": 5,
+   "Worn": 0.3,
+   "WornWidth": 2.0,
+   "WornColour": "8f875c",
+   "Far": "919058",
+   "GrassLight": "999652",
+   "PatchLight": 0.45,
+   "Ruts": 0.12
+  }
+ },
+ "Roads": [
+  {
+   "Name": "Main",
+   "PxLine": [
+    [
+     1000,
+     780,
+     10
+    ],
+    [
+     1000,
+     600,
+     12
+    ],
+    [
+     985,
+     500,
+     12
+    ],
+    [
+     962,
+     430,
+     9
+    ],
+    [
+     945,
+     370,
+     7
+    ],
+    [
+     930,
+     320,
+     5.5
+    ],
+    [
+     920,
+     295,
+     5
+    ],
+    [
+     910,
+     280,
+     4.5
+    ]
+   ],
+   "Depth": 0.5,
+   "Bank": 5
+  },
+  {
+   "Name": "RightSpur",
+   "PxLine": [
+    [
+     1040,
+     470,
+     7
+    ],
+    [
+     1180,
+     440,
+     6
+    ],
+    [
+     1336,
+     420,
+     6
+    ],
+    [
+     1480,
+     405,
+     6
+    ]
+   ],
+   "Depth": 0.4,
+   "Bank": 4
+  },
+  {
+   "Name": "Branch",
+   "PxLine": [
+    [
+     935,
+     452,
+     6
+    ],
+    [
+     800,
+     440,
+     6
+    ],
+    [
+     700,
+     425,
+     5.5
+    ],
+    [
+     620,
+     360,
+     5
+    ],
+    [
+     530,
+     310,
+     4.5
+    ],
+    [
+     440,
+     260,
+     4
+    ],
+    [
+     415,
+     230,
+     3.5
+    ]
+   ],
+   "Depth": 0.4,
+   "Bank": 4
+  }
+ ],
+ "Place": [
+  {
+   "Kind": "Gate",
+   "Id": "Gate",
+   "Seed": 50,
+   "Left": {
+    "Px": [
+     845,
+     300
+    ],
+    "TopPx": 93,
+    "Args": {
+     "height": 36,
+     "width": 13
+    }
+   },
+   "Right": {
+    "Px": [
+     1098,
+     325
+    ],
+    "TopPx": 17,
+    "Args": {
+     "height": 40,
+     "width": 14
+    }
+   },
+   "Tower": {},
+   "Arch": {
+    "TopPx": 155,
+    "Thick": 0.14,
+    "Depth": 0.3
+   },
+   "Banners": [
+    {
+     "On": "Right",
+     "Top": 0.84,
+     "Width": 0.32,
+     "Length": 0.29
+    },
+    {
+     "On": "Left",
+     "Top": 0.79,
+     "Width": 0.34,
+     "Length": 0.33
+    }
+   ],
+   "Depth": 46,
+   "CentrePx": [
+    960,
+    292
+   ]
+  },
+  {
+   "Kit": "BannerPole",
+   "Px": [
+    853,
+    372
+   ],
+   "TopPx": 242,
+   "Face": "camera",
+   "Args": {
+    "height": 12,
+    "arm": 4.6,
+    "side": -1
+   },
+   "Banner": {
+    "Width": 3.6,
+    "Length": 7
+   },
+   "Seed": 71
+  },
+  {
+   "Kit": "BannerPole",
+   "Px": [
+    1083,
+    388
+   ],
+   "TopPx": 245,
+   "Face": "camera",
+   "Args": {
+    "height": 12,
+    "arm": 4.6,
+    "side": 1
+   },
+   "Banner": {
+    "Width": 3.6,
+    "Length": 7
+   },
+   "Seed": 73
+  },
+  {
+   "Kit": "Tower",
+   "Px": [
+    395,
+    242
+   ],
+   "TopPx": 75,
+   "Face": "camera",
+   "Yaw": 20,
+   "Args": {
+    "height": 40,
+    "width": 12,
+    "ruined": true
+   },
+   "Seed": 55,
+   "Depth": 170,
+   "Pad": {
+    "Radius": 10,
+    "Blend": 40
+   }
+  },
+  {
+   "Kit": "RuinArches",
+   "Px": [
+    720,
+    262
+   ],
+   "TopPx": 205,
+   "Face": "camera",
+   "Yaw": 10,
+   "Args": {
+    "bays": 3,
+    "bay": 12,
+    "height": 14
+   },
+   "Seed": 57,
+   "Depth": 130,
+   "Pad": {
+    "Radius": 18,
+    "Blend": 30
+   }
+  },
+  {
+   "Kit": "Stele",
+   "Px": [
+    422,
+    543
+   ],
+   "TopPx": 446,
+   "Face": "camera",
+   "Yaw": -15,
+   "Seed": 80
+  },
+  {
+   "Kit": "Boulder",
+   "Px": [
+    200,
+    518
+   ],
+   "TopPx": 422,
+   "Yaw": 30,
+   "Args": {
+    "size": [
+     9,
+     6,
+     4.5
+    ]
+   },
+   "Seed": 21
+  },
+  {
+   "Kit": "Boulder",
+   "Px": [
+    250,
+    690
+   ],
+   "TopPx": 590,
+   "Yaw": 70,
+   "Args": {
+    "size": [
+     6,
+     5,
+     3.5
+    ]
+   },
+   "Seed": 22
+  },
+  {
+   "Kit": "Boulder",
+   "Px": [
+    265,
+    565
+   ],
+   "TopPx": 512,
+   "Yaw": 10,
+   "Args": {
+    "size": [
+     4,
+     3.5,
+     2.2
+    ]
+   },
+   "Seed": 23
+  },
+  {
+   "Kit": "Boulder",
+   "Px": [
+    20,
+    505
+   ],
+   "TopPx": 425,
+   "Yaw": 0,
+   "Args": {
+    "size": [
+     5,
+     4,
+     4
+    ]
+   },
+   "Seed": 24
+  },
+  {
+   "Kit": "Boulder",
+   "Px": [
+    1225,
+    350
+   ],
+   "TopPx": 315,
+   "Yaw": 40,
+   "Args": {
+    "size": [
+     6,
+     5,
+     3.5
+    ]
+   },
+   "Seed": 25
+  },
+  {
+   "Kit": "Boulder",
+   "Px": [
+    1100,
+    330
+   ],
+   "TopPx": 300,
+   "Yaw": 0,
+   "Args": {
+    "size": [
+     5,
+     4,
+     3
+    ]
+   },
+   "Seed": 26
+  },
+  {
+   "Kit": "Boulder",
+   "Px": [
+    1300,
+    470
+   ],
+   "TopPx": 400,
+   "Yaw": 20,
+   "Args": {
+    "size": [
+     6,
+     5,
+     4
+    ]
+   },
+   "Seed": 27
+  },
+  {
+   "Kit": "Golem",
+   "Px": [
+    525,
+    598
+   ],
+   "TopPx": 418,
+   "Face": "camera",
+   "Yaw": 30,
+   "Seed": 90
+  },
+  {
+   "Kit": "Golem",
+   "Px": [
+    1027,
+    330
+   ],
+   "TopPx": 262,
+   "Face": "camera",
+   "Seed": 91
+  },
+  {
+   "Kit": "Golem",
+   "Px": [
+    1305,
+    478
+   ],
+   "TopPx": 362,
+   "Face": "camera",
+   "Yaw": -40,
+   "Seed": 92
+  },
+  {
+   "Kit": "Hero",
+   "Px": [
+    640,
+    618
+   ],
+   "TopPx": 388,
+   "Face": "camera",
+   "Yaw": 180,
+   "Seed": 7
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    55,
+    470
+   ],
+   "TopPx": -200,
+   "Args": {
+    "height": 30,
+    "slender": 1.25
+   },
+   "Seed": 110
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    165,
+    445
+   ],
+   "TopPx": 95,
+   "Args": {
+    "height": 30,
+    "slender": 1.25
+   },
+   "Seed": 111
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    310,
+    440
+   ],
+   "TopPx": -60,
+   "Args": {
+    "height": 30,
+    "slender": 1.25
+   },
+   "Seed": 112
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    470,
+    440
+   ],
+   "TopPx": 115,
+   "Args": {
+    "height": 30,
+    "slender": 1.25
+   },
+   "Seed": 113
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    505,
+    400
+   ],
+   "TopPx": 110,
+   "Args": {
+    "height": 30,
+    "slender": 1.25
+   },
+   "Seed": 114
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    560,
+    380
+   ],
+   "TopPx": 145,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 115
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    615,
+    375
+   ],
+   "TopPx": 150,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 116
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    685,
+    380
+   ],
+   "TopPx": 180,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 117
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    915,
+    295
+   ],
+   "TopPx": 245,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 118
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    1170,
+    300
+   ],
+   "TopPx": 150,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 119
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    1215,
+    295
+   ],
+   "TopPx": 175,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 120
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    1260,
+    300
+   ],
+   "TopPx": 140,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 121
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    1320,
+    300
+   ],
+   "TopPx": 150,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 122
+  },
+  {
+   "Kit": "Tower",
+   "Px": [
+    612,
+    236
+   ],
+   "TopPx": 140,
+   "Depth": 150,
+   "Face": "camera",
+   "Yaw": -10,
+   "Args": {
+    "height": 22,
+    "width": 13,
+    "ruined": true
+   },
+   "Seed": 58,
+   "Pad": {
+    "Radius": 9,
+    "Blend": 30
+   }
+  },
+  {
+   "Kit": "Mountain",
+   "At": [
+    865.5,
+    1400
+   ],
+   "Scale": 1.0,
+   "Args": {
+    "width": 1100,
+    "height": 456.4,
+    "depth": 500,
+    "peaks": 3
+   },
+   "Seed": 201
+  },
+  {
+   "Kit": "Mountain",
+   "At": [
+    -438.0,
+    1400
+   ],
+   "Scale": 1.0,
+   "Args": {
+    "width": 900,
+    "height": 404.3,
+    "depth": 500,
+    "peaks": 2
+   },
+   "Seed": 202
+  },
+  {
+   "Kit": "Mountain",
+   "At": [
+    -1220.1,
+    1400
+   ],
+   "Scale": 1.0,
+   "Args": {
+    "width": 1000,
+    "height": 443.4,
+    "depth": 500,
+    "peaks": 2
+   },
+   "Seed": 203
+  },
+  {
+   "Kit": "Mountain",
+   "At": [
+    1647.7,
+    1400
+   ],
+   "Scale": 1.0,
+   "Args": {
+    "width": 900,
+    "height": 534.6,
+    "depth": 500,
+    "peaks": 2
+   },
+   "Seed": 204
+  },
+  {
+   "Kit": "Mountain",
+   "At": [
+    291.2,
+    1700
+   ],
+   "Scale": 1.0,
+   "Args": {
+    "width": 1200,
+    "height": 315.1,
+    "depth": 500,
+    "peaks": 3
+   },
+   "Seed": 205
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    580,
+    256
+   ],
+   "TopPx": 150,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 140
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    625,
+    250
+   ],
+   "TopPx": 160,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 141
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    662,
+    248
+   ],
+   "TopPx": 170,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 142
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    540,
+    330
+   ],
+   "TopPx": 160,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 143
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    720,
+    330
+   ],
+   "TopPx": 200,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 144
+  },
+  {
+   "Kit": "Pine",
+   "Px": [
+    765,
+    300
+   ],
+   "TopPx": 190,
+   "Args": {
+    "height": 30
+   },
+   "Seed": 145
+  }
+ ],
+ "Forests": [
+  {
+   "Name": "LeftRidge",
+   "Poly": [
+    [
+     -200,
+     95
+    ],
+    [
+     -45,
+     95
+    ],
+    [
+     -35,
+     220
+    ],
+    [
+     -200,
+     220
+    ]
+   ],
+   "Spacing": 11,
+   "Height": [
+    20,
+    30
+   ],
+   "RoadClear": 5,
+   "Seed": 5,
+   "Fill": 0.85
+  },
+  {
+   "Name": "RightWoods",
+   "PxPoly": [
+    [
+     1150,
+     320
+    ],
+    [
+     1336,
+     345
+    ],
+    [
+     1336,
+     290
+    ],
+    [
+     1160,
+     292
+    ]
+   ],
+   "Spacing": 11,
+   "Height": [
+    28,
+    38
+   ],
+   "RoadClear": 4,
+   "Seed": 6,
+   "Fill": 0.6
+  },
+  {
+   "Name": "Beyond",
+   "Poly": [
+    [
+     -260,
+     150
+    ],
+    [
+     320,
+     150
+    ],
+    [
+     320,
+     480
+    ],
+    [
+     -260,
+     480
+    ]
+   ],
+   "Spacing": 22,
+   "Height": [
+    22,
+    34
+   ],
+   "RoadClear": 8,
+   "Seed": 7,
+   "Fill": 0.7
+  },
+  {
+   "Name": "GateWoods",
+   "Poly": [
+    [
+     18,
+     58
+    ],
+    [
+     50,
+     58
+    ],
+    [
+     50,
+     120
+    ],
+    [
+     18,
+     120
+    ]
+   ],
+   "Spacing": 6.0,
+   "Height": [
+    16,
+    24
+   ],
+   "RoadClear": 5,
+   "Seed": 8,
+   "Fill": 0.95
+  },
+  {
+   "Name": "MidWoods",
+   "PxPoly": [
+    [
+     440,
+     392
+    ],
+    [
+     600,
+     372
+    ],
+    [
+     780,
+     336
+    ],
+    [
+     800,
+     300
+    ],
+    [
+     600,
+     286
+    ],
+    [
+     420,
+     292
+    ]
+   ],
+   "Spacing": 7,
+   "Height": [
+    20,
+    30
+   ],
+   "RoadClear": 3,
+   "Seed": 12,
+   "Fill": 0.8
+  }
+ ],
+ "Scatter": [
+  {
+   "Name": "GrassOpen",
+   "Density": 0.05,
+   "MaxDist": 130,
+   "ThinFrom": 60,
+   "RoadClear": 0.3,
+   "Seed": 9,
+   "Kinds": [
+    {
+     "Kit": "Grass",
+     "Args": {
+      "blades": 16,
+      "height": 1.9
+     },
+     "Variants": 6,
+     "SeedBase": 300,
+     "Scale": [
+      0.7,
+      1.3
+     ]
+    }
+   ]
+  },
+  {
+   "Name": "GrassEdges",
+   "Density": 0.45,
+   "MaxDist": 110,
+   "ThinFrom": 50,
+   "RoadClear": -0.3,
+   "Seed": 19,
+   "Near": {
+    "Road": [
+     -0.3,
+     2.2
+    ],
+    "Foot": 1.6,
+    "FootAdd": 2.5
+   },
+   "Kinds": [
+    {
+     "Kit": "Grass",
+     "Args": {
+      "blades": 16,
+      "height": 1.9
+     },
+     "Variants": 6,
+     "SeedBase": 300,
+     "Scale": [
+      0.7,
+      1.3
+     ]
+    }
+   ]
+  },
+  {
+   "Name": "WhiteFlowers",
+   "Density": 0.15,
+   "MaxDist": 110,
+   "RoadClear": 0.6,
+   "Seed": 10,
+   "Patches": {
+    "Threshold": 0.15
+   },
+   "Kinds": [
+    {
+     "Kit": "Flowers",
+     "Args": {
+      "kind": "white",
+      "count": 14
+     },
+     "Variants": 4,
+     "SeedBase": 400,
+     "Scale": [
+      0.8,
+      1.2
+     ]
+    }
+   ]
+  },
+  {
+   "Name": "YellowFlowers",
+   "Density": 0.025,
+   "MaxDist": 60,
+   "RoadClear": 0.8,
+   "Seed": 11,
+   "Patches": {
+    "Threshold": 0.45
+   },
+   "Kinds": [
+    {
+     "Kit": "Flowers",
+     "Args": {
+      "kind": "yellow",
+      "count": 3
+     },
+     "Variants": 4,
+     "SeedBase": 420,
+     "Scale": [
+      0.8,
+      1.2
+     ]
+    }
+   ]
+  }
+ ],
+ "Post": {
+  "Haze": {
+   "Density": 0.0038461538461538464,
+   "Power": 2.0,
+   "Start": 40,
+   "Max": 0.88,
+   "Colour": "d2d8d0",
+   "GlowColour": "efe8d2",
+   "Glow": 0.5,
+   "GlowPower": 6,
+   "FarColour": "d3dad5",
+   "FarAt": 1500
+  },
+  "Bloom": {
+   "Threshold": 1.0,
+   "Intensity": 0.35,
+   "Layers": [
+    [
+     4,
+     0.5
+    ],
+    [
+     16,
+     0.35
+    ],
+    [
+     50,
+     0.15
+    ]
+   ]
+  },
+  "Grade": {
+   "Saturation": 0.0,
+   "Contrast": -0.06
+  }
+ },
+ "Palette": {
+  "pine": "759c90",
+  "pine_dark": "50746a",
+  "rock": "b3b7b0",
+  "rock_dark": "9ca19c",
+  "stone": "cccac2",
+  "stone_dark": "b6b4ac",
+  "golem": "8d8478",
+  "blade": "62903f",
+  "blade_tip": "b0c870",
+  "banner": "9f2c1d",
+  "banner_dark": "63170e"
+ }
+}

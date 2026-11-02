@@ -1,0 +1,88 @@
+{
+ "_note": "The reference copy (docs/look-passes.md). Px = where a thing's base touches the ground in the reference frame (1336 x 752), TopPx = the row of its top. Studs, Z up, camera looks along +Y.",
+ "Frame": [1336, 752],
+ "Camera": {"Height": 7.8, "Pitch": 12.0, "FovV": 70.0},
+ "Render": {"Res": [1336, 752], "Samples": 48, "Exposure": 0.0, "DepthRange": 3000.0},
+ "Sky": {
+  "Size": [4096, 2048],
+  "Gradient": [[-2, "d0d6cc"], [2, "d6dcd3"], [8, "c6d2cd"], [18, "abc2c4"], [30, "93b1bd"], [60, "7b9eb6"], [90, "6f94b0"]],
+  "SunSide": {"Colour": "e9e3c9", "Radius": 70, "Strength": 0.45, "Power": 1.6},
+  "Sun": {"Px": [629, 77], "Disc": 1.3, "DiscColour": "fffdf3", "DiscStrength": 2.2,
+   "Glow": [{"Colour": "fff3d6", "Radius": 4, "Strength": 1.1, "Power": 1.5}, {"Colour": "f3ebd1", "Radius": 14, "Strength": 0.32}, {"Colour": "e9e5d2", "Radius": 40, "Strength": 0.1}]},
+  "Clouds": {"Seed": 4, "Count": 70, "Azimuth": [10, 170], "Elevation": [6, 38], "Width": [8, 30], "Height": [0.8, 2.4], "Opacity": [0.2, 0.55],
+   "Colour": "f6f7f2", "Belly": "b9c8cb", "FadeLow": 3, "FadeHigh": 10},
+  "Below": "a7b29b"
+ },
+ "Light": {
+  "Sun": {"Azimuth": -35, "Elevation": 28, "Colour": "fff0d6", "Strength": 3.2, "Angle": 5},
+  "Ambient": {"Strength": 1.0, "Tint": "ffffff"}
+ },
+ "Terrain": {
+  "Extent": [-200, -10, 260, 300], "Step": 1.0, "FarZ": -14,
+  "Noise": {"Amp": 0.7, "Scale": 45, "Seed": 3},
+  "Features": [
+   {"Kind": "Hill", "At": [48, 100], "Radius": 70, "Height": 6, "_": "the gate's rise"},
+   {"Kind": "Ridge", "Line": [[18, 15], [40, 40], [75, 70]], "Width": 40, "Height": 3.5, "_": "the bank on the right"},
+   {"Kind": "Hill", "At": [-30, 20], "Radius": 30, "Height": 3.5, "_": "the slope up to the left rocks"},
+   {"Kind": "Tilt", "Dir": 90, "Slope": -0.12, "At": [0, 165], "Min": 0, "_": "the land falls away beyond the gate"}
+  ],
+  "Colour": {"GrassA": "7d8d4a", "GrassB": "6f8a46", "GrassC": "56703a", "PatchScale": 28, "PatchDark": 0.35, "Grain": 0.05,
+   "Road": "b8a47c", "RoadEdge": "a89670", "RoadVar": 0.08, "EdgeSoft": 1.4, "EdgeWobble": 0.7, "EdgeScale": 5,
+   "Worn": 0.3, "WornWidth": 2.0, "WornColour": "a39a6a", "Far": "7c8a5a"}
+ },
+ "Roads": [
+  {"Name": "Main", "PxLine": [[900, 760], [905, 600], [930, 470], [960, 410], [945, 350], [925, 300], [912, 282], [905, 276]], "Width": 8, "Depth": 0.5, "Bank": 5},
+  {"Name": "Branch", "PxLine": [[960, 450], [850, 440], [740, 430], [660, 395], [610, 345], [560, 310], [470, 285], [430, 255], [415, 228]], "Width": 5.5, "Depth": 0.4, "Bank": 4}
+ ],
+ "Place": [
+  {"Kind": "Gate", "Id": "Gate", "Seed": 50, "Left": {"Px": [845, 300], "TopPx": 93}, "Right": {"Px": [1098, 325], "TopPx": 17},
+   "Tower": {"height": 48, "width": 14}, "Arch": {"TopFrac": 0.6, "Thick": 3.2, "Depth": 7},
+   "Banners": [{"On": "Right", "Top": 0.84, "Width": 0.32, "Length": 0.29}, {"On": "Left", "Top": 0.79, "Width": 0.34, "Length": 0.33}]},
+  {"Kit": "BannerPole", "Px": [853, 372], "TopPx": 242, "Face": "camera", "Args": {"height": 12, "arm": 4.6, "side": -1}, "Banner": {"Width": 3.6, "Length": 7}, "Seed": 71},
+  {"Kit": "BannerPole", "Px": [1083, 388], "TopPx": 245, "Face": "camera", "Args": {"height": 12, "arm": 4.6, "side": 1}, "Banner": {"Width": 3.6, "Length": 7}, "Seed": 73},
+  {"Kit": "Tower", "Px": [395, 242], "TopPx": 75, "Face": "camera", "Yaw": 20, "Args": {"height": 40, "width": 12, "ruined": true}, "Seed": 55},
+  {"Kit": "RuinArches", "Px": [720, 262], "TopPx": 205, "Face": "camera", "Yaw": 10, "Args": {"bays": 3, "bay": 12, "height": 14}, "Seed": 57},
+  {"Kit": "Stele", "Px": [422, 543], "TopPx": 446, "Face": "camera", "Yaw": -15, "Seed": 80},
+  {"Kit": "Boulder", "Px": [200, 518], "TopPx": 422, "Yaw": 30, "Args": {"size": [9, 6, 4.5]}, "Seed": 21},
+  {"Kit": "Boulder", "Px": [250, 690], "TopPx": 590, "Yaw": 70, "Args": {"size": [6, 5, 3.5]}, "Seed": 22},
+  {"Kit": "Boulder", "Px": [265, 565], "TopPx": 512, "Yaw": 10, "Args": {"size": [4, 3.5, 2.2]}, "Seed": 23},
+  {"Kit": "Boulder", "Px": [20, 505], "TopPx": 425, "Yaw": 0, "Args": {"size": [5, 4, 4]}, "Seed": 24},
+  {"Kit": "Boulder", "Px": [1225, 350], "TopPx": 315, "Yaw": 40, "Args": {"size": [6, 5, 3.5]}, "Seed": 25},
+  {"Kit": "Boulder", "Px": [1100, 330], "TopPx": 300, "Yaw": 0, "Args": {"size": [5, 4, 3]}, "Seed": 26},
+  {"Kit": "Boulder", "Px": [1300, 470], "TopPx": 400, "Yaw": 20, "Args": {"size": [6, 5, 4]}, "Seed": 27},
+  {"Kit": "Golem", "Px": [525, 598], "TopPx": 418, "Face": "camera", "Yaw": 30, "Seed": 90},
+  {"Kit": "Golem", "Px": [1027, 330], "TopPx": 262, "Face": "camera", "Seed": 91},
+  {"Kit": "Golem", "Px": [1305, 478], "TopPx": 362, "Face": "camera", "Yaw": -40, "Seed": 92},
+  {"Kit": "Hero", "Px": [640, 618], "TopPx": 388, "Face": "camera", "Yaw": 180, "Seed": 7},
+  {"Kit": "Pine", "Px": [110, 480], "TopPx": -150, "Args": {"height": 30}, "Seed": 101},
+  {"Kit": "Pine", "Px": [330, 440], "TopPx": -40, "Args": {"height": 30}, "Seed": 102},
+  {"Kit": "Pine", "Px": [600, 380], "TopPx": 110, "Args": {"height": 30}, "Seed": 103},
+  {"Kit": "Pine", "Px": [700, 385], "TopPx": 145, "Args": {"height": 30}, "Seed": 104},
+  {"Kit": "Pine", "Px": [505, 335], "TopPx": 140, "Args": {"height": 30}, "Seed": 105},
+  {"Kit": "Pine", "Px": [745, 345], "TopPx": 175, "Args": {"height": 30}, "Seed": 106},
+  {"Kit": "Pine", "Px": [1230, 330], "TopPx": 30, "Args": {"height": 30}, "Seed": 107},
+  {"Kit": "Pine", "Px": [1320, 300], "TopPx": 190, "Args": {"height": 30}, "Seed": 108},
+  {"Kit": "Mountain", "At": [-700, 1500], "Scale": 1.0, "Args": {"width": 1100, "height": 480, "depth": 500, "peaks": 2}, "Seed": 201},
+  {"Kit": "Mountain", "At": [100, 1700], "Scale": 1.0, "Args": {"width": 1200, "height": 560, "depth": 500, "peaks": 2}, "Seed": 202},
+  {"Kit": "Mountain", "At": [900, 1500], "Scale": 1.0, "Args": {"width": 1100, "height": 500, "depth": 500, "peaks": 3}, "Seed": 203},
+  {"Kit": "Mountain", "At": [1500, 1000], "Scale": 1.0, "Args": {"width": 900, "height": 420, "depth": 500, "peaks": 2}, "Seed": 204}
+ ],
+ "Forests": [
+  {"Name": "LeftWoods", "PxPoly": [[0, 520], [300, 470], [480, 420], [600, 395], [700, 365], [770, 300], [600, 285], [300, 280], [0, 300]], "Spacing": 9, "Height": [28, 42], "RoadClear": 4, "Seed": 5, "Fill": 0.8},
+  {"Name": "RightWoods", "PxPoly": [[1140, 310], [1336, 320], [1336, 262], [1150, 268]], "Spacing": 10, "Height": [28, 40], "RoadClear": 4, "Seed": 6},
+  {"Name": "Beyond", "Poly": [[-500, 240], [500, 240], [500, 700], [-500, 700]], "Spacing": 15, "Height": [30, 46], "RoadClear": 6, "Seed": 7, "Fill": 0.85}
+ ],
+ "Scatter": [
+  {"Name": "Grass", "Density": 0.12, "MaxDist": 130, "ThinFrom": 60, "RoadClear": 0.2, "Seed": 9,
+   "Kinds": [{"Kit": "Grass", "Args": {"blades": 12, "height": 1.6}, "Variants": 6, "SeedBase": 300, "Scale": [0.7, 1.3]}]},
+  {"Name": "WhiteFlowers", "Density": 0.03, "MaxDist": 90, "RoadClear": 0.6, "Seed": 10, "Patches": {"Threshold": 0.5},
+   "Kinds": [{"Kit": "Flowers", "Args": {"kind": "white", "count": 6}, "Variants": 4, "SeedBase": 400, "Scale": [0.8, 1.2]}]},
+  {"Name": "YellowFlowers", "Density": 0.015, "MaxDist": 70, "RoadClear": 0.8, "Seed": 11, "Patches": {"Threshold": 0.7},
+   "Kinds": [{"Kit": "Flowers", "Args": {"kind": "yellow", "count": 3}, "Variants": 4, "SeedBase": 420, "Scale": [0.8, 1.2]}]}
+ ],
+ "Post": {
+  "Haze": {"Density": 0.0018, "Start": 15, "Max": 0.85, "Colour": "c9d3cf", "GlowColour": "efe8d2", "Glow": 0.5, "GlowPower": 6, "FarColour": "d6dcd6", "FarAt": 1500},
+  "Bloom": {"Threshold": 0.75, "Intensity": 0.6},
+  "Grade": {"Saturation": -0.1, "Contrast": -0.05, "Tint": "fffaf0"}
+ }
+}
