@@ -100,6 +100,46 @@ def paint(sky, size=None):
 		col = col * (1 - cover[..., None]) + cc * cover[..., None]
 		del cover, shade, cc, mixw
 
+	cu = sky.get("Cumulus")
+	if cu:  # piled-up cumulus: clusters of round puffs over a flat base, lit tops, blue-grey bellies
+		rng = np.random.RandomState(cu.get("Seed", 2))
+		cover = np.zeros((H, W), np.float32)
+		lit = np.zeros((H, W), np.float32)
+		sun_az = math.atan2(sd[1], sd[0])
+		for _ in range(cu["Count"]):
+			az_range = cu.get("Azimuth")
+			c_az = math.radians(rng.uniform(*az_range)) if az_range else rng.uniform(-math.pi, math.pi)
+			base = math.radians(rng.uniform(*cu["Elevation"]))
+			size = math.radians(rng.uniform(*cu["Size"]))
+			op = rng.uniform(*cu.get("Opacity", (0.85, 1.0)))
+			for _ in range(rng.randint(*cu.get("Puffs", (6, 14)))):
+				p_az = c_az + rng.uniform(-1.0, 1.0) * size * 1.4
+				pr = size * rng.uniform(0.25, 0.6)
+				p_el = base + pr * rng.uniform(0.2, 1.4)  # puffs sit on the base and pile up
+				j0 = max(0, int((0.5 - (p_el + 2.2 * pr) / math.pi) * H))
+				j1 = min(H, int((0.5 - (base - 0.4 * pr) / math.pi) * H) + 1)
+				span = 2.2 * pr / max(0.2, math.cos(p_el))
+				i0 = int((0.5 - (p_az + span) / (2 * math.pi)) * W)
+				i1 = int((0.5 - (p_az - span) / (2 * math.pi)) * W) + 1
+				if j1 <= j0 or i1 <= i0:
+					continue
+				ii = np.arange(i0, i1) % W
+				daz = (az[ii][None, :] - p_az + math.pi) % (2 * math.pi) - math.pi
+				dl = el[j0:j1][:, None] - p_el
+				dx, dy = daz * math.cos(p_el) / pr, dl / pr
+				blob = np.clip(1.15 - np.hypot(dx, dy), 0, 1) ** 0.7 * op
+				blob *= np.clip((el[j0:j1][:, None] - base) / (pr * 0.25) + 1, 0, 1)  # flat underside
+				sub = cover[j0:j1][:, ii]
+				cover[j0:j1, ii] = np.maximum(sub, blob)
+				facing = np.clip(0.55 + 0.45 * (-dy * 0.8 + dx * math.cos(p_az - sun_az) * 0.4), 0, 1)
+				ls = lit[j0:j1][:, ii]
+				lit[j0:j1, ii] = np.where(blob > sub, facing, ls)
+		cover *= smoothstep(cu.get("FadeLow", 1), cu.get("FadeHigh", 5), eld)
+		cl_lit, cl_shade = to_lin(hex_rgb(cu["Colour"])), to_lin(hex_rgb(cu["Shade"]))
+		ccol = cl_shade * (1 - lit[..., None]) + cl_lit * lit[..., None]
+		col = col * (1 - cover[..., None]) + ccol * cover[..., None]
+		del cover, lit, ccol
+
 	sun = sky.get("Sun")
 	if sun:
 		disc = smoothstep(sun["Disc"] * 1.3, sun["Disc"] * 0.75, ang)[..., None]

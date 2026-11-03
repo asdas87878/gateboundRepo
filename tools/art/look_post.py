@@ -76,6 +76,14 @@ def post(pass_dir, spec):
 			t = np.clip((dist - hz["Start"]) / max(1.0, hz.get("FarAt", 1500.0) - hz["Start"]), 0, 1)[..., None]
 			hc = hc * (1 - t) + to_lin(hex_rgb(hz["FarColour"]))[None, None] * t
 		lin = lin * (1 - f[..., None]) + hc * f[..., None]
+		hf = p.get("HeightFog")
+		if hf:  # low mist that pools in valleys: thick below Top, thinning upward over Falloff studs
+			cam = meta["Camera"]
+			wz = cam["Pos"][2] + dirs[..., 2] * dist
+			k = 1 - np.exp(-hf["Density"] * np.maximum(0.0, dist - hf.get("Start", 20.0)))
+			k *= np.exp(-np.maximum(0.0, wz - hf["Top"]) / hf["Falloff"])
+			k = np.minimum(k, hf.get("Max", 0.7)) * (~sky)
+			lin = lin * (1 - k[..., None]) + to_lin(hex_rgb(hf["Colour"]))[None, None] * k[..., None]
 	bl = p.get("Bloom")
 	if bl:
 		L = lum(lin)

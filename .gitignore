@@ -9,3 +9,6 @@ art/look/*/passes/*/depth.png
 art/look/*/passes/*/scene.blend
 art/look/*/passes/*/final.png
 art/look/*/passes/*/placements.json
+
+# reference study media (downloaded footage, frames): private, never in the repo
+research/

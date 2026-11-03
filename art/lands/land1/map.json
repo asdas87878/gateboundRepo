@@ -523,5 +523,579 @@
    }
   ],
   "GapTrees": 0.05
+ },
+ "Beauty": {
+  "_note": "BotW-study look for tools/blender/vale_beauty.py (docs/style/botw-study.md). Colours are sRGB hex albedo.",
+  "Seed": 7,
+  "Step": 2.5,
+  "WaterLevel": -1.5,
+  "WaterColour": "2f7d86",
+  "GrassHeight": 1.25,
+  "TreeCell": 9.0,
+  "Rocks": 700,
+  "ZoneOverrides": {
+   "Wayfarer's Rest": {
+    "Top": 0.82
+   },
+   "Gatehill": {
+    "Height": 75
+   }
+  },
+  "Ground": {
+   "Default": {
+    "A": "8fbf45",
+    "B": "6aa23a",
+    "Dry": "c9b85a",
+    "DryAmount": 0.3,
+    "Grass": 0.95
+   },
+   "Zones": {
+    "Sunny Meadows": {
+     "A": "94c447",
+     "B": "6fa83a",
+     "Dry": "cdbd5c",
+     "DryAmount": 0.35,
+     "Grass": 1.0
+    },
+    "Mossrock Hills": {
+     "A": "86ad4a",
+     "B": "5f8f3a",
+     "Dry": "b5a860",
+     "DryAmount": 0.25,
+     "Grass": 0.85
+    },
+    "Whisperwood": {
+     "A": "4f8a35",
+     "B": "3a6c2b",
+     "Dry": "6f7a35",
+     "DryAmount": 0.1,
+     "Grass": 0.6
+    },
+    "Bandit Ridge": {
+     "A": "a7a656",
+     "B": "8a9446",
+     "Dry": "c8b467",
+     "DryAmount": 0.5,
+     "Grass": 0.75
+    },
+    "Gatehill": {
+     "A": "8db248",
+     "B": "6a9a3c",
+     "Dry": "bdb062",
+     "DryAmount": 0.2,
+     "Grass": 0.8
+    },
+    "Wayfarer's Rest": {
+     "A": "8fbf45",
+     "B": "6fa83a",
+     "Dry": "c9b85a",
+     "DryAmount": 0.3,
+     "Grass": 0.9
+    }
+   },
+   "RockA": "9a958a",
+   "RockB": "bdb6a4",
+   "Dirt": "a8804c",
+   "DirtDark": "86643c",
+   "Bank": "cdbf96",
+   "Bed": "2e5c58",
+   "Cobble": "b9ad94",
+   "PathHalf": 3.2,
+   "PatchScale": 70,
+   "DryScale": 34,
+   "Grain": 0.07,
+   "RockFrom": 0.6,
+   "RockTo": 1.0
+  },
+  "GrassDensity": {
+   "Max": 3.0,
+   "Dist": 230,
+   "FallPower": 0.9,
+   "Flowers": 0.25
+  },
+  "Trees": {
+   "_gap": {
+    "Density": 0.12,
+    "GroveFrom": 0.45,
+    "GroveScale": 110,
+    "Mix": {
+     "oak": 3,
+     "round": 2,
+     "pine": 1,
+     "bush": 2
+    },
+    "Height": [
+     0.8,
+     1.3
+    ],
+    "Rocks": 0.15
+   },
+   "Sunny Meadows": {
+    "Density": 0.1,
+    "GroveFrom": 0.55,
+    "GroveScale": 120,
+    "Mix": {
+     "oak": 4,
+     "round": 3,
+     "poplar": 1,
+     "autumn": 0.4,
+     "bush": 3
+    },
+    "Height": [
+     0.8,
+     1.3
+    ],
+    "Rocks": 0.12
+   },
+   "Mossrock Hills": {
+    "Density": 0.18,
+    "GroveFrom": 0.4,
+    "GroveScale": 90,
+    "Mix": {
+     "pine": 3,
+     "oak": 2,
+     "round": 1,
+     "bush": 2
+    },
+    "Height": [
+     0.8,
+     1.25
+    ],
+    "Rocks": 0.45
+   },
+   "Whisperwood": {
+    "Density": 0.85,
+    "GroveFrom": 0.0,
+    "GroveScale": 80,
+    "Mix": {
+     "pine": 3,
+     "oak": 4,
+     "round": 1,
+     "poplar": 1,
+     "bush": 1.5
+    },
+    "Height": [
+     0.9,
+     1.5
+    ],
+    "Rocks": 0.12
+   },
+   "Bandit Ridge": {
+    "Density": 0.2,
+    "GroveFrom": 0.35,
+    "GroveScale": 90,
+    "Mix": {
+     "pine": 5,
+     "oak": 1,
+     "bush": 2
+    },
+    "Height": [
+     0.8,
+     1.2
+    ],
+    "Rocks": 0.3
+   },
+   "Gatehill": {
+    "Density": 0.08,
+    "GroveFrom": 0.5,
+    "GroveScale": 80,
+    "Mix": {
+     "pine": 3,
+     "oak": 1,
+     "bush": 2
+    },
+    "Height": [
+     0.8,
+     1.2
+    ],
+    "Rocks": 0.35
+   },
+   "Wayfarer's Rest": {
+    "Density": 0.12,
+    "GroveFrom": 0.4,
+    "GroveScale": 80,
+    "Mix": {
+     "pine": 3,
+     "oak": 1,
+     "bush": 1
+    },
+    "Height": [
+     0.9,
+     1.3
+    ],
+    "Rocks": 0.2
+   }
+  },
+  "Town": {
+   "Gates": [
+    90,
+    0,
+    270
+   ],
+   "Wheel": [
+    608,
+    632
+   ],
+   "WheelYaw": 0.75,
+   "Windmill": [
+    560,
+    860
+   ]
+  },
+  "Gate": {
+   "Height": 64,
+   "BeamRadius": 3.2
+  },
+  "Far": {
+   "Ranges": [
+    {
+     "At": [
+      700,
+      -1500
+     ],
+     "Width": 5200,
+     "Depth": 900,
+     "Height": 700,
+     "Yaw": 0,
+     "Peaks": 6,
+     "Snow": 0.6,
+     "Z": -40
+    },
+    {
+     "At": [
+      2900,
+      600
+     ],
+     "Width": 5200,
+     "Depth": 900,
+     "Height": 820,
+     "Yaw": 90,
+     "Peaks": 6,
+     "Snow": 0.58,
+     "Z": -40
+    },
+    {
+     "At": [
+      700,
+      -3300
+     ],
+     "Width": 9000,
+     "Depth": 1300,
+     "Height": 1500,
+     "Yaw": 0,
+     "Peaks": 7,
+     "Snow": 0.45,
+     "Z": -60
+    },
+    {
+     "At": [
+      -1400,
+      600
+     ],
+     "Width": 5200,
+     "Depth": 900,
+     "Height": 650,
+     "Yaw": 90,
+     "Peaks": 5,
+     "Snow": 0.62,
+     "Z": -40
+    },
+    {
+     "At": [
+      3300,
+      -1900
+     ],
+     "Width": 4500,
+     "Depth": 1000,
+     "Height": 1200,
+     "Yaw": 45,
+     "Peaks": 5,
+     "Snow": 0.5,
+     "Z": -60
+    },
+    {
+     "At": [
+      700,
+      2800
+     ],
+     "Width": 5200,
+     "Depth": 900,
+     "Height": 700,
+     "Yaw": 0,
+     "Peaks": 5,
+     "Snow": 0.62,
+     "Z": -40
+    }
+   ],
+   "Island": {
+    "At": [
+     1750,
+     -520
+    ],
+    "Z": 680,
+    "Radius": 150,
+    "Yaw": 20
+   }
+  },
+  "Sky": {
+   "Size": [
+    4096,
+    2048
+   ],
+   "Gradient": [
+    [
+     -2,
+     "c9d8de"
+    ],
+    [
+     2,
+     "b9d2de"
+    ],
+    [
+     8,
+     "98c2da"
+    ],
+    [
+     20,
+     "6ea9d1"
+    ],
+    [
+     40,
+     "4b90c7"
+    ],
+    [
+     70,
+     "3c80be"
+    ],
+    [
+     90,
+     "3677b7"
+    ]
+   ],
+   "SunFrom": [
+    125,
+    40
+   ],
+   "SunSide": {
+    "Colour": "f2f0de",
+    "Radius": 40,
+    "Strength": 0.3,
+    "Power": 1.6
+   },
+   "Sun": {
+    "Disc": 1.2,
+    "DiscColour": "fffef8",
+    "DiscStrength": 2.5,
+    "Glow": [
+     {
+      "Colour": "fff6e0",
+      "Radius": 3,
+      "Strength": 1.0,
+      "Power": 1.5
+     },
+     {
+      "Colour": "f6eedc",
+      "Radius": 12,
+      "Strength": 0.22
+     },
+     {
+      "Colour": "eef0e8",
+      "Radius": 40,
+      "Strength": 0.06
+     }
+    ]
+   },
+   "Cumulus": {
+    "Seed": 3,
+    "Count": 38,
+    "Elevation": [
+     3,
+     16
+    ],
+    "Size": [
+     2.5,
+     8
+    ],
+    "Puffs": [
+     7,
+     15
+    ],
+    "Opacity": [
+     0.85,
+     1.0
+    ],
+    "Colour": "ffffff",
+    "Shade": "b6c6d8",
+    "FadeLow": 0.5,
+    "FadeHigh": 3
+   },
+   "Clouds": {
+    "Seed": 5,
+    "Count": 40,
+    "Elevation": [
+     16,
+     55
+    ],
+    "Width": [
+     10,
+     30
+    ],
+    "Height": [
+     0.6,
+     1.6
+    ],
+    "Opacity": [
+     0.15,
+     0.45
+    ],
+    "Colour": "f8fbff",
+    "Belly": "dbe6ef",
+    "BellyAmount": 0.3,
+    "FadeLow": 6,
+    "FadeHigh": 14
+   },
+   "Below": "9fb7a8"
+  },
+  "Light": {
+   "Sun": {
+    "Azimuth": 125,
+    "Elevation": 40,
+    "Colour": "fff4e2",
+    "Strength": 3.2,
+    "Angle": 3
+   },
+   "Ambient": {
+    "Strength": 1.4,
+    "Tint": "fff2e6"
+   }
+  },
+  "Render": {
+   "Res": [
+    1600,
+    900
+   ],
+   "Samples": 48,
+   "Exposure": 0.0,
+   "DepthRange": 12000.0,
+   "Eevee": {
+    "use_raytracing": true
+   }
+  },
+  "Post": {
+   "Haze": {
+    "Density": 0.00072,
+    "Power": 1.25,
+    "Start": 60,
+    "Max": 0.78,
+    "Colour": "a9c4d8",
+    "GlowColour": "fff2d8",
+    "Glow": 0.3,
+    "GlowPower": 5,
+    "FarColour": "bcd2e2",
+    "FarAt": 4000
+   },
+   "HeightFog": {
+    "Colour": "e1eaee",
+    "Density": 0.004,
+    "Top": 6,
+    "Falloff": 12,
+    "Max": 0.3,
+    "Start": 60
+   },
+   "Bloom": {
+    "Threshold": 0.85,
+    "Intensity": 0.55
+   },
+   "Grade": {
+    "Saturation": 0.12,
+    "Contrast": 0.06
+   }
+  },
+  "Views": [
+   {
+    "Name": "overlook",
+    "From": [
+     250,
+     1045
+    ],
+    "Up": 7,
+    "To": [
+     700,
+     640
+    ],
+    "ToUp": 25,
+    "FovV": 55
+   },
+   {
+    "Name": "meadow_town",
+    "From": [
+     640,
+     980
+    ],
+    "Up": 6,
+    "To": [
+     700,
+     640
+    ],
+    "ToUp": 22,
+    "FovV": 55
+   },
+   {
+    "Name": "plaza",
+    "From": [
+     696,
+     650
+    ],
+    "Up": 7,
+    "To": [
+     722,
+     590
+    ],
+    "ToUp": 34,
+    "FovV": 62
+   },
+   {
+    "Name": "forest",
+    "From": [
+     640,
+     330
+    ],
+    "Up": 6,
+    "To": [
+     560,
+     140
+    ],
+    "ToUp": 8,
+    "FovV": 60
+   },
+   {
+    "Name": "gatehill",
+    "From": [
+     1085,
+     345
+    ],
+    "Up": 7,
+    "To": [
+     1150,
+     230
+    ],
+    "ToUp": 40,
+    "FovV": 58
+   },
+   {
+    "Name": "ruins",
+    "From": [
+     1060,
+     640
+    ],
+    "Up": 7,
+    "To": [
+     990,
+     560
+    ],
+    "ToUp": 10,
+    "FovV": 58
+   }
+  ]
  }
 }

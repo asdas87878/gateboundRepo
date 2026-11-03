@@ -383,4 +383,5 @@ def main():
 	bpy.ops.wm.save_as_mainfile(filepath=os.path.join(OUT, "blockout.blend"))
 
 
-main()
+if __name__ == "__main__":
+	main()

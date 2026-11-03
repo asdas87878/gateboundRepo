@@ -130,6 +130,18 @@ class Piece:
 		self.paint(faces, fn)
 		return faces
 
+	def quad_strip(self, rows, fn, close=False):
+		"""faces between consecutive rings of points (lists of Vectors of equal length)"""
+		vs = [[self.bm.verts.new(q) for q in ring_] for ring_ in rows]
+		n = len(rows[0])
+		faces = []
+		for a, b in zip(vs, vs[1:]):
+			for i in range(n if close else n - 1):
+				j = (i + 1) % n
+				faces.append(self.bm.faces.new((a[i], a[j], b[j], b[i])))
+		self.paint(faces, fn)
+		return faces
+
 	def block(self, centre, along, out, size, fn, chamfer=0.0):
 		"""a box: size = (length along `along`, depth along `out`, height); the face toward +out is inset by `chamfer` on
 		all four edges, so from the front each block reads as a bevelled stone"""
