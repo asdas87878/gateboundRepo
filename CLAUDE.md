@@ -5,6 +5,11 @@ flat-shaded fantasy world (pine forests, stone ruins, red banners, blue haze), f
 Claude builds the models and writes most of the code. The user is strong on game design and Studio, and their Luau is basic.
 Plan for co-op from the start: server-authoritative, per-player state.
 
+- **This folder is also the user's Obsidian vault** (2026-11-08). Start at [Home](Home.md). Read [Working together](docs/Working%20together.md)
+  first in every session: the user's preferences and lessons. Design is in `docs/design/` (one note per system: decided, ideas not
+  agreed, open), settled things in [Decisions](docs/Decisions.md), assets in [Assets](docs/Assets.md). The user drops raw ideas in
+  [Inbox](docs/Inbox.md); "sort the inbox" means file them and clear it. Use plain markdown links (relative paths), not [[wikilinks]].
+  Start game sessions in this folder.
 - Toolchain as in the FPS project (`C:\Users\blast\New folder`): `rokit.toml`, `rojo serve`, `stylua src`, `selene src`.
 - `src/server` -> ServerScriptService.Server (`Main` loads `Services/`), `src/client` -> StarterPlayerScripts.Client
   (`Main` loads `Controllers/`), `src/shared` -> ReplicatedStorage.Shared. Modules have optional `Init` (no yield) / `Start`.

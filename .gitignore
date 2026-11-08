@@ -31,3 +31,8 @@ art/style/grass/bench1/*.png
 
 # Python build files
 __pycache__/
+
+# Obsidian (the repo is the vault): the settings are kept, each person's window layout and the trash are not
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/

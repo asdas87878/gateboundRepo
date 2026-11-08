@@ -1,0 +1,16 @@
+{
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative",
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "docs/attachments",
+  "userIgnoreFilters": [
+    "src/",
+    "tools/",
+    "research/",
+    "Packages/",
+    "art/look/",
+    "art/kit/looks/"
+  ],
+  "showUnsupportedFiles": false,
+  "promptDelete": true
+}
