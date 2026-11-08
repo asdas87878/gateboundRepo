@@ -217,3 +217,95 @@ YouTube videos about.
 - **Launch weapons**: Sword & Shield, Greatsword, Dual Blades, Spear.
 - **Story**: a light thread through the Guardians, told mostly through NPC dialogue. No long cutscenes.
 - **Money**: cosmetics and convenience only, never power.
+
+## 14. Direction: an RPG's goals with a simulator's rhythm (agreed with the user 2026-11-06)
+
+This replaces section 2's world structure and section 8's villages where they differ. Nothing here has been playtested. Earlier the same day this section described a village with a Gate Court inside the Lands; the user's take since then is what's below.
+
+**The loop:**
+1. **Fight.** Kills pay at once, loot flies to you, your pack fills.
+2. **Champion.** Each farming area has a kill bar. A full bar spawns a mini-boss and a chest.
+3. **Haul home.** Full pack, waystone home, pour it into your storehouse. This is the simulator's "sell" moment.
+4. **Spend.** Build, upgrade, forge, give rescued NPCs a house, Terraria-style.
+5. **Feel it.** Your weapon is visibly bigger; old enemies die in one hit.
+6. **Boss.** Craft its summoning item from what you farmed. It drops signature gear and the key to the next Land.
+
+**The world:** the Haven (see `docs/lands/haven.md`) is a shared floating island with a plot per player around it, like a tycoon game, so you see other players' bases. **30 Lands in six themes of five** (`docs/lands/lands-list.md`, the user's call): a theme shares a look, and each Land changes something and has its own boss, for steadier progression. They float in the sky, stacked above and below each other: the sky is the map, locked ones are far and dim, and beating a boss lights the next and draws it closer. You leave through your theme's arch and come home by waystone. Inside a Land, travel is part of the fun: launchers, ziplines, gliding, one signature way of moving per Land.
+
+**Building a Land:** smaller Lands, a few enemy types and a boss, curated part by part. Each theme's first Land has 5-6 composed sets and the rest 2-3 plus a boss arena (Proposed: the list has the sums), each designed from its entry view. Necks (a gorge, a hollow tree, a tunnel) block sight and then reveal the next set; light and music change at the necks. Edges fall away with tapering rock, waterfalls and other islands in view. One locked camera per set is matched to concept art. Top-down generated layouts only made good views by luck, so layout now starts from the player's camera. The fence, props, bridge, cottage and trees carry over; only the layout changes.
+
+**Hooks, best first (none agreed one by one yet):**
+- **The forge reveal:** a timing minigame, recipes you discover.
+- **Home keeps working:** garden plots and mutated harvests while you're out.
+- **The Climb:** the endless tower, pick-one boons between floors, a weekly leaderboard.
+- **Pets from eggs:** simple pets only.
+- **Rare variants:** a 1-in-5,000 golden enemy, announced to the server.
+- **Decor as loot:** props drop as decorations for your base.
+- **Harder tiers of a Land.**
+- **Bigger enemy packs:** after a performance test.
+
+**Keep:** quests, weapon skills, proper bosses, dungeons, gear, hidden skills, rescued NPCs, a collection log, drop odds shown. **Money:** Robux buys cosmetics and convenience only.
+
+**Cut (the user's call):** monsters joining or fighting beside you, Land remixes, event gates everyone rushes into. It must all be playable solo. Hordes and Ascension resets were cut on my recommendation, so they can come back.
+
+**Release (Proposed):** launch with the first two themes, then a theme per update.
+
+**Order:** the user makes concept art while a rough fun test gets built in a plain room (one enemy, pack, kill bar, haul home, one building, forge). Then the Haven and one Land set are built to match the art. Judge those, then expand.
+
+**Open:** set plots vs free building; memory at a full server of plots.
+
+## 15. The user's principles (2026-11-08, from a voice brief; overrides section 14 where they differ)
+
+**The foundation is the simulator loop.** Kill enemies in a Land, gain resources, take them home, turn them into better tools, farm
+stronger things faster. The replayability is always hanging a sweeter fruit just out of reach, so the player needs the next tool to
+get it.
+- **The twist on a normal simulator:** better tools need **specific ingredients in combinations**, not just a bigger number.
+- **The crafting UI** is a little hard to work out, but it can be worked out.
+
+**Four ways to get stronger:**
+- **Weapons:** crafted with ingredients.
+- **Abilities:** levelled with XP; flashy VFX moves such as a fireball.
+- **Stats:** levelled with XP, slower, such as movement speed.
+- **Charms:** equipped like pets, each a specific bonus (for example +20 armour and lifesteal on hits). About 3 slots to start, more
+  later, and the coolest charms come from hard content.
+
+**Drops:** XP (levels skills), gold, gems and specific ingredients (for crafting). What gold and gems buy is undecided.
+
+**The base:** craft, upgrade, personalise, and chill.
+- **The base is upgradable, and some tools need a higher-level base.** A forge station (craft, smelt, exchange, create) has tiers,
+  and a tier can need a quest ingredient, for example a mithril anvil.
+- **A town hall** whose role is undecided. It must not be only a limiter: it needs real rewards of its own. Forge or town hall
+  first is an open choice.
+- **NPC vendor hubs, like Terraria:** NPCs rescued in the Lands come to live at the base.
+- **Extra scenery.** What else a base can have, and what to take from tycoons, is open.
+
+**No main quest line.** Where to go should be self-explanatory: no hand-holding. There are challenges instead (kill 20 of an enemy,
+beat the second boss), and they bring NPCs home.
+
+**The Lands:** 30 or more.
+- **Shape:** farming stations of basic enemies, then a layer of tougher enemies on the way to a boss. Size and details are open.
+  The farming must not get over-complicated.
+- **You can always walk into a Land too strong for you and be killed.** That's from the RPG the user loved as a kid: defeat gives
+  you something to strive for. The challenge must suit a beginner's skill.
+
+**The feel:** bright, full of VFX, clear progression, fast travel, satisfying rewards. Gold visibly flies into your inventory with
+good sounds, and depositing gives instant, satisfying feedback.
+
+**Travel:** easy to get home and to the Lands, from the UI and from a physical landmark, but not so easy that it breaks the balance.
+Worry: going all the way home to cash in may take too long and put players off.
+
+**The start:** no long cutscene. A friend who's told to hop on must be playing at once. How the game works must be clear but still
+intriguing and a little mysterious.
+
+**Rebirth eventually:** after the 30 Lands, like Borderlands' True Vault Hunter Mode or Mayhem, with big long-term rewards for
+rebirthers.
+
+**Showing what you're missing:** the player starts with a basic sword and basic enemies, and should clearly see the cool weapons
+they don't have yet (how is open).
+
+**Section 14 questions this raises:**
+- Charms vs section 14's pets from eggs.
+- Open-but-deadly Lands vs section 14's locked, dim ones.
+- What gold and gems are for.
+
+Claude's suggestions for the gaps were made in the chat on 2026-11-08; the ones the user agrees to go in here.

@@ -1,0 +1,502 @@
+{
+ "ClusterTallA": {
+  "Group": "Clusters",
+  "Size": [
+   25.3,
+   16.7,
+   18.3
+  ],
+  "Tris": 1609,
+  "Sheet": "Clusters01"
+ },
+ "ClusterTallB": {
+  "Group": "Clusters",
+  "Size": [
+   21.4,
+   13.5,
+   24.6
+  ],
+  "Tris": 1399,
+  "Sheet": "Clusters02"
+ },
+ "ClusterTallC": {
+  "Group": "Clusters",
+  "Size": [
+   25.3,
+   15.1,
+   20.1
+  ],
+  "Tris": 1463,
+  "Sheet": "Clusters04"
+ },
+ "ClusterLowA": {
+  "Group": "Clusters",
+  "Size": [
+   22.7,
+   12.9,
+   8.5
+  ],
+  "Tris": 1211,
+  "Sheet": "Clusters04"
+ },
+ "ClusterLowB": {
+  "Group": "Clusters",
+  "Size": [
+   28.7,
+   13.2,
+   7.0
+  ],
+  "Tris": 1230,
+  "Sheet": "Clusters05"
+ },
+ "ClusterStackA": {
+  "Group": "Clusters",
+  "Size": [
+   19.0,
+   10.8,
+   11.2
+  ],
+  "Tris": 1650,
+  "Sheet": "Clusters02"
+ },
+ "ClusterTwinA": {
+  "Group": "Clusters",
+  "Size": [
+   25.3,
+   14.5,
+   19.4
+  ],
+  "Tris": 1316,
+  "Sheet": "Clusters06"
+ },
+ "ClusterStepA": {
+  "Group": "Clusters",
+  "Size": [
+   29.9,
+   14.3,
+   18.3
+  ],
+  "Tris": 1314,
+  "Sheet": "Clusters05"
+ },
+ "ClusterWideA": {
+  "Group": "Clusters",
+  "Size": [
+   37.8,
+   13.1,
+   12.8
+  ],
+  "Tris": 1594,
+  "Sheet": "Clusters03"
+ },
+ "ClusterSmallA": {
+  "Group": "Clusters",
+  "Size": [
+   10.3,
+   5.1,
+   4.6
+  ],
+  "Tris": 579,
+  "Sheet": "Clusters01"
+ },
+ "ClusterSmallB": {
+  "Group": "Clusters",
+  "Size": [
+   9.7,
+   6.2,
+   6.6
+  ],
+  "Tris": 902,
+  "Sheet": "Clusters01"
+ },
+ "CubeSmallA": {
+  "Group": "Cubes",
+  "Size": [
+   4.9,
+   4.9,
+   4.6
+  ],
+  "Tris": 218,
+  "Sheet": "Cubes01"
+ },
+ "CubeA": {
+  "Group": "Cubes",
+  "Size": [
+   7.8,
+   7.8,
+   7.2
+  ],
+  "Tris": 193,
+  "Sheet": "Cubes01"
+ },
+ "CubeLargeA": {
+  "Group": "Cubes",
+  "Size": [
+   11.9,
+   10.9,
+   10.2
+  ],
+  "Tris": 264,
+  "Sheet": "Cubes04"
+ },
+ "CubeHugeA": {
+  "Group": "Cubes",
+  "Size": [
+   17.8,
+   14.6,
+   15.5
+  ],
+  "Tris": 307,
+  "Sheet": "Cubes01"
+ },
+ "TallB": {
+  "Group": "Cubes",
+  "Size": [
+   7.9,
+   6.9,
+   16.3
+  ],
+  "Tris": 201,
+  "Sheet": "Cubes03"
+ },
+ "TallD": {
+  "Group": "Cubes",
+  "Size": [
+   11.9,
+   9.9,
+   26.5
+  ],
+  "Tris": 326,
+  "Sheet": "Cubes03"
+ },
+ "WideB": {
+  "Group": "Cubes",
+  "Size": [
+   17.8,
+   8.9,
+   7.2
+  ],
+  "Tris": 237,
+  "Sheet": "Cubes05"
+ },
+ "WedgeB": {
+  "Group": "Cubes",
+  "Size": [
+   13.6,
+   9.8,
+   10.7
+  ],
+  "Tris": 225,
+  "Sheet": "Cubes02"
+ },
+ "NotchB": {
+  "Group": "Cubes",
+  "Size": [
+   15.4,
+   13.2,
+   13.4
+  ],
+  "Tris": 712,
+  "Sheet": "Cubes04"
+ },
+ "SplitB": {
+  "Group": "Cubes",
+  "Size": [
+   15.9,
+   10.3,
+   14.3
+  ],
+  "Tris": 669,
+  "Sheet": "Cubes02"
+ },
+ "Mod8x8x8": {
+  "Group": "Modular",
+  "Size": [
+   8.0,
+   8.0,
+   8.0
+  ],
+  "Tris": 141,
+  "Sheet": "Modular01"
+ },
+ "Mod16x16x8": {
+  "Group": "Modular",
+  "Size": [
+   16.0,
+   16.0,
+   8.0
+  ],
+  "Tris": 141,
+  "Sheet": "Modular03"
+ },
+ "Mod16x16x16": {
+  "Group": "Modular",
+  "Size": [
+   16.0,
+   16.0,
+   16.0
+  ],
+  "Tris": 141,
+  "Sheet": "Modular04"
+ },
+ "Mod32x16x8": {
+  "Group": "Modular",
+  "Size": [
+   32.0,
+   16.0,
+   8.0
+  ],
+  "Tris": 146,
+  "Sheet": "Modular03"
+ },
+ "ModCorner16": {
+  "Group": "Modular",
+  "Size": [
+   16.0,
+   16.1,
+   16.0
+  ],
+  "Tris": 282,
+  "Sheet": "Modular01"
+ },
+ "ModStep16": {
+  "Group": "Modular",
+  "Size": [
+   16.1,
+   16.0,
+   16.0
+  ],
+  "Tris": 278,
+  "Sheet": "Modular02"
+ },
+ "CliffSlabA": {
+  "Group": "Cliffs",
+  "Size": [
+   60.7,
+   26.8,
+   39.8
+  ],
+  "Tris": 919,
+  "Sheet": "Cliffs09"
+ },
+ "CliffColumnsA": {
+  "Group": "Cliffs",
+  "Size": [
+   60.6,
+   23.7,
+   48.4
+  ],
+  "Tris": 2482,
+  "Sheet": "Cliffs03"
+ },
+ "CliffStrataA": {
+  "Group": "Cliffs",
+  "Size": [
+   68.2,
+   31.8,
+   36.0
+  ],
+  "Tris": 2383,
+  "Sheet": "Cliffs02"
+ },
+ "CliffTerrace": {
+  "Group": "Cliffs",
+  "Size": [
+   63.2,
+   44.7,
+   37.0
+  ],
+  "Tris": 775,
+  "Sheet": "Cliffs06"
+ },
+ "CliffButtress": {
+  "Group": "Cliffs",
+  "Size": [
+   58.9,
+   37.6,
+   63.0
+  ],
+  "Tris": 1473,
+  "Sheet": "Cliffs05"
+ },
+ "CliffCornerOut": {
+  "Group": "Cliffs",
+  "Size": [
+   47.6,
+   42.3,
+   46.8
+  ],
+  "Tris": 989,
+  "Sheet": "Cliffs07"
+ },
+ "CliffOverhang": {
+  "Group": "Cliffs",
+  "Size": [
+   57.2,
+   32.7,
+   44.7
+  ],
+  "Tris": 722,
+  "Sheet": "Cliffs08"
+ },
+ "CliffCrag": {
+  "Group": "Cliffs",
+  "Size": [
+   65.3,
+   30.1,
+   51.9
+  ],
+  "Tris": 1268,
+  "Sheet": "Cliffs04"
+ },
+ "CliffArch": {
+  "Group": "Cliffs",
+  "Size": [
+   57.2,
+   26.3,
+   38.3
+  ],
+  "Tris": 636,
+  "Sheet": "Cliffs10"
+ },
+ "CliffWallLong": {
+  "Group": "Cliffs",
+  "Size": [
+   113.1,
+   29.8,
+   42.1
+  ],
+  "Tris": 3357,
+  "Sheet": "Cliffs01"
+ },
+ "CliffFoot": {
+  "Group": "Cliffs",
+  "Size": [
+   67.4,
+   16.1,
+   10.2
+  ],
+  "Tris": 2500,
+  "Sheet": "Cliffs11"
+ },
+ "RoundC": {
+  "Group": "Boulders",
+  "Size": [
+   7.8,
+   6.8,
+   5.6
+  ],
+  "Tris": 374,
+  "Sheet": "Boulders01"
+ },
+ "RoundE": {
+  "Group": "Boulders",
+  "Size": [
+   14.5,
+   11.5,
+   9.1
+  ],
+  "Tris": 402,
+  "Sheet": "Boulders01"
+ },
+ "ShelfB": {
+  "Group": "Slabs",
+  "Size": [
+   11.0,
+   6.4,
+   2.6
+  ],
+  "Tris": 278,
+  "Sheet": "Slabs01"
+ },
+ "ShelfStack": {
+  "Group": "Slabs",
+  "Size": [
+   12.8,
+   8.8,
+   6.1
+  ],
+  "Tris": 732,
+  "Sheet": "Slabs01"
+ },
+ "SpireB": {
+  "Group": "Spires",
+  "Size": [
+   9.5,
+   7.9,
+   24.2
+  ],
+  "Tris": 330,
+  "Sheet": "Spires01"
+ },
+ "ScatterB": {
+  "Group": "Chips",
+  "Size": [
+   12.9,
+   10.7,
+   1.3
+  ],
+  "Tris": 2153,
+  "Sheet": "Chips01"
+ },
+ "WallWide": {
+  "Group": "Classic",
+  "Size": [
+   33.3,
+   14.2,
+   13.9
+  ],
+  "Tris": 1060,
+  "Sheet": "Classic01"
+ },
+ "WallStep": {
+  "Group": "Classic",
+  "Size": [
+   29.1,
+   16.4,
+   17.1
+  ],
+  "Tris": 907,
+  "Sheet": "Classic02"
+ },
+ "FootWide": {
+  "Group": "Classic",
+  "Size": [
+   13.8,
+   7.2,
+   2.8
+  ],
+  "Tris": 490,
+  "Sheet": "Classic01"
+ },
+ "SlabLong": {
+  "Group": "Classic",
+  "Size": [
+   16.4,
+   6.3,
+   1.9
+  ],
+  "Tris": 350,
+  "Sheet": "Classic01"
+ },
+ "BoulderWide": {
+  "Group": "Classic",
+  "Size": [
+   11.2,
+   8.1,
+   4.1
+  ],
+  "Tris": 490,
+  "Sheet": "Classic01"
+ },
+ "Corner": {
+  "Group": "Classic",
+  "Size": [
+   18.4,
+   21.6,
+   17.5
+  ],
+  "Tris": 731,
+  "Sheet": "Extra01"
+ }
+}

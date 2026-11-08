@@ -1,0 +1,110 @@
+{
+ "NatPebble": {
+  "Size": [
+   2.6,
+   2.2,
+   1.5
+  ],
+  "Tris": 219,
+  "Atlas": "C"
+ },
+ "NatStone": {
+  "Size": [
+   4.2,
+   3.4,
+   3.0
+  ],
+  "Tris": 304,
+  "Atlas": "C"
+ },
+ "NatRound": {
+  "Size": [
+   7.0,
+   6.0,
+   4.6
+  ],
+  "Tris": 338,
+  "Atlas": "C"
+ },
+ "NatChunk": {
+  "Size": [
+   9.0,
+   7.5,
+   6.5
+  ],
+  "Tris": 482,
+  "Atlas": "C"
+ },
+ "NatFlat": {
+  "Size": [
+   12.0,
+   8.0,
+   3.2
+  ],
+  "Tris": 204,
+  "Atlas": "C"
+ },
+ "NatLong": {
+  "Size": [
+   15.0,
+   7.0,
+   5.0
+  ],
+  "Tris": 376,
+  "Atlas": "C"
+ },
+ "NatBlock": {
+  "Size": [
+   12.0,
+   9.5,
+   9.5
+  ],
+  "Tris": 536,
+  "Atlas": "B"
+ },
+ "NatTall": {
+  "Size": [
+   8.5,
+   7.5,
+   13.0
+  ],
+  "Tris": 529,
+  "Atlas": "B"
+ },
+ "NatWall": {
+  "Size": [
+   20.0,
+   11.0,
+   13.0
+  ],
+  "Tris": 641,
+  "Atlas": "B"
+ },
+ "NatWide": {
+  "Size": [
+   30.0,
+   13.0,
+   16.0
+  ],
+  "Tris": 608,
+  "Atlas": "A"
+ },
+ "NatCrag": {
+  "Size": [
+   16.0,
+   12.0,
+   22.0
+  ],
+  "Tris": 597,
+  "Atlas": "B"
+ },
+ "NatLong2": {
+  "Size": [
+   40.0,
+   14.0,
+   17.0
+  ],
+  "Tris": 688,
+  "Atlas": "A"
+ }
+}

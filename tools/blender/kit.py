@@ -340,14 +340,15 @@ def flowers(name, seed, kind="white", count=6, coll=None):
 	return p.finish(name, coll)
 
 
-def bush(name, seed, size=3.0, coll=None):
+def bush(name, seed, size=3.0, coll=None, dark="pine_dark", light="leaf"):
+	"""a few lumpy balls, dark below to light on top (dark/light: palette names or hex)"""
 	p = Piece(seed)
 	r = p.rng
 	for _ in range(r.randint(3, 5)):
 		c = Vector((r.uniform(-1, 1) * size * 0.35, r.uniform(-1, 1) * size * 0.35, size * r.uniform(0.25, 0.45)))
 		rad = size * r.uniform(0.3, 0.45)
 		pts = [c + Vector((r.gauss(0, 1), r.gauss(0, 1), r.gauss(0, 1) * 0.8)).normalized() * rad * r.uniform(0.85, 1.05) for _ in range(14)]
-		p.hull(pts, lambda f: mix(jitter("pine_dark", r, v=0.03), jitter("leaf", r, v=0.03), 0.3 + 0.7 * max(0, f.normal.z)), dissolve=4)
+		p.hull(pts, lambda f: mix(jitter(dark, r, v=0.03), jitter(light, r, v=0.03), 0.3 + 0.7 * max(0, f.normal.z)), dissolve=4)
 	return p.finish(name, coll, smooth=True, sharp=50)
 
 

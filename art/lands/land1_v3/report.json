@@ -1,0 +1,567 @@
+{
+ "BlocksDroppedOffRoads": 41,
+ "Map": [
+  6260,
+  5370
+ ],
+ "Columns": [
+  1543,
+  1766
+ ],
+ "Heights": [
+  -11.0,
+  753.2
+ ],
+ "Objects": 9736,
+ "Trees": 7027,
+ "Rocks": 668,
+ "Camps": {
+  "Wayfarer's Crag": 2,
+  "Sunny Meadows": 10,
+  "Mossrock Hills": 10,
+  "Whisperwood": 12,
+  "Bandit Ridge": 12,
+  "Gatehill": 6
+ },
+ "CampsTotal": 52,
+ "Bridges": 6,
+ "Roads": [
+  {
+   "Name": "Wake road",
+   "Length": 4260,
+   "Seconds": 266,
+   "MaxGrade": 0.3,
+   "Climb": 186
+  },
+  {
+   "Name": "Golem road",
+   "Length": 4520,
+   "Seconds": 282,
+   "MaxGrade": 0.3,
+   "Climb": 113
+  },
+  {
+   "Name": "Colossus lane",
+   "Length": 2724,
+   "Seconds": 170,
+   "MaxGrade": 0.3,
+   "Climb": 151
+  },
+  {
+   "Name": "Falls stair",
+   "Length": 2384,
+   "Seconds": 149,
+   "MaxGrade": 0.3,
+   "Climb": 104
+  },
+  {
+   "Name": "Elder road",
+   "Length": 828,
+   "Seconds": 52,
+   "MaxGrade": 0.27,
+   "Climb": 32
+  },
+  {
+   "Name": "Wood road east",
+   "Length": 2300,
+   "Seconds": 144,
+   "MaxGrade": 0.3,
+   "Climb": 98
+  },
+  {
+   "Name": "Hub east road",
+   "Length": 2220,
+   "Seconds": 139,
+   "MaxGrade": 0.3,
+   "Climb": 36
+  },
+  {
+   "Name": "Redfang climb",
+   "Length": 1976,
+   "Seconds": 124,
+   "MaxGrade": 0.3,
+   "Climb": 219
+  },
+  {
+   "Name": "Warden's Stair",
+   "Length": 3504,
+   "Seconds": 219,
+   "MaxGrade": 0.3,
+   "Climb": 302
+  },
+  {
+   "Name": "East lane",
+   "Length": 4072,
+   "Seconds": 254,
+   "MaxGrade": 0.3,
+   "Climb": 121
+  }
+ ],
+ "GateSeenFrom": {
+  "Gate-stone circle (wake)": true,
+  "Cliff lookout": true,
+  "Millford": true,
+  "Crossroads Inn": true,
+  "Windmill Hill": true,
+  "Shepherd's Tor": true,
+  "The Ploughlands": true,
+  "Lake Landing": true,
+  "Barrow Field": false,
+  "Mossgate towers": false,
+  "Colossus chest ruins": false,
+  "Colossus's crown": true,
+  "Old Quarry": true,
+  "Golem Foundry": true,
+  "Row of Hands": true,
+  "Lost scout's camp": true,
+  "The Elder / Rootdeep Hollow": true,
+  "Wisp Mere": true,
+  "Mushroom ring": true,
+  "Woodcutters' wreck": true,
+  "Twin Fang shrine": false,
+  "Canyon gate": false,
+  "Rope bridge": false,
+  "Redfang's Hold": true,
+  "Crest watchtowers": true,
+  "East mesa hold": true,
+  "South mesa": true,
+  "Dry mine": false,
+  "Stair camp": false,
+  "Fallen arch": false,
+  "Bell tower": false,
+  "Brightwater": false,
+  "Ferry post": true,
+  "Hillstair ruin": false,
+  "Reed huts": true,
+  "Hunter's stand": true,
+  "Pilgrim shelter": true,
+  "Pilgrim ruin": false
+ },
+ "QuietestStretchSeconds": {
+  "Wake road": 58,
+  "Golem road": 68,
+  "Colossus lane": 78,
+  "Falls stair": 58,
+  "Elder road": 26,
+  "Wood road east": 68,
+  "Hub east road": 56,
+  "Redfang climb": 44,
+  "Warden's Stair": 48,
+  "East lane": 92
+ },
+ "Story": [
+  {
+   "From": "Wake",
+   "To": "Brightwater",
+   "Seconds": 259
+  },
+  {
+   "From": "Brightwater",
+   "To": "Mossgate",
+   "Seconds": 125
+  },
+  {
+   "From": "Mossgate",
+   "To": "Rootdeep",
+   "Seconds": 227
+  },
+  {
+   "From": "Rootdeep",
+   "To": "Redfang's Hold",
+   "Seconds": 278
+  },
+  {
+   "From": "Redfang's Hold",
+   "To": "The Gate",
+   "Seconds": 270
+  }
+ ],
+ "StoryMinutes": 19.3,
+ "WalkFromStartToZoneSeconds": {
+  "Wayfarer's Crag": 0,
+  "Sunny Meadows": 183,
+  "Mossrock Hills": 260,
+  "Whisperwood": 426,
+  "Bandit Ridge": 382,
+  "Gatehill": 765
+ },
+ "Progression": {
+  "Stages": [
+   {
+    "Name": "Start: every lock shut",
+    "ShareOfMap": 0.467
+   },
+   {
+    "Name": "Mossgate open",
+    "ShareOfMap": 0.843
+   },
+   {
+    "Name": "Stair Gate open too",
+    "ShareOfMap": 0.93
+   },
+   {
+    "Name": "All open",
+    "ShareOfMap": 0.931
+   }
+  ],
+  "WrongStage": {},
+  "Leaks": []
+ },
+ "ZoneParts": {
+  "Wayfarer's Crag": {
+   "Spot": 2,
+   "Material": 1,
+   "Rescue": 1,
+   "FieldBoss": 1,
+   "Secret": 1,
+   "Dungeon": 0,
+   "Lock": 0
+  },
+  "Sunny Meadows": {
+   "Spot": 5,
+   "Material": 1,
+   "Rescue": 2,
+   "FieldBoss": 1,
+   "Secret": 1,
+   "Dungeon": 0,
+   "Lock": 0
+  },
+  "Mossrock Hills": {
+   "Spot": 5,
+   "Material": 1,
+   "Rescue": 1,
+   "FieldBoss": 1,
+   "Secret": 1,
+   "Dungeon": 0,
+   "Lock": 1
+  },
+  "Whisperwood": {
+   "Spot": 5,
+   "Material": 1,
+   "Rescue": 2,
+   "FieldBoss": 1,
+   "Secret": 1,
+   "Dungeon": 1,
+   "Lock": 1
+  },
+  "Bandit Ridge": {
+   "Spot": 5,
+   "Material": 1,
+   "Rescue": 1,
+   "FieldBoss": 1,
+   "Secret": 1,
+   "Dungeon": 0,
+   "Lock": 2
+  },
+  "Gatehill": {
+   "Spot": 3,
+   "Material": 1,
+   "Rescue": 1,
+   "FieldBoss": 1,
+   "Secret": 1,
+   "Dungeon": 0,
+   "Lock": 1
+  }
+ },
+ "EnemyBlocks": 717,
+ "SecondsToNearestWaystone": {
+  "East Gate (rescue the Engineer)": 80,
+  "Bandit Iron": 54,
+  "Waymaker (repairs the next arch)": 50,
+  "Stablehand (opens the Stable: mounts)": 45,
+  "South mesa cache (needs Climb)": 45,
+  "Tor-top cache (needs Climb)": 42,
+  "Stair Sentries": 41,
+  "Pilgrim Wraiths": 40
+ },
+ "ContentGround": {
+  "Slime Hollow": {
+   "H": 189,
+   "Slope": 0.03,
+   "Water": false
+  },
+  "Hare Bluff": {
+   "H": 188,
+   "Slope": 0.1,
+   "Water": false
+  },
+  "Wakestone": {
+   "H": 190,
+   "Slope": 0.06,
+   "Water": false
+  },
+  "Blacksmith (opens the Forge)": {
+   "H": 180,
+   "Slope": 0.04,
+   "Water": false
+  },
+  "Mother Slime": {
+   "H": 186,
+   "Slope": 0.04,
+   "Water": false
+  },
+  "Under-cliff cache (needs Climb)": {
+   "H": 10,
+   "Slope": 0.02,
+   "Water": false
+  },
+  "Hare Warren": {
+   "H": 17,
+   "Slope": 0.02,
+   "Water": false
+  },
+  "Boar Run": {
+   "H": 14,
+   "Slope": 0.18,
+   "Water": false
+  },
+  "Scarecrow Field": {
+   "H": 18,
+   "Slope": 0.03,
+   "Water": false
+  },
+  "Hillfolk Camp": {
+   "H": 13,
+   "Slope": 0.08,
+   "Water": false
+  },
+  "Barrow Wights": {
+   "H": 46,
+   "Slope": 0.15,
+   "Water": false
+  },
+  "Sunwheat": {
+   "H": 13,
+   "Slope": 0.0,
+   "Water": false
+  },
+  "Merchant (opens the Market)": {
+   "H": 11,
+   "Slope": 0.05,
+   "Water": false
+  },
+  "Stablehand (opens the Stable: mounts)": {
+   "H": 42,
+   "Slope": 0.25,
+   "Water": false
+  },
+  "Old Tusk": {
+   "H": 24,
+   "Slope": 0.04,
+   "Water": false
+  },
+  "Tor-top cache (needs Climb)": {
+   "H": 60,
+   "Slope": 0.31,
+   "Water": false
+  },
+  "Colossus Ribs": {
+   "H": 25,
+   "Slope": 0.14,
+   "Water": false
+  },
+  "Thornwolf Run": {
+   "H": 22,
+   "Slope": 0.12,
+   "Water": false
+  },
+  "Moss Golem Yard": {
+   "H": 1,
+   "Slope": 0.01,
+   "Water": false
+  },
+  "Foundry Guards": {
+   "H": 19,
+   "Slope": 0.01,
+   "Water": false
+  },
+  "Quarry Crawlers": {
+   "H": 8,
+   "Slope": 0.38,
+   "Water": false
+  },
+  "Mossstone": {
+   "H": 3,
+   "Slope": 0.02,
+   "Water": false
+  },
+  "Mason (opens Mossgate)": {
+   "H": 3,
+   "Slope": 0.13,
+   "Water": false
+  },
+  "Rockback": {
+   "H": 3,
+   "Slope": 0.12,
+   "Water": false
+  },
+  "The Colossus's crown (needs Climb)": {
+   "H": 114,
+   "Slope": 0.06,
+   "Water": false
+  },
+  "Mossgate (rescue the Mason)": {
+   "H": 51,
+   "Slope": 0.3,
+   "Water": false
+  },
+  "Wisp Mere": {
+   "H": 92,
+   "Slope": 0.1,
+   "Water": false
+  },
+  "Thornwolf Den": {
+   "H": 100,
+   "Slope": 0.09,
+   "Water": false
+  },
+  "Root Crawlers": {
+   "H": 98,
+   "Slope": 0.05,
+   "Water": false
+  },
+  "Fungus Ring": {
+   "H": 102,
+   "Slope": 0.03,
+   "Water": false
+  },
+  "Stag Glade": {
+   "H": 95,
+   "Slope": 0.05,
+   "Water": false
+  },
+  "Elderbark": {
+   "H": 104,
+   "Slope": 0.11,
+   "Water": false
+  },
+  "Carpenter (opens the Workshop and Falls Stair)": {
+   "H": 114,
+   "Slope": 0.04,
+   "Water": false
+  },
+  "Beast-keeper (opens the Pet Keeper)": {
+   "H": 97,
+   "Slope": 0.04,
+   "Water": false
+  },
+  "Hollowhorn": {
+   "H": 101,
+   "Slope": 0.06,
+   "Water": false
+  },
+  "Rootdeep Hollow": {
+   "H": 143,
+   "Slope": 0.33,
+   "Water": false
+  },
+  "Falls ledge (needs Glide)": {
+   "H": 13,
+   "Slope": 0.08,
+   "Water": false
+  },
+  "Falls Stair (rescue the Carpenter)": {
+   "H": 33,
+   "Slope": 0.3,
+   "Water": false
+  },
+  "Crest Riders": {
+   "H": 4,
+   "Slope": 0.23,
+   "Water": false
+  },
+  "Hold Yard": {
+   "H": 136,
+   "Slope": 0.01,
+   "Water": false
+  },
+  "Outlaw Flats": {
+   "H": 3,
+   "Slope": 0.1,
+   "Water": false
+  },
+  "Cut Ambush": {
+   "H": 1,
+   "Slope": 0.0,
+   "Water": false
+  },
+  "Mine Guards": {
+   "H": 4,
+   "Slope": 0.0,
+   "Water": false
+  },
+  "Bandit Iron": {
+   "H": 14,
+   "Slope": 0.58,
+   "Water": false
+  },
+  "Engineer (opens Canyon Gate and East Gate)": {
+   "H": 4,
+   "Slope": 0.03,
+   "Water": false
+  },
+  "Captain Redfang (Stair Gate opens)": {
+   "H": 136,
+   "Slope": 0.02,
+   "Water": false
+  },
+  "South mesa cache (needs Climb)": {
+   "H": 122,
+   "Slope": 0.41,
+   "Water": false
+  },
+  "Canyon Gate (rescue the Engineer)": {
+   "H": 23,
+   "Slope": 0.36,
+   "Water": false
+  },
+  "East Gate (rescue the Engineer)": {
+   "H": 102,
+   "Slope": 0.21,
+   "Water": false
+  },
+  "Stair Sentries": {
+   "H": 180,
+   "Slope": 0.54,
+   "Water": false
+  },
+  "Pilgrim Wraiths": {
+   "H": 167,
+   "Slope": 0.54,
+   "Water": false
+  },
+  "Bell Guard": {
+   "H": 218,
+   "Slope": 0.3,
+   "Water": false
+  },
+  "Warden Ore": {
+   "H": 211,
+   "Slope": 0.28,
+   "Water": false
+  },
+  "Waymaker (repairs the next arch)": {
+   "H": 128,
+   "Slope": 0.23,
+   "Water": false
+  },
+  "Mossback Warden, the Guardian (Land 2 stone)": {
+   "H": 402,
+   "Slope": 0.04,
+   "Water": false
+  },
+  "Bell top (needs Climb)": {
+   "H": 126,
+   "Slope": 1.13,
+   "Water": false
+  },
+  "Stair Gate (beat Captain Redfang)": {
+   "H": 130,
+   "Slope": 0.21,
+   "Water": false
+  }
+ },
+ "BadGround": [
+  "Bell top (needs Climb)"
+ ]
+}

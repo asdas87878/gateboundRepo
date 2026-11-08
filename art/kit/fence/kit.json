@@ -1,0 +1,9 @@
+{
+ "Triangles": {
+  "FenceA": 336,
+  "FenceLean": 336,
+  "FenceBroken": 288,
+  "FencePost": 80
+ },
+ "SheetUsedToRow": 768
+}

@@ -2,7 +2,7 @@
 beauty.png + depth.png. Each step stands for a Roblox Lighting effect so the numbers carry over: Haze ~ Atmosphere,
 Bloom ~ BloomEffect, Grade ~ ColorCorrectionEffect (Brightness, Contrast, Saturation, TintColor).
 
-  python tools/art/look_post.py <pass_dir> <spec.json>      -> <pass_dir>/final.png
+  python tools/art/look_post.py <pass_dir> <spec.json> [--key Beauty]      -> <pass_dir>/final.png
 """
 
 import json
@@ -115,4 +115,7 @@ def post(pass_dir, spec):
 
 
 if __name__ == "__main__":
-	post(sys.argv[1], json.load(open(sys.argv[2], encoding="utf-8")))
+	spec = json.load(open(sys.argv[2], encoding="utf-8"))
+	if "--key" in sys.argv:  # the settings sit under a key, e.g. a land map's "Beauty" block
+		spec = spec[sys.argv[sys.argv.index("--key") + 1]]
+	post(sys.argv[1], spec)

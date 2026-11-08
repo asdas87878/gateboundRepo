@@ -1,0 +1,111 @@
+{
+ "Pixels": [
+  651,
+  651
+ ],
+ "Heights": [
+  3.0,
+  419.4
+ ],
+ "Blocks": 460,
+ "Trees": 325,
+ "Bushes": 163,
+ "Rocks": 186,
+ "EnemyBlocks": 51,
+ "Paths": [
+  {
+   "Name": "Arrival lane",
+   "Length": 332,
+   "Seconds": 21,
+   "MaxGrade": 0.35
+  },
+  {
+   "Name": "Pasture road",
+   "Length": 300,
+   "Seconds": 19,
+   "MaxGrade": 0.35
+  },
+  {
+   "Name": "Farm track",
+   "Length": 196,
+   "Seconds": 12,
+   "MaxGrade": 0.02
+  },
+  {
+   "Name": "Camp road",
+   "Length": 64,
+   "Seconds": 4,
+   "MaxGrade": 0.35
+  },
+  {
+   "Name": "Thornwood road",
+   "Length": 1252,
+   "Seconds": 78,
+   "MaxGrade": 0.04
+  },
+  {
+   "Name": "Falls climb",
+   "Length": 524,
+   "Seconds": 33,
+   "MaxGrade": 0.35
+  },
+  {
+   "Name": "Boss road",
+   "Length": 208,
+   "Seconds": 13,
+   "MaxGrade": 0.35
+  },
+  {
+   "Name": "High Wood track",
+   "Length": 300,
+   "Seconds": 19,
+   "MaxGrade": 0.35
+  },
+  {
+   "Name": "High Wood track west",
+   "Length": 740,
+   "Seconds": 46,
+   "MaxGrade": 0.35
+  },
+  {
+   "Name": "Mill spur",
+   "Length": 64,
+   "Seconds": 4,
+   "MaxGrade": 0.32
+  },
+  {
+   "Name": "River walk",
+   "Length": 212,
+   "Seconds": 13,
+   "MaxGrade": 0.07
+  }
+ ],
+ "WalkArrivalToBossSeconds": 176,
+ "Reach": {
+  "Reachable": {
+   "Home Pasture (Boars)": true,
+   "Thornwood (Thornlings)": true,
+   "Falls Ledges (both)": true,
+   "Old Tusk": true,
+   "High Wood (both)": true,
+   "Behind the falls": true,
+   "High Wood shrine": true,
+   "Blacksmith: opens your Forge": true
+  },
+  "ShareOfLand": 0.988
+ },
+ "ReachWithoutBridges": {
+  "Reachable": {
+   "Home Pasture (Boars)": true,
+   "Thornwood (Thornlings)": true,
+   "Falls Ledges (both)": true,
+   "Old Tusk": true,
+   "High Wood (both)": false,
+   "Behind the falls": true,
+   "High Wood shrine": false,
+   "Blacksmith: opens your Forge": true
+  },
+  "ShareOfLand": 0.83
+ },
+ "DataKB": 46
+}

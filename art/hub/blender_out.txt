@@ -1,0 +1,28 @@
+C:\Users\blast\RpgGame\tools\blender\hub_blockout.py:93: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\Users\blast\RpgGame\tools\blender\hub_blockout.py:134: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\Users\blast\RpgGame\tools\blender\hub_blockout.py:617: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  tm.use_nodes = True
+C:\Users\blast\RpgGame\tools\blender\hub_blockout.py:652: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+00:10.906  render           | Saved: 'C:\Users\blast\RpgGame\art\hub\blockout\hero.png'
+00:11.562  render           | Saved: 'C:\Users\blast\RpgGame\art\hub\blockout\high.png'
+00:12.296  render           | Saved: 'C:\Users\blast\RpgGame\art\hub\blockout\edge.png'
+00:12.953  render           | Saved: 'C:\Users\blast\RpgGame\art\hub\blockout\bridge.png'
+00:13.593  render           | Saved: 'C:\Users\blast\RpgGame\art\hub\blockout\deck.png'
+00:14.203  render           | Saved: 'C:\Users\blast\RpgGame\art\hub\blockout\below.png'
+00:14.734  render           | Saved: 'C:\Users\blast\RpgGame\art\hub\blockout\side.png'
+BlenderMCP addon registered
+BlenderMCP addon unregistered
+Info: Saved as "hub_blockout.blend"
+rendered hero
+rendered high
+rendered edge
+rendered bridge
+rendered deck
+rendered below
+rendered side
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

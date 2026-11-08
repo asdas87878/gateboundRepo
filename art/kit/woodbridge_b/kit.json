@@ -1,0 +1,43 @@
+{
+ "Triangles": {
+  "BridgeChunky": 4832,
+  "BridgeLattice": 7408,
+  "BridgeRope": 5468
+ },
+ "Bounds": {
+  "BridgeChunky": [
+   -19.795,
+   19.786,
+   -7.879,
+   3.947,
+   -7.379,
+   8.738
+  ],
+  "BridgeLattice": [
+   -20.401,
+   20.341,
+   -7.865,
+   7.122,
+   -6.876,
+   8.006
+  ],
+  "BridgeRope": [
+   -23.803,
+   23.803,
+   -8.869,
+   6.548,
+   -6.567,
+   7.582
+  ]
+ },
+ "Sheets": {
+  "BridgeChunky": "Woodbridge_B_BridgeChunky.png",
+  "BridgeLattice": "Woodbridge_B_BridgeLattice.png",
+  "BridgeRope": "Woodbridge_B_BridgeRope.png"
+ },
+ "SheetUsedToRow": {
+  "BridgeChunky": 1006,
+  "BridgeLattice": 995,
+  "BridgeRope": 742
+ }
+}

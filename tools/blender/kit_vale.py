@@ -1,4 +1,4 @@
-"""The Verdant Vale kit (docs/lands/land1-verdant-vale.md, docs/style/botw-study.md): low-poly pieces for the beauty
+"""The Verdant Vale kit (docs/lands/land1-verdant-vale.md, docs/style/look-direction.md): low-poly pieces for the beauty
 pass, built in code on kit.Piece. Smooth-shaded where forms are soft (canopies, grass, rocks), flat where they are cut
 (stone, timber, roofs). Colour lives in vertex colours: soft gradients (dark, cool undersides to light, warm tops) do the
 work a painted texture would, at no texture cost.
@@ -10,6 +10,7 @@ import math
 import random
 
 import bmesh
+import bpy
 from mathutils import Matrix, Vector
 
 import kit
@@ -92,9 +93,12 @@ def tube(p, pts, radii, colour, sides=6):
 # ---------------------------------------------------------------- trees and plants
 
 
-def broadleaf(name, seed, height=16.0, coll=None, kind="oak", autumn=False):
+def broadleaf(name, seed, height=16.0, coll=None, kind="oak", autumn=False, style="smooth"):
 	"""a BotW-style broadleaf: a trunk forking into limbs under a canopy of a few lumpy smooth masses. kind: oak (wide,
-	5-7 masses), poplar (tall and narrow), round (one big soft ball and a few small ones)"""
+	5-7 masses), poplar (tall and narrow), round (one big soft ball and a few small ones). style="facet": many smaller leaf
+	clumps in a dome, flat-shaded so each facet catches the light on its own (crisper up close), a flared root"""
+	if style == "facet":
+		return _broadleaf_facet(name, seed, height, coll, kind, autumn)
 	p = Piece(seed)
 	r = p.rng
 	H = height
@@ -132,6 +136,42 @@ def broadleaf(name, seed, height=16.0, coll=None, kind="oak", autumn=False):
 		hi = jitter(light, r, v=0.05, h=0.012)
 		vgrad(p, faces, lo, hi, zlo, zhi, noise=0.06, seed=seed + k)
 	return p.finish(name, coll, smooth=True)
+
+
+def _broadleaf_facet(name, seed, H, coll, kind, autumn):
+	p = Piece(seed)
+	r = p.rng
+	fork = H * r.uniform(0.3, 0.38)
+	tr = H * (0.05 if kind != "poplar" else 0.038)
+	# trunk with a flared root: a wide base ring, then the tube up to the fork
+	tube(p, [Vector((0, 0, -0.6)), Vector((0, 0, 0.5)), Vector((r.uniform(-0.25, 0.25), r.uniform(-0.25, 0.25), fork * 0.6)), Vector((0, 0, fork))],
+		 [tr * 2.1, tr * 1.35, tr * 1.0, tr * 0.85], "bark", 7)
+	# the dome of clumps: rings of smaller lumpy balls, wider and lower for oaks, a column for poplars
+	if kind == "poplar":
+		rings = [(H * 0.42, H * 0.12, 4, H * 0.13), (H * 0.6, H * 0.1, 4, H * 0.12), (H * 0.76, H * 0.07, 3, H * 0.1), (H * 0.9, 0.0, 1, H * 0.08)]
+	elif kind == "round":
+		rings = [(H * 0.5, H * 0.24, 6, H * 0.15), (H * 0.66, H * 0.16, 5, H * 0.15), (H * 0.8, 0.0, 1, H * 0.15)]
+	else:
+		rings = [(H * 0.5, H * 0.3, 7, H * 0.14), (H * 0.62, H * 0.22, 6, H * 0.15), (H * 0.76, H * 0.1, 4, H * 0.14), (H * 0.86, 0.0, 1, H * 0.12)]
+	masses = []
+	for z, rad_ring, n, size in rings:
+		off = r.uniform(0, math.tau)
+		for i in range(n):
+			a = off + i * math.tau / n + r.uniform(-0.25, 0.25)
+			d = rad_ring * r.uniform(0.8, 1.1)
+			masses.append((Vector((math.cos(a) * d, math.sin(a) * d, z + r.uniform(-0.05, 0.05) * H)), size * r.uniform(0.85, 1.15)))
+	for c, rad in masses:  # limbs to the outer clumps
+		if (c - Vector((0, 0, fork))).length > rad * 1.2 and r.random() < 0.6:
+			tube(p, [Vector((0, 0, fork - 0.2)), (Vector((0, 0, fork)) + c) / 2 + Vector((0, 0, rad * 0.2)), c], [tr * 0.55, tr * 0.4, tr * 0.22], "bark", 5)
+	dark, light = ("leaf_autumn_dark", "leaf_autumn_light") if autumn else ("leaf_dark", "leaf_light")
+	zlo = min(c.z - rad for c, rad in masses)
+	zhi = max(c.z + rad for c, rad in masses)
+	for k, (c, rad) in enumerate(masses):
+		faces = blob(p, c, rad, (1.0, 1.0, 0.82), subdiv=1, lump=0.2, seed=seed * 37 + k)
+		lo = jitter(dark, r, v=0.06, h=0.01)
+		hi = jitter(light, r, v=0.06, h=0.012)
+		vgrad(p, faces, lo, hi, zlo, zhi, noise=0.05, seed=seed + k)
+	return p.finish(name, coll, smooth=False)
 
 
 def field_grass(name, seed, blades=14, height=1.3, coll=None, dry=False):
@@ -259,12 +299,50 @@ def house(name, seed, w=10.0, d=8.0, h=8.0, coll=None, roof="slate", storeys=2):
 	return p.finish(name, coll)
 
 
-def round_tower(name, seed, radius=4.0, height=20.0, coll=None, roof_h=None, material="stone_light", sides=12, windows=3):
-	"""a round tower: a band at the top, slit windows, a tall cone roof in blue slate with a finial"""
+def coursed_ring(p, at, radius, z0, z1, r, course=1.5, sides=12, colour="stone_light", taper=0.97, v=0.06):
+	"""a round wall laid in stone courses: each course its own ring, turned a little against the one below so the facet
+	joints zig-zag like staggered blocks, a hair wider or narrower, every facet its own shade"""
+	n = max(1, round((z1 - z0) / course))
+	for k in range(n):
+		za, zb = z0 + (z1 - z0) * k / n, z0 + (z1 - z0) * (k + 1) / n
+		rad = radius * (1 - (1 - taper) * k / n) * (1 + r.uniform(-0.012, 0.012))
+		off = (k % 2) * 0.5 + r.uniform(-0.15, 0.15)
+		ring = [at + q for q in kit.ring(za, rad, sides, off=off)] + [at + q for q in kit.ring(zb, rad, sides, off=off)]
+		p.hull(ring, lambda f: jitter(colour, r, v=v), dissolve=0.5)  # one shade per block face, not per triangle
+
+
+def coursed_block(p, c, size, yaw, r, course=1.5, block=(2.0, 3.6), colour="stone_light", v=0.06, inset=0.06):
+	"""a straight wall laid in courses of blocks of random length, alternate courses offset, each block a slightly
+	different depth and shade. c = base centre, size = (length, thickness, height)."""
+	L, T, Hh = size
+	n = max(1, round(Hh / course))
+	ch = Hh / n
+	along = Vector((math.cos(yaw), math.sin(yaw), 0))
+	for k in range(n):
+		x = -L / 2
+		first = True
+		while x < L / 2 - 0.01:
+			bl = r.uniform(*block) * (0.5 if first and k % 2 else 1.0)
+			first = False
+			bl = min(bl, L / 2 - x)
+			if L / 2 - (x + bl) < block[0] * 0.4:  # don't leave a sliver at the end
+				bl = L / 2 - x
+			cx = x + bl / 2
+			d = r.uniform(-inset, inset)
+			_box(p, Vector(c) + along * cx + Vector((0, 0, k * ch)), (bl - 0.06, T + d, ch - 0.06), jitter(colour, r, v=v), yaw=yaw)
+			x += bl
+	return n * ch
+
+
+def round_tower(name, seed, radius=4.0, height=20.0, coll=None, roof_h=None, material="stone_light", sides=12, windows=3, banner=False):
+	"""a round tower in stone courses: a band at the top, slit windows, a tall cone roof in blue slate with a finial;
+	banner=True hangs a red banner on its front"""
 	p = Piece(seed)
 	r = p.rng
 	roof_h = roof_h or radius * 2.4
-	p.hull(kit.ring(0, radius * 1.04, sides) + kit.ring(height, radius, sides), lambda f: jitter(material, r, v=0.03))
+	coursed_ring(p, Vector((0, 0, 0)), radius * 1.02, 0, height, r, course=1.6, sides=sides, colour=material)
+	if banner:
+		_hang_banner(p, Vector((0, -radius - 0.25, height - 1.2)), 0.0, radius * 0.9, height * 0.42, r)
 	p.hull(kit.ring(height - 0.2, radius * 1.12, sides) + kit.ring(height + 0.9, radius * 1.12, sides), lambda f: jitter("stone_mid", r, v=0.03))
 	for k in range(windows):
 		z = height * (0.3 + 0.55 * k / max(1, windows - 1))
@@ -279,11 +357,30 @@ def round_tower(name, seed, radius=4.0, height=20.0, coll=None, roof_h=None, mat
 	return p.finish(name, coll)
 
 
+def _hang_banner(p, top, yaw, width, length, r):
+	"""a red banner with a cream diamond hanging from top (centre of its rod), facing -Y turned by yaw, merged into p"""
+	b = kit.banner("_b", r.randrange(1 << 30), width=width, length=length)
+	m = Matrix.Translation(top) @ Matrix.Rotation(yaw, 4, "Z")
+	src = bmesh.new()  # read through bmesh so the colours stay in the same encoding Piece writes
+	src.from_mesh(b.data)
+	layer = src.loops.layers.color.get("Col")
+	vmap = {v: p.bm.verts.new(m @ v.co) for v in src.verts}
+	for f0 in src.faces:
+		f = p.bm.faces.new([vmap[v] for v in f0.verts])
+		for lp, lp0 in zip(f.loops, f0.loops):
+			lp[p.col] = lp0[layer] if layer else (0.6, 0.1, 0.08, 1.0)
+	src.free()
+	mesh = b.data
+	bpy.data.objects.remove(b)
+	bpy.data.meshes.remove(mesh)
+	p.hull([top + Matrix.Rotation(yaw, 4, "Z") @ Vector((x * (width / 2 + 0.4), y, z)) for x in (-1, 1) for y in (-0.12, 0.12) for z in (-0.12, 0.12)], "6b4a33")
+
+
 def crenel_wall(name, seed, length=24.0, height=10.0, thick=3.0, coll=None):
-	"""a town wall: coursed stone, a walkway lip and square merlons"""
+	"""a town wall: coursed stone blocks, a walkway lip and square merlons"""
 	p = Piece(seed)
 	r = p.rng
-	_box(p, (0, 0, 0), (length, thick, height), jitter("stone_light", r, v=0.03))
+	coursed_block(p, (0, 0, 0), (length, thick, height), 0.0, r, course=1.6, colour="stone_light")
 	_box(p, (0, 0, height - 0.3), (length + 0.2, thick + 0.6, 0.6), "stone_mid")
 	n = max(2, int(length / 3))
 	for i in range(n):
@@ -294,31 +391,38 @@ def crenel_wall(name, seed, length=24.0, height=10.0, thick=3.0, coll=None):
 
 
 def keep(name, seed, coll=None):
-	"""Brightwater's castle keep: a tall white main block with a blue slate roof, four corner turrets with cone roofs, a
-	taller spire tower on one side with a gold finial: the landmark seen from every zone (about 70 studs)"""
+	"""Brightwater's castle keep: a tall white main block laid in stone courses with a blue slate roof, four corner
+	turrets with cone roofs, a taller spire tower on one side with a gold finial, red banners on the front: the landmark
+	seen from every zone (about 70 studs)"""
 	p = Piece(seed)
 	r = p.rng
 	W, D, H = 26.0, 20.0, 34.0
 	_box(p, (0, 0, -1), (W + 3, D + 3, 4), "stone_mid")
-	_box(p, (0, 0, 3), (W, D, H - 3), jitter("stone_light", r, v=0.02))
+	n = 17  # courses: each a box a hair bigger or smaller than the last, in its own shade
+	for k in range(n):
+		z0 = 3 + (H - 3) * k / n
+		g = r.uniform(-0.05, 0.05)
+		_box(p, (0, 0, z0), (W + g, D + g, (H - 3) / n), jitter("stone_light", r, v=0.045))
 	for z in (H * 0.45, H * 0.8):
-		_box(p, (0, 0, z), (W + 0.4, D + 0.4, 0.6), "stone_mid")
+		_box(p, (0, 0, z), (W + 0.5, D + 0.5, 0.6), "stone_mid")
 	for k in range(5):  # tall arched windows on the front
 		x = -W / 2 + W * (k + 0.5) / 5
-		_box(p, (x, -D / 2 - 0.1, H * 0.55), (1.6, 0.3, 4.5), "window")
-		_box(p, (x, -D / 2 - 0.1, H * 0.2), (1.4, 0.3, 3.2), "window")
+		_box(p, (x, -D / 2 - 0.15, H * 0.55), (1.6, 0.3, 4.5), "window")
+		_box(p, (x, -D / 2 - 0.15, H * 0.2), (1.4, 0.3, 3.2), "window")
 	_box(p, (0, -D / 2 - 0.2, 3), (5, 0.6, 6.5), "4a3a2c")
+	for x in (-W * 0.3, W * 0.3):  # banners either side of the door
+		_hang_banner(p, Vector((x, -D / 2 - 0.45, H * 0.78)), 0.0, 3.6, 13.0, r)
 	_gable(p, (0, 0, 0), W, D, H, D * 0.7, "slate", overhang=0.8, ridge_col="3a4a60")
 	for sx in (-1, 1):
 		for sy in (-1, 1):
 			_place_tower(p, Vector((sx * W / 2, sy * D / 2, 0)), 3.6, H + 6, 9, r)
-	_place_tower(p, Vector((W / 2 + 4, -D / 4, 0)), 5.0, H + 22, 16, r)
+	_place_tower(p, Vector((W / 2 + 4, -D / 4, 0)), 5.0, H + 22, 16, r, banner=True)
 	return p.finish(name, coll)
 
 
-def _place_tower(p, at, radius, height, roof_h, r, sides=12):
+def _place_tower(p, at, radius, height, roof_h, r, sides=12, banner=False):
 	ring = lambda z, rad: [at + v for v in kit.ring(z, rad, sides)]
-	p.hull(ring(0, radius) + ring(height, radius * 0.97), lambda f: jitter("stone_light", r, v=0.03))
+	coursed_ring(p, at, radius, 0, height, r, course=1.7, sides=sides)
 	p.hull(ring(height, radius * 1.12) + ring(height + 1.0, radius * 1.12), lambda f: jitter("stone_mid", r, v=0.03))
 	p.hull(ring(height + 1.0, radius * 1.22) + [at + Vector((0, 0, height + 1.0 + roof_h))], lambda f: jitter("slate", r, v=0.04))
 	p.hull([at + Vector((x * 0.14, y * 0.14, height + roof_h + 1.0 + z)) for x in (-1, 1) for y in (-1, 1) for z in (0, 2.0)], "c9a24a")
@@ -327,6 +431,8 @@ def _place_tower(p, at, radius, height, roof_h, r, sides=12):
 		c = at + Vector((math.cos(a) * radius, math.sin(a) * radius, height * (0.35 + 0.22 * k)))
 		n = Vector((math.cos(a), math.sin(a), 0))
 		p.block(c, Vector((-n.y, n.x, 0)), n, (0.7, 0.4, 1.8), "window")
+	if banner:
+		_hang_banner(p, at + Vector((0, -radius - 0.3, height - 1.5)), 0.0, radius * 0.8, height * 0.35, r)
 
 
 def stone_bridge(name, seed, length=34.0, width=7.0, coll=None, arches=3, rise=7.0):
@@ -359,9 +465,23 @@ def stone_bridge(name, seed, length=34.0, width=7.0, coll=None, arches=3, rise=7
 				p.poly(q if side < 0 else q[::-1], jitter("stone_light", r, v=0.03))
 	xs = [-length / 2 - 2 + (length + 4) * k / 10 for k in range(11)]
 	for x0, x1 in zip(xs, xs[1:]):
-		p.hull([Vector((x, y, deck_z(x) + dz)) for x in (x0, x1) for y in (-width / 2, width / 2) for dz in (-0.6, 0.0)], jitter("c8b48a", r, v=0.03))
+		p.hull([Vector((x, y, deck_z(x) + dz)) for x in (x0, x1) for y in (-width / 2, width / 2) for dz in (-0.6, -0.08)], jitter("8f8576", r, v=0.03))
 		for side in (-1, 1):
-			p.hull([Vector((x, side * (width / 2 - 0.3) + dy, deck_z(x) + dz)) for x in (x0, x1) for dy in (-0.3, 0.3) for dz in (0.0, 1.1)], jitter("stone_mid", r, v=0.03))
+			p.hull([Vector((x, side * (width / 2 - 0.3) + dy, deck_z(x) + dz)) for x in (x0, x1) for dy in (-0.3, 0.3) for dz in (-0.1, 1.1)], jitter("stone_mid", r, v=0.04))
+	# paving: rows of setts across the deck, every other row offset half a stone, small gaps showing the bed
+	inner = width - 1.2
+	rows = int((length + 4) / 1.3)
+	for k in range(rows):
+		x0 = -length / 2 - 2 + (length + 4) * k / rows
+		x1 = -length / 2 - 2 + (length + 4) * (k + 1) / rows
+		n = 4
+		off = 0.5 if k % 2 else 0.0
+		cuts = sorted({max(0.0, min(n, j + off)) for j in range(n + 1)} | {0.0, float(n)})
+		for a, b in zip(cuts, cuts[1:]):
+			y0, y1 = -inner / 2 + inner * a / n + 0.05, -inner / 2 + inner * b / n - 0.05
+			if y1 - y0 < 0.3:
+				continue
+			p.hull([Vector((x, y, deck_z(x) + dz)) for x in (x0 + 0.05, x1 - 0.05) for y in (y0, y1) for dz in (-0.1, 0.02)], jitter("c2b49a", r, v=0.08))
 	return p.finish(name, coll)
 
 
@@ -541,6 +661,24 @@ def standing_stone(name, seed, height=7.0, coll=None, rune=True):
 	return p.finish(name, coll, smooth=True, sharp=35)
 
 
+def signpost(name, seed, arms=(0.0,), coll=None, height=5.6):
+	"""a wooden signpost: a post with a little pitched cap and pointed arrow boards, one per road (arms: yaw angles in
+	radians about the post, 0 = toward -Y); boards stack down the post, each a weathered shade with a dark painted band"""
+	p = Piece(seed)
+	r = p.rng
+	_box(p, (0, 0, -0.6), (0.42, 0.42, height + 0.6), jitter("6b4a33", r, v=0.05))
+	p.hull([Vector((x, y, height)) for x in (-0.4, 0.4) for y in (-0.4, 0.4)] + [Vector((0, 0, height + 0.5))], "5c3e2a")
+	for k, a in enumerate(arms):
+		z = height - 0.8 - k * 0.8
+		along = Vector((math.sin(a), -math.cos(a), 0))
+		side = Vector((-along.y, along.x, 0))
+		base = [along * t + side * w + Vector((0, 0, z + h)) for t in (0.25, 2.2) for w in (-0.07, 0.07) for h in (-0.27, 0.27)]
+		tip = [along * 2.65 + side * w + Vector((0, 0, z)) for w in (-0.07, 0.07)]
+		p.hull(base + tip, jitter("a8845a", r, v=0.07))
+		p.hull([along * t + side * w + Vector((0, 0, z + h)) for t in (0.5, 1.9) for w in (-0.09, 0.09) for h in (-0.08, 0.08)], "4a3626")
+	return p.finish(name, coll)
+
+
 def tent(name, seed, coll=None, colour="cloth_red", length=6.0, width=4.5, height=3.6):
 	"""a ridge tent: two sloped cloth sides and closed ends, a pole at each end"""
 	p = Piece(seed)
@@ -603,40 +741,74 @@ def mountain_range(name, seed, width=4000.0, depth=900.0, height=900.0, coll=Non
 
 
 def floating_island(name, seed, radius=120.0, coll=None):
-	"""a far floating island (the SAO-style promise of the next Land): an inverted cone of stratified rock with a grassy
-	top, a few trees, a ruined spire and waterfalls pouring off the rim into nothing"""
+	"""a far floating island (the SAO-style promise of the next Land), top-heavy so it reads as land and not a spinning
+	top: a domed grassy top crowded with trees and a ruined keep, a near-vertical cliff band in strata, a ragged underside
+	of hanging rock spikes, waterfalls pouring off the rim, and a few small islets drifting around it"""
 	p = Piece(seed)
 	r = p.rng
-	n = 18
-	rings = []
-	for k, (z, rr) in enumerate(((0, 1.0), (-0.12, 0.97), (-0.3, 0.82), (-0.55, 0.6), (-0.8, 0.33), (-1.0, 0.1))):
-		rings.append([Vector((math.cos(a) * radius * rr * r.uniform(0.9, 1.08), math.sin(a) * radius * rr * r.uniform(0.9, 1.08), z * radius * 1.1 + r.uniform(-3, 3))) for a in (i * math.tau / n for i in range(n))])
-	bands = ["8d8072", "a29484", "7c7066", "958877", "6f665d"]
-	for k, (ra, rb) in enumerate(zip(rings, rings[1:])):
+	R = radius
+	n = 22
+	wob = [r.uniform(0.86, 1.1) for _ in range(n)]
+
+	def ring_at(z, rr, jit=0.04):
+		return [Vector((math.cos(a) * R * rr * wob[i] * r.uniform(1 - jit, 1 + jit), math.sin(a) * R * rr * wob[i] * r.uniform(1 - jit, 1 + jit), z + r.uniform(-2, 2)))
+				for i, a in enumerate(k * math.tau / n for k in range(n))]
+
+	def band(ra, rb, colour, v=0.05):
 		for i in range(n):
 			j = (i + 1) % n
-			p.poly([rb[i], rb[j], ra[j], ra[i]], jitter(bands[k % len(bands)], r, v=0.05))
-	tip = Vector((r.uniform(-5, 5), r.uniform(-5, 5), -radius * 1.3))
+			p.poly([rb[i], rb[j], ra[j], ra[i]], jitter(colour, r, v=v))
+
+	# the top: a low dome of grass, darker toward the rim
+	dome = [ring_at(R * 0.1, 0.35), ring_at(R * 0.07, 0.65), ring_at(R * 0.02, 0.9), ring_at(0, 1.0, 0.02)]
+	ctr = Vector((0, 0, R * 0.12))
+	for i in range(n):
+		p.poly([dome[0][i], dome[0][(i + 1) % n], ctr], jitter("8aa64a", r, v=0.05))
+	for k, (ra, rb) in enumerate(zip(dome, dome[1:])):
+		band(ra, rb, ("86a246", "789a40", "6c8e3c")[k])
+	# the cliff band, strata from light sandstone to grey, then the underside closing in
+	rings = [dome[-1]] + [ring_at(-R * z, rr) for z, rr in ((0.02, 1.01), (0.1, 1.0), (0.2, 0.97), (0.32, 0.93), (0.42, 0.82), (0.6, 0.6), (0.8, 0.36))]
+	strata = ["6f8a3e", "c2b49a", "a99c86", "b9ad95", "948a7c", "857c70", "776f66"]
+	for k, (ra, rb) in enumerate(zip(rings, rings[1:])):
+		band(ra, rb, strata[k % len(strata)])
+	tip = Vector((r.uniform(-0.05, 0.05) * R, r.uniform(-0.05, 0.05) * R, -R * 1.25))
 	for i in range(n):
 		p.poly([rings[-1][(i + 1) % n], rings[-1][i], tip], jitter("6f665d", r))
-	top = rings[0]
-	ctr = Vector((0, 0, 4))
-	for i in range(n):
-		p.poly([top[i], top[(i + 1) % n], ctr], jitter("6f9a45", r, v=0.06))
-	for k in range(9):  # trees on top: cone pines and round broadleaves
-		a, d = r.uniform(0, math.tau), r.uniform(0.15, 0.75) * radius
-		c = Vector((math.cos(a) * d, math.sin(a) * d, 2))
-		if r.random() < 0.6:
-			p.hull([c + q for q in kit.ring(0, 6, 7)] + [c + Vector((0, 0, 22))], "35633f")
+	for k in range(7):  # hanging spikes under the rim: a ragged, rooty underside
+		a, d = r.uniform(0, math.tau), r.uniform(0.35, 0.75) * R
+		top_z = -R * (0.3 + 0.5 * (d / R - 0.35))
+		c = Vector((math.cos(a) * d, math.sin(a) * d, top_z))
+		rad = R * r.uniform(0.1, 0.17)
+		p.hull([c + q for q in kit.ring(0, rad, 6, off=r.uniform(0, 1))] + [c + Vector((r.uniform(-4, 4), r.uniform(-4, 4), -R * r.uniform(0.35, 0.65)))], jitter("7a7168", r, v=0.06))
+	# trees crowding the top: cone pines and lumpy broadleaves, big enough to read from far away
+	for k in range(30):
+		a, d = r.uniform(0, math.tau), math.sqrt(r.uniform(0.02, 0.8)) * R
+		c = Vector((math.cos(a) * d, math.sin(a) * d, R * 0.11 * (1 - (d / R) ** 2) - 0.5))
+		s = R / 120
+		if r.random() < 0.55:
+			h = r.uniform(18, 30) * s
+			p.hull([c + q for q in kit.ring(0, h * 0.24, 7)] + [c + Vector((0, 0, h))], jitter("3f6e55", r, v=0.08))
 		else:
-			p.hull([c + Vector((0, 0, 9)) + Vector((r.gauss(0, 1), r.gauss(0, 1), r.gauss(0, 1) * 0.8)).normalized() * 9 for _ in range(12)], "4f8a3f")
-	sp = Vector((radius * 0.2, -radius * 0.1, 2))  # a ruined spire: something to wonder about
-	p.hull([sp + q for q in kit.ring(0, 7, 8) + kit.ring(48, 5, 8)], "c9c3b4")
-	p.hull([sp + q for q in kit.ring(48, 6.5, 8) + [Vector((0, 0, 70))]], "5c7392")
-	for k in range(3):  # waterfalls off the rim
-		a = -math.pi / 2 + (k - 1) * 0.55 + r.uniform(-0.1, 0.1)
-		c = Vector((math.cos(a) * radius * 0.98, math.sin(a) * radius * 0.98, 0))
-		t = Vector((-math.sin(a), math.cos(a), 0)) * r.uniform(5, 9)
-		o = Vector((math.cos(a), math.sin(a), 0)) * 2
-		p.poly([c - t + o, c + t + o, c + t * 1.6 + o * 6 + Vector((0, 0, -radius * 1.6)), c - t * 1.6 + o * 6 + Vector((0, 0, -radius * 1.6))], "water_fall")
+			rad = r.uniform(6, 10) * s
+			p.hull([c + Vector((0, 0, rad * 1.1)) + Vector((r.gauss(0, 1), r.gauss(0, 1), r.gauss(0, 1) * 0.75)).normalized() * rad for _ in range(14)], jitter("5d8c42", r, v=0.08))
+	# a ruined keep on the high ground: something to wonder about
+	sp = Vector((R * 0.18, -R * 0.12, R * 0.08))
+	for q, hgt, rad in ((Vector((0, 0, 0)), 0.55, 0.07), (Vector((R * 0.12, R * 0.05, 0)), 0.32, 0.05), (Vector((-R * 0.08, R * 0.1, 0)), 0.22, 0.05)):
+		c = sp + q
+		p.hull([c + v for v in kit.ring(0, R * rad, 8)] + [c + v for v in kit.ring(R * hgt, R * rad * 0.9, 8)], jitter("d6d0c2", r, v=0.04))
+	p.hull([sp + v for v in kit.ring(R * 0.55, R * 0.085, 8)] + [sp + Vector((0, 0, R * 0.78))], "4d6584")
+	for k in range(3):  # waterfalls off the rim, widening as they fall into nothing
+		a = -math.pi / 2 + (k - 1) * 0.6 + r.uniform(-0.1, 0.1)
+		c = Vector((math.cos(a) * R * 0.99, math.sin(a) * R * 0.99, 0.5))
+		t = Vector((-math.sin(a), math.cos(a), 0)) * r.uniform(4, 7) * R / 120
+		o = Vector((math.cos(a), math.sin(a), 0))
+		f = p.poly([c - t + o, c + t + o, c + t * 2.2 + o * 8 + Vector((0, 0, -R * 1.5)), c - t * 2.2 + o * 8 + Vector((0, 0, -R * 1.5))], "water_fall")
+		p.paint_loops([f], lambda lp: mix("water_fall", "b4cad8", max(0.0, min(1.0, -lp.vert.co.z / (R * 1.5))) ** 0.8))  # thins into spray
+	for k in range(5):  # islets drifting around it
+		a, d = r.uniform(0, math.tau), R * r.uniform(1.35, 1.9)
+		c = Vector((math.cos(a) * d, math.sin(a) * d, R * r.uniform(-0.6, 0.15)))
+		rad = R * r.uniform(0.08, 0.16)
+		top = [c + v for v in kit.ring(0, rad, 7, off=r.uniform(0, 1))]
+		p.hull(top + [c + Vector((0, 0, -rad * r.uniform(1.2, 1.8)))], jitter("8f8578", r, v=0.05))
+		p.hull([q + Vector((0, 0, 0.3)) for q in top] + [c + Vector((0, 0, rad * 0.25))], jitter("7f9c48", r, v=0.05))
 	return p.finish(name, coll)

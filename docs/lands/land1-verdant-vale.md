@@ -182,3 +182,63 @@ What it showed and what changed:
   - Wayfarer's Rest plateau reads as a rim, not a cliff edge.
   - Paths cross the river without bridges yet.
   - Mossrock's hills need shaping around the ruins.
+
+## Beauty pass (2026-11-03)
+
+`tools/blender/vale_beauty.py -- art/lands/land1/map.json <out> [--views a,b] [--quick] [--grass <style>]` dresses the
+block-out in the target look. All its settings are in map.json's `Beauty` block. Hero views are in
+`art/lands/land1/beauty/v0N/` (post: `tools/art/look_post.py <view dir> art/lands/land1/map.json --key Beauty`); the
+look rules are in `docs/style/look-direction.md`.
+
+Changes to the Land itself:
+- **The river splits around Brightwater.** It used to run straight across the town island, with houses standing in it.
+  It now flows into the moat on one side and out on the other (`land_blockout.river_dist`).
+- **The ring of mountains** is now natural ranges (`Blockout.RimStyle: natural`, `rim_mountains`): crests, saddles,
+  gullies, high sections and low passes, and foothills just inside the edge. The old ring was regular waves.
+- **Farmland:** strip fields around the windmill and along the river south-east of town, with hedgerows (`Beauty.Fields`).
+  This is the countryside around a castle town, and it gives the overlook its patchwork.
+- **A floating island** hangs over the eastern mountains, seen from the start overlook: a forested top, a ruined keep,
+  waterfalls, small islets around it. It is the far promise of later Lands.
+
+Hero views: overlook (the start circle's edge, the town with the Gate's beam behind), meadow_town (the south road),
+plaza, forest (the road into Whisperwood), gatehill, ruins, gate_vista (from the Gate back over the whole Vale).
+
+### At the player's feet (2026-11-03, second round)
+
+The user's review: grand from a distance, but it fell apart close up. Changes, all judged from six walk views with a
+5.2-stud player (`walk_*`; rules in `docs/style/ground.md`):
+- **Paths:** real trails with crisp edges, wheel ruts and edge stones. Lanes (paths 3-5) are narrower with a grassy
+  crown. A signpost stands at each junction.
+- **Grass:** matched to the ground. Nothing grows on trails; the verges are worn; clumps grow at the feet of rocks,
+  trees and walls.
+- **Ground:** detail textures keep it crisp up close.
+- **Fields:** wheat and leafy crop rows.
+- **Woods:** faceted trees kept about 9 studs off the paths, ferns under the trees.
+- **Bridges:** paved decks.
+- **Navigation research** (Elden Ring and others): the Gate is the Vale's Erdtree; lures go off the road; road
+  hierarchy; a camera that pitches up on climbs.
+
+## Vale v2: 20x the area (Proposed 2026-11-05)
+
+The user judged the 1,400 x 1,200 grey-box too small and too boring, and chose 20x the area: 6,260 x 5,370 studs, 6.6 minutes to walk across. Spec: `art/lands/land1_v2/spec.json`. Generator: `tools/art/land_v2.py` (terrain tiles, objects, `plan.png`, clay `views.jpg`, `report.json`). Studio builder: `tools/studio/build_land_v2.luau` (world position = map + (4000, 0, -3000)).
+
+Layout changes, all open to review:
+- **The story now runs as one arc** from the Wake crag in the south-west: Meadows (south), Mossrock (west), Whisperwood (north), Bandit Ridge (east), Gatehill (north-east). Bandits sit next to the Gate, so the last walk no longer goes back through low-level land, and new players don't start beside Lv 7-9.
+- **Levels:** Whisperwood 5-7, Gatehill 9-10, so level 9 is covered without leaning on the dungeon. The east road from the hub is meant to stay locked until story step 6 (a label only in the grey-box; it isn't blocked).
+- **Brightwater** sits on an island in a lake, with four road approaches (three bridges in the first map).
+- **New landmarks:** the Fallen Colossus (Mossrock's hills are a giant lying down, an older Warden, so the golems guard its body), the Elder above Rootdeep, a cliff and waterfall under Whisperwood, Redfang Cut through the ridge, a spiral Warden's Stair and a 200-stud Gate with a light beam.
+- **Enemy density:** 353 camps of 4, gathered in patches, not spread evenly as a straight 20x would be (about 1,260).
+
+Assumptions to test: terrain and block streaming at this size, whether the Gate and keep show across the map in play, and whether Studio holds up on the user's PC.
+
+## Vale v3: the star blockout (Proposed 2026-11-06)
+
+Same 6,260 x 5,370 ground as v2, rebuilt for `docs/game-design.md` section 14. Spec `art/lands/land1_v3/spec.json`; run `python tools/art/land_v2.py art/lands/land1_v3/spec.json`, upload the tiles and `objects.png` (`tools/roblox/upload_asset.py --image`), update the DATA block in `tools/studio/build_land_v3.luau`, run it in Studio. It replaces `Workspace.ValeV2` with `Workspace.ValeV3`.
+
+- **Home plot** off the Land's east side (map 7400, 2700): Gate Court with four arches (Verdant Vale open, three locked), nine building plots, spawn at a campfire.
+- **`Content`:** 25 farming spots, 6 materials, 8 rescues, 6 field bosses (the Warden is the Guardian), 6 secrets, 1 dungeon, 5 locks. All markers; no enemies or systems are live.
+- **Progression, checked by a flood from the start** (`reachability`: uphill onto a surface steeper than 52 degrees is blocked, `report.json`, `reach_<n>.png`): 46.7% of the map with every lock shut, 84.3% after Mossgate, 93.0% after Stair Gate. No item is reachable earlier or later than the spec says. The South mesa cache is climb-only on purpose.
+- **Walls** (`wall` forms) are rough straight cliff bands, there to prove the structure; they need shaping into the land. Locks are see-through markers you can walk through, so a tester isn't stuck; in the flood they count as shut.
+- `BlockoutTravel` script (grey-box only): Gate Court prompts, Go home on every waystone, `MaxSlopeAngle` 52, test mount at 60 studs/s on the Stable plot.
+
+Known leftovers: walking stretches of 58-92 s with nothing nearby on six roads (East lane 92 s, Colossus lane 78 s), secrets' movement requirements are labels only, and rescues don't do anything yet.

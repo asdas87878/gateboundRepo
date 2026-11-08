@@ -1,0 +1,16 @@
+{
+ "Triangles": {
+  "BarrelA": 156,
+  "BarrelOpen": 156,
+  "BarrelPile": 592,
+  "CrateA": 124,
+  "CrateSmall": 124,
+  "CrateBroken": 264,
+  "CrateStack": 528,
+  "Cart": 772,
+  "CartBroken": 800,
+  "SignPost": 148,
+  "SignLean": 148
+ },
+ "SheetUsedToRow": 1001
+}

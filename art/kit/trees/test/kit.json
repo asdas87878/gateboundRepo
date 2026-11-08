@@ -1,0 +1,12 @@
+{
+ "Triangles": {
+  "TestA_Crown": 696,
+  "TestA_Trunk": 420,
+  "TestABush_Crown": 280,
+  "TestABush_Core": 60,
+  "TestB_Crown": 890,
+  "TestB_Trunk": 420,
+  "TestBBush_Crown": 330,
+  "TestBBush_Core": 60
+ }
+}

@@ -22,7 +22,9 @@ from mathutils import Vector
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(HERE, "..", "art"))
 import kit  # noqa: E402
+import noise2d  # noqa: E402
 
 ARGS = sys.argv[sys.argv.index("--") + 1 :]
 MAP_PATH = os.path.abspath(ARGS[0])
@@ -60,6 +62,29 @@ def seg_dist(X, Y, pts):
 	return best
 
 
+def rim_mountains(X, Y, edge):
+	"""the ring of mountains around a Land as ridged ranges: crests, saddles and gullies running down into the Land,
+	high sections and low passes along the ring, foothills that fade out inside the edge. Rises from Rim.From studs
+	inside the edge to full height Rim.To studs outside."""
+	rc = B.get("Rim", {})
+	wall = B.get("Wall", 160)
+	p = smoothstep(rc.get("From", 60), -rc.get("To", 230), edge)
+	sc = rc.get("Scale", 240.0)
+	m = noise2d.ridged(X / sc, Y / sc, rc.get("Seed", 7), 5, 0.5, rc.get("Sharp", 2.0), warp=rc.get("Warp", 0.6))
+	lo, hi = np.percentile(m[p > 0.5], [5, 97]) if np.any(p > 0.5) else (0.0, 1.0)
+	m = np.clip((m - lo) / max(hi - lo, 1e-6), 0, 1.15)
+	big = noise2d.fbm(X / 900, Y / 900, rc.get("Seed", 7) + 40, 2) * 0.5 + 0.5  # high sections and low passes
+	z = wall * p ** 1.2 * (rc.get("Low", 0.35) + rc.get("Peak", 1.05) * m) * (0.75 + 0.5 * big)
+	feet = smoothstep(rc.get("FootIn", 150), 20, edge) * smoothstep(-80, 20, edge)  # foothills just inside the edge
+	z += noise2d.ridged(X / 90, Y / 90, rc.get("Seed", 7) + 70, 4, 0.5, 2.0, warp=0.4) * rc.get("Foothills", 26) * feet
+	return z
+
+
+def river_dist(X, Y, dh, isl):
+	"""distance to the river, which splits into the moat around the hub island instead of crossing it"""
+	return np.where(dh < isl["Radius"] + 4, 1e9, seg_dist(X, Y, M["River"]))
+
+
 def ellipse_d(X, Y, z):
 	cx, cy = z["At"]
 	rx, ry = z["Radius"]
@@ -95,7 +120,10 @@ def build_heights():
 		weight_best = np.maximum(weight_best, w)
 	# mountains closing the Vale in
 	edge = np.minimum.reduce([X, W - X, Y, H - Y])
-	Z += smoothstep(40, -220, edge) * (B.get("Wall", 160) + noise(X, Y, 160, 99) * 50)
+	if B.get("RimStyle") == "natural":
+		Z += rim_mountains(X, Y, edge)
+	else:
+		Z += smoothstep(40, -220, edge) * (B.get("Wall", 160) + noise(X, Y, 160, 99) * 50)
 	# the hub island: a raised plateau ringed by water
 	hub = next(p for p in M["Places"] if p["Icon"] == "castle")["At"]
 	dh = np.hypot(X - hub[0], Y - hub[1])
@@ -103,7 +131,7 @@ def build_heights():
 	Z = np.where(dh < isl["Radius"] + 40, Z * smoothstep(isl["Radius"], isl["Radius"] + 40, dh) + isl["Height"] * smoothstep(isl["Radius"] + 4, isl["Radius"] - 10, dh), Z)
 	water = np.zeros_like(X, bool)
 	moat = np.abs(dh - isl["Radius"] - isl["Moat"] / 2 - 4)
-	river = seg_dist(X, Y, M["River"])
+	river = river_dist(X, Y, dh, isl)
 	rw = B.get("RiverWidth", 28)
 	cut = np.minimum(river, moat * (rw / isl["Moat"]))
 	bed = -6.0

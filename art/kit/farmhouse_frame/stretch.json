@@ -1,0 +1,96 @@
+{
+ "Texels": {
+  "Frame": {
+   "sides": {
+    "sq_studs": 646.0,
+    "off_pct": 5.5,
+    "thinnest_vs_scale": 0.72,
+    "worst_aspect": 1.86
+   },
+   "ends": {
+    "sq_studs": 30.3,
+    "off_pct": 15.3,
+    "thinnest_vs_scale": 0.66,
+    "worst_aspect": 1.66
+   }
+  },
+  "Joinery": {
+   "sides": {
+    "sq_studs": 354.0,
+    "off_pct": 22.0,
+    "thinnest_vs_scale": 0.03,
+    "worst_aspect": 29.5
+   },
+   "ends": {
+    "sq_studs": 40.2,
+    "off_pct": 11.1,
+    "thinnest_vs_scale": 0.64,
+    "worst_aspect": 9.02
+   }
+  }
+ },
+ "Marks": [
+  {
+   "length": 26.6,
+   "uses": 2,
+   "mark_p90_studs": 2.4,
+   "mark_max_studs": 3.31,
+   "marks_per_stud": 0.15,
+   "grain_correlation_studs": 1.11
+  },
+  {
+   "length": 14.5,
+   "uses": 3,
+   "mark_p90_studs": 1.19,
+   "mark_max_studs": 2.86,
+   "marks_per_stud": 0.471,
+   "grain_correlation_studs": 0.66
+  },
+  {
+   "length": 14.5,
+   "uses": 1,
+   "mark_p90_studs": 1.32,
+   "mark_max_studs": 3.09,
+   "marks_per_stud": 0.45,
+   "grain_correlation_studs": 1.09
+  },
+  {
+   "length": 13.4,
+   "uses": 2,
+   "mark_p90_studs": 1.64,
+   "mark_max_studs": 2.54,
+   "marks_per_stud": 0.232,
+   "grain_correlation_studs": 1.14
+  },
+  {
+   "length": 8.1,
+   "uses": 1,
+   "mark_p90_studs": 0.83,
+   "mark_max_studs": 1.2,
+   "marks_per_stud": 0.349,
+   "grain_correlation_studs": 0.51
+  },
+  {
+   "length": 8.1,
+   "uses": 1,
+   "mark_p90_studs": 0.78,
+   "mark_max_studs": 1.66,
+   "marks_per_stud": 0.31,
+   "grain_correlation_studs": 0.51
+  }
+ ],
+ "Off_by_part": {
+  "tile 18x18": 52.5,
+  "Chestnut strip L14.5 w0.34 h0.86": 11.1,
+  "Chestnut strip L7.1 w0.70 h0.80": 8.4,
+  "Chestnut strip L26.6 w0.66 h0.74": 6.9,
+  "tile 156x156": 6.7,
+  "Chestnut strip L2.6 w0.20 h0.17": 6.1,
+  "tile 81x166": 4.7,
+  "Chestnut strip L2.8 w0.50 h0.36": 3.0,
+  "tile 210x390": 2.7,
+  "Chestnut strip L8.1 w0.72 h0.70": 2.6,
+  "Chestnut strip L3.6 w0.58 h0.44": 2.5,
+  "Sage strip L1.3 w0.14 h0.32": 1.7
+ }
+}

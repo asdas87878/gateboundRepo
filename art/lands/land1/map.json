@@ -522,10 +522,24 @@
     ]
    }
   ],
-  "GapTrees": 0.05
+  "GapTrees": 0.05,
+  "RimStyle": "natural",
+  "Rim": {
+   "_note": "rim_mountains(): ridged ranges, From studs inside the edge to full height To studs outside",
+   "From": 60,
+   "To": 230,
+   "Scale": 240,
+   "Warp": 0.45,
+   "Low": 0.35,
+   "Peak": 0.9,
+   "FootIn": 150,
+   "Foothills": 26,
+   "Seed": 7,
+   "Sharp": 1.6
+  }
  },
  "Beauty": {
-  "_note": "BotW-study look for tools/blender/vale_beauty.py (docs/style/botw-study.md). Colours are sRGB hex albedo.",
+  "_note": "The Land's finished look for tools/blender/vale_beauty.py (docs/style/look-direction.md). Colours are sRGB hex albedo.",
   "Seed": 7,
   "Step": 2.5,
   "WaterLevel": -1.5,
@@ -543,60 +557,61 @@
   },
   "Ground": {
    "Default": {
-    "A": "8fbf45",
-    "B": "6aa23a",
-    "Dry": "c9b85a",
+    "A": "8aa64a",
+    "B": "6b8c3c",
+    "Dry": "c4b25e",
     "DryAmount": 0.3,
     "Grass": 0.95
    },
    "Zones": {
     "Sunny Meadows": {
-     "A": "94c447",
-     "B": "6fa83a",
-     "Dry": "cdbd5c",
+     "A": "8ca84b",
+     "B": "6b8c3c",
+     "Dry": "c6b45f",
      "DryAmount": 0.35,
      "Grass": 1.0
     },
     "Mossrock Hills": {
-     "A": "86ad4a",
-     "B": "5f8f3a",
-     "Dry": "b5a860",
+     "A": "7f9c48",
+     "B": "5d7f38",
+     "Dry": "b2a45e",
      "DryAmount": 0.25,
      "Grass": 0.85
     },
     "Whisperwood": {
-     "A": "4f8a35",
-     "B": "3a6c2b",
-     "Dry": "6f7a35",
+     "A": "5f8a43",
+     "B": "4c7539",
+     "Dry": "6a7434",
      "DryAmount": 0.1,
-     "Grass": 0.6
+     "Grass": 0.6,
+     "Ferns": 0.55
     },
     "Bandit Ridge": {
-     "A": "a7a656",
-     "B": "8a9446",
-     "Dry": "c8b467",
+     "A": "9a9a52",
+     "B": "7f8a44",
+     "Dry": "c2ae63",
      "DryAmount": 0.5,
      "Grass": 0.75
     },
     "Gatehill": {
-     "A": "8db248",
-     "B": "6a9a3c",
-     "Dry": "bdb062",
+     "A": "84a046",
+     "B": "64843a",
+     "Dry": "b9aa5e",
      "DryAmount": 0.2,
      "Grass": 0.8
     },
     "Wayfarer's Rest": {
-     "A": "8fbf45",
-     "B": "6fa83a",
-     "Dry": "c9b85a",
+     "A": "8aa64a",
+     "B": "6b8c3c",
+     "Dry": "c4b25e",
      "DryAmount": 0.3,
      "Grass": 0.9
     }
    },
-   "RockA": "9a958a",
-   "RockB": "bdb6a4",
-   "Dirt": "a8804c",
-   "DirtDark": "86643c",
+   "RockA": "8a8794",
+   "RockB": "aaa6b0",
+   "Dirt": "b39a6c",
+   "DirtDark": "957c55",
    "Bank": "cdbf96",
    "Bed": "2e5c58",
    "Cobble": "b9ad94",
@@ -604,19 +619,35 @@
    "PatchScale": 70,
    "DryScale": 34,
    "Grain": 0.07,
-   "RockFrom": 0.6,
-   "RockTo": 1.0
+   "RockFrom": 0.85,
+   "RockTo": 1.25,
+   "Moss": "6f8f3e",
+   "CurvLight": 3.0,
+   "Saturation": 0.8,
+   "Rim": {
+    "_note": "darker, cooler grass on the mountains' slopes (edge studs: From inside to To outside)",
+    "A": "6a8448",
+    "B": "4f6b3c",
+    "From": 20,
+    "To": -150
+   },
+   "PathPaint": 2.0
   },
   "GrassDensity": {
    "Max": 3.0,
-   "Dist": 230,
+   "Dist": 150,
    "FallPower": 0.9,
-   "Flowers": 0.25
+   "Flowers": 0.25,
+   "Carpet": 3.0,
+   "Drift": 2.2,
+   "Tint": "f2ffd8",
+   "DriftTint": "f6ffe0",
+   "_note": "carpet/drift grass only within Dist studs of the camera (Roblox draws terrain grass only near the camera too)"
   },
   "Trees": {
    "_gap": {
-    "Density": 0.12,
-    "GroveFrom": 0.45,
+    "Density": 0.16,
+    "GroveFrom": 0.62,
     "GroveScale": 110,
     "Mix": {
      "oak": 3,
@@ -631,8 +662,8 @@
     "Rocks": 0.15
    },
    "Sunny Meadows": {
-    "Density": 0.1,
-    "GroveFrom": 0.55,
+    "Density": 0.16,
+    "GroveFrom": 0.68,
     "GroveScale": 120,
     "Mix": {
      "oak": 4,
@@ -724,7 +755,28 @@
      1.3
     ],
     "Rocks": 0.2
-   }
+   },
+   "_rim": {
+    "_note": "pine forest on the mountains' lower slopes, up to a wandering tree line (studs)",
+    "From": 30,
+    "Density": 0.6,
+    "GroveFrom": 0.2,
+    "GroveScale": 100,
+    "Mix": {
+     "pine": 6,
+     "round": 0.5,
+     "bush": 0.5
+    },
+    "Height": [
+     0.9,
+     1.5
+    ],
+    "Rocks": 0.3,
+    "Treeline": 140,
+    "TreelineVar": 45,
+    "MaxSlope": 1.5
+   },
+   "PathClear": 9
   },
   "Town": {
    "Gates": [
@@ -829,12 +881,12 @@
    ],
    "Island": {
     "At": [
-     1750,
-     -520
+     1625,
+     291
     ],
-    "Z": 680,
-    "Radius": 150,
-    "Yaw": 20
+    "Z": 520,
+    "Radius": 110,
+    "Tilt": 12
    }
   },
   "Sky": {
@@ -845,36 +897,36 @@
    "Gradient": [
     [
      -2,
-     "c9d8de"
+     "c0cfcf"
     ],
     [
      2,
-     "b9d2de"
+     "b4c8ca"
     ],
     [
      8,
-     "98c2da"
+     "a2bcc4"
     ],
     [
      20,
-     "6ea9d1"
+     "88aac0"
     ],
     [
      40,
-     "4b90c7"
+     "6c97bb"
     ],
     [
      70,
-     "3c80be"
+     "5a88b5"
     ],
     [
      90,
-     "3677b7"
+     "5281b0"
     ]
    ],
    "SunFrom": [
-    125,
-    40
+    95,
+    30
    ],
    "SunSide": {
     "Colour": "f2f0de",
@@ -905,68 +957,81 @@
      }
     ]
    },
-   "Cumulus": {
-    "Seed": 3,
-    "Count": 38,
-    "Elevation": [
-     3,
-     16
-    ],
-    "Size": [
-     2.5,
-     8
-    ],
-    "Puffs": [
-     7,
-     15
-    ],
-    "Opacity": [
-     0.85,
-     1.0
-    ],
-    "Colour": "ffffff",
-    "Shade": "b6c6d8",
-    "FadeLow": 0.5,
-    "FadeHigh": 3
-   },
-   "Clouds": {
-    "Seed": 5,
-    "Count": 40,
-    "Elevation": [
-     16,
-     55
-    ],
-    "Width": [
-     10,
-     30
-    ],
-    "Height": [
-     0.6,
-     1.6
-    ],
-    "Opacity": [
-     0.15,
-     0.45
-    ],
-    "Colour": "f8fbff",
-    "Belly": "dbe6ef",
-    "BellyAmount": 0.3,
-    "FadeLow": 6,
-    "FadeHigh": 14
-   },
-   "Below": "9fb7a8"
+   "Below": "9fb7a8",
+   "Layers": [
+    {
+     "_note": "cirrus: one flat layer",
+     "Seed": 11,
+     "Height": 4.0,
+     "Scale": 2.0,
+     "Stretch": 5,
+     "Wind": 20,
+     "Threshold": 0.3,
+     "Soft": 0.25,
+     "Clump": 0.5,
+     "Opacity": 0.2,
+     "Colour": "f8fbff",
+     "Shade": "e0e8f0",
+     "LightGain": 1.5,
+     "FadeLow": 8,
+     "FadeHigh": 20,
+     "Octaves": 4
+    },
+    {
+     "_note": "fair-weather cumulus: a slab marched in slices",
+     "Seed": 4,
+     "Height": 1.0,
+     "Thickness": 0.6,
+     "Slices": 12,
+     "SliceAlpha": 0.3,
+     "Dome": 0.25,
+     "Scale": 0.6,
+     "Stretch": 1.3,
+     "Wind": 20,
+     "Threshold": 0.23,
+     "Soft": 0.08,
+     "Clump": 0.75,
+     "Colour": "fffaf0",
+     "Shade": "9fb0c4",
+     "Base": 0.15,
+     "Rise": 0.65,
+     "LightGain": 3.0,
+     "Core": 0.3,
+     "FadeLow": 0.5,
+     "FadeHigh": 4,
+     "Top": [
+      22,
+      45
+     ],
+     "Octaves": 5,
+     "Backlit": 0.4,
+     "Blur": 1,
+     "Flatten": [
+      8,
+      35,
+      0.15
+     ]
+    }
+   ]
   },
   "Light": {
    "Sun": {
-    "Azimuth": 125,
-    "Elevation": 40,
-    "Colour": "fff4e2",
-    "Strength": 3.2,
-    "Angle": 3
+    "Azimuth": 95,
+    "Elevation": 28,
+    "Colour": "ffedcc",
+    "Strength": 3.8,
+    "Angle": 2.5
    },
    "Ambient": {
-    "Strength": 1.4,
-    "Tint": "fff2e6"
+    "Strength": 0.65,
+    "Tint": "e8eeff"
+   },
+   "Fill": {
+    "_note": "shadowless fill standing in for Roblox's OutdoorAmbient (reaches under canopies)",
+    "Strength": 1.1,
+    "Colour": "c8def0",
+    "Azimuth": 275,
+    "Elevation": 80
    }
   },
   "Render": {
@@ -983,104 +1048,150 @@
   },
   "Post": {
    "Haze": {
-    "Density": 0.00072,
-    "Power": 1.25,
+    "Density": 0.0004,
+    "Power": 1.5,
     "Start": 60,
-    "Max": 0.78,
-    "Colour": "a9c4d8",
-    "GlowColour": "fff2d8",
-    "Glow": 0.3,
+    "Max": 0.75,
+    "Colour": "a9bec6",
+    "GlowColour": "fff0d6",
+    "Glow": 0.25,
     "GlowPower": 5,
-    "FarColour": "bcd2e2",
+    "FarColour": "b8c9cf",
     "FarAt": 4000
    },
    "HeightFog": {
-    "Colour": "e1eaee",
-    "Density": 0.004,
-    "Top": 6,
-    "Falloff": 12,
-    "Max": 0.3,
-    "Start": 60
+    "Colour": "dfe7ea",
+    "Density": 0.003,
+    "Top": 5,
+    "Falloff": 10,
+    "Max": 0.2,
+    "Start": 80
    },
    "Bloom": {
-    "Threshold": 0.85,
-    "Intensity": 0.55
+    "Threshold": 0.9,
+    "Intensity": 0.45
    },
    "Grade": {
-    "Saturation": 0.12,
-    "Contrast": 0.06
+    "Saturation": 0.05,
+    "Contrast": 0.15
    }
   },
   "Views": [
    {
     "Name": "overlook",
     "From": [
-     250,
-     1045
+     285,
+     1010
     ],
-    "Up": 7,
+    "Up": 12,
     "To": [
      700,
-     640
+     620
     ],
-    "ToUp": 25,
-    "FovV": 55
+    "ToUp": 42,
+    "FovV": 50,
+    "Level": true,
+    "Drift": 0.35,
+    "Framing": [
+     {
+      "Kind": "pine",
+      "At": [
+       -16,
+       20
+      ],
+      "Scale": 1.35,
+      "Seed": 1
+     },
+     {
+      "Kind": "pine",
+      "At": [
+       -24,
+       30
+      ],
+      "Scale": 1.05,
+      "Seed": 2
+     },
+     {
+      "Kind": "boulder",
+      "At": [
+       12,
+       18
+      ],
+      "Scale": 1.4,
+      "Seed": 1,
+      "Sink": 1.0
+     },
+     {
+      "Kind": "bush",
+      "At": [
+       8,
+       15
+      ],
+      "Scale": 0.9,
+      "Seed": 1
+     }
+    ],
+    "ClearAhead": 110
    },
    {
     "Name": "meadow_town",
     "From": [
-     640,
-     980
+     688,
+     820
     ],
     "Up": 6,
     "To": [
-     700,
+     704,
      640
     ],
-    "ToUp": 22,
-    "FovV": 55
+    "ToUp": 16,
+    "FovV": 50,
+    "Level": true
    },
    {
     "Name": "plaza",
     "From": [
-     696,
-     650
+     690,
+     662
     ],
     "Up": 7,
     "To": [
-     722,
-     590
+     705,
+     585
     ],
-    "ToUp": 34,
-    "FovV": 62
+    "ToUp": 30,
+    "FovV": 60,
+    "Level": true
    },
    {
     "Name": "forest",
     "From": [
-     640,
-     330
+     700,
+     540
     ],
     "Up": 6,
     "To": [
-     560,
-     140
+     645,
+     330
     ],
-    "ToUp": 8,
-    "FovV": 60
+    "ToUp": 10,
+    "FovV": 55,
+    "Level": true
    },
    {
     "Name": "gatehill",
     "From": [
-     1085,
-     345
+     1060,
+     380
     ],
-    "Up": 7,
+    "Up": 6,
     "To": [
-     1150,
-     230
+     1140,
+     228
     ],
-    "ToUp": 40,
-    "FovV": 58
+    "ToUp": 30,
+    "FovV": 50,
+    "Level": true
    },
    {
     "Name": "ruins",
@@ -1094,8 +1205,519 @@
      560
     ],
     "ToUp": 10,
-    "FovV": 58
+    "FovV": 58,
+    "Level": true
+   },
+   {
+    "Name": "gate_vista",
+    "From": [
+     1112,
+     292
+    ],
+    "Up": 9,
+    "To": [
+     700,
+     620
+    ],
+    "ToUp": 0,
+    "FovV": 50,
+    "Level": true
+   },
+   {
+    "Name": "walk_road",
+    "Player": [
+     600,
+     917
+    ],
+    "Facing": [
+     690,
+     820
+    ],
+    "Cam": {
+     "Back": 10,
+     "Right": 2.0,
+     "Up": 6.6,
+     "Ahead": 40,
+     "LookUp": 3.0
+    },
+    "FovV": 70
+   },
+   {
+    "Name": "walk_meadow",
+    "Player": [
+     740,
+     900
+    ],
+    "Facing": [
+     820,
+     760
+    ],
+    "Cam": {
+     "Back": 10,
+     "Right": 2.0,
+     "Up": 6.6,
+     "Ahead": 40,
+     "LookUp": 3.0
+    },
+    "FovV": 70
+   },
+   {
+    "Name": "walk_forest",
+    "Player": [
+     670,
+     400
+    ],
+    "Facing": [
+     640,
+     300
+    ],
+    "Cam": {
+     "Back": 10,
+     "Right": 2.0,
+     "Up": 6.6,
+     "Ahead": 40,
+     "LookUp": 3.0
+    },
+    "FovV": 70
+   },
+   {
+    "Name": "walk_gate_road",
+    "Player": [
+     1158,
+     420
+    ],
+    "Facing": [
+     1150,
+     260
+    ],
+    "Cam": {
+     "Back": 10,
+     "Right": 2.0,
+     "Up": 6.6,
+     "Ahead": 40,
+     "LookUp": 3.0
+    },
+    "FovV": 70
+   },
+   {
+    "Name": "walk_ruins",
+    "Player": [
+     1048,
+     604
+    ],
+    "Facing": [
+     1020,
+     560
+    ],
+    "Cam": {
+     "Back": 10,
+     "Right": 2.0,
+     "Up": 6.6,
+     "Ahead": 40,
+     "LookUp": 3.0
+    },
+    "FovV": 70
+   },
+   {
+    "Name": "walk_bridge",
+    "Player": [
+     702,
+     748
+    ],
+    "Facing": [
+     700,
+     690
+    ],
+    "Cam": {
+     "Back": 10,
+     "Right": 2.0,
+     "Up": 6.6,
+     "Ahead": 40,
+     "LookUp": 3.0
+    },
+    "FovV": 70
    }
-  ]
+  ],
+  "Palette": {
+   "pine": "5a8a78",
+   "pine_dark": "355b50",
+   "leaf_dark": "3a5c40",
+   "leaf_light": "93b05a",
+   "rock_cool": "8f969b",
+   "moss": "6f9440",
+   "bark": "6a5442"
+  },
+  "GrassStyle": "matched",
+  "GrassStyles": {
+   "_note": "--grass <style> picks one; numbers go over GrassDensity (docs/style/grass.md)",
+   "mixed": {
+    "Carpet": 3.0,
+    "CarpetHeight": 0.45,
+    "Drift": 2.2,
+    "DriftHeight": 1.2,
+    "DriftBase": 0.0,
+    "Tint": "f2ffd8",
+    "DriftTint": "f6ffe0",
+    "Flowers": 0.25
+   },
+   "tufts": {
+    "Carpet": 0,
+    "Drift": 0.7,
+    "DriftHeight": 0.9,
+    "DriftBlades": 14,
+    "DriftWidth": 0.08,
+    "DriftSpread": 0.45,
+    "DriftBase": 0.25,
+    "DriftTint": "b4c89a",
+    "Flowers": 0.8
+   },
+   "short": {
+    "Carpet": 2.0,
+    "CarpetHeight": 0.3,
+    "CarpetBlades": 20,
+    "Tint": "e8f5d0",
+    "Drift": 1.0,
+    "DriftHeight": 1.15,
+    "DriftBlades": 12,
+    "DriftWidth": 0.08,
+    "DriftSpread": 0.35,
+    "DriftBase": 0.3,
+    "DriftTint": "b4c89a",
+    "Flowers": 0.5
+   },
+   "matched": {
+    "_note": "grass in the ground's own colour: root x1.0, tip x1.08, each clump +-5% lighter/darker and +-4% warmer/cooler (mean = the ground); no dark accents; casts no shadows",
+    "Carpet": 2.1,
+    "CarpetHeight": 0.5,
+    "CarpetBlades": 24,
+    "CarpetWidth": 0.045,
+    "Root": 1.0,
+    "Tip": 1.08,
+    "Tint": "ffffff",
+    "Drift": 0.75,
+    "DriftHeight": 1.05,
+    "DriftBlades": 16,
+    "DriftWidth": 0.07,
+    "DriftSpread": 0.45,
+    "DriftRoot": 0.98,
+    "DriftTip": 1.1,
+    "DriftTint": "ffffff",
+    "DriftBase": 0.15,
+    "Shelter": 0.9,
+    "Vary": {
+     "Light": 0.05,
+     "Hue": 0.04
+    },
+    "Accent": 0,
+    "AccentHeight": 1.0,
+    "AccentTint": "b4c89a",
+    "Flowers": 0.7,
+    "Pebbles": 0.35,
+    "VergeFrom": 0.2,
+    "VergeTo": 4.0,
+    "Dist": 95
+   },
+   "none": {
+    "_note": "ground only (flowers and pebbles kept): the baseline for measuring how well the grass matches the ground",
+    "Carpet": 0,
+    "CarpetHeight": 0.5,
+    "CarpetBlades": 24,
+    "CarpetWidth": 0.045,
+    "Root": 1.0,
+    "Tip": 1.08,
+    "Tint": "ffffff",
+    "Drift": 0,
+    "DriftHeight": 1.05,
+    "DriftBlades": 16,
+    "DriftWidth": 0.07,
+    "DriftSpread": 0.45,
+    "DriftRoot": 0.98,
+    "DriftTip": 1.1,
+    "DriftTint": "ffffff",
+    "DriftBase": 0.15,
+    "Shelter": 0.9,
+    "Vary": {
+     "Light": 0.05,
+     "Hue": 0.04
+    },
+    "Accent": 0,
+    "AccentHeight": 1.0,
+    "AccentTint": "b4c89a",
+    "Flowers": 0.7,
+    "Pebbles": 0.35,
+    "VergeFrom": 0.2,
+    "VergeTo": 4.0,
+    "Dist": 95
+   }
+  },
+  "Fields": {
+   "_note": "strip fields: blocks of long narrow crops around the windmill and along the river (farm_fields in vale_beauty.py)",
+   "Seed": 3,
+   "PathGap": 5,
+   "RowSpacing": 2.2,
+   "HedgeStep": 5.5,
+   "HedgeGaps": 0.3,
+   "Colours": [
+    "d2b65e",
+    "c9c27a",
+    "8fa24a",
+    "a7b552",
+    "8a6e4a",
+    "9a9a5a",
+    "7f9a6e"
+   ],
+   "Blocks": [
+    {
+     "At": [
+      505,
+      860
+     ],
+     "Size": [
+      110,
+      70
+     ],
+     "Angle": 20,
+     "Strips": 5
+    },
+    {
+     "At": [
+      610,
+      905
+     ],
+     "Size": [
+      70,
+      50
+     ],
+     "Angle": -40,
+     "Strips": 4
+    },
+    {
+     "At": [
+      440,
+      790
+     ],
+     "Size": [
+      90,
+      60
+     ],
+     "Angle": 35,
+     "Strips": 4
+    },
+    {
+     "At": [
+      880,
+      760
+     ],
+     "Size": [
+      120,
+      50
+     ],
+     "Angle": 35,
+     "Strips": 5
+    },
+    {
+     "At": [
+      860,
+      880
+     ],
+     "Size": [
+      110,
+      60
+     ],
+     "Angle": 35,
+     "Strips": 5
+    },
+    {
+     "At": [
+      990,
+      790
+     ],
+     "Size": [
+      80,
+      50
+     ],
+     "Angle": 35,
+     "Strips": 3
+    }
+   ],
+   "Kinds": [
+    "wheat",
+    "wheat",
+    "greens",
+    "greens",
+    "bare",
+    "fallow",
+    "greens"
+   ],
+   "Crops": {
+    "Wheat": 4.0,
+    "WheatHeight": 2.2,
+    "Greens": 2.5,
+    "GreensHeight": 0.9
+   }
+  },
+  "GroundDetail": {
+   "_note": "tiling detail textures (tools/art/ground_textures.py) x the vertex colours; Roblox: Terrain MaterialVariant colour maps",
+   "Grass": "ground_grass.png",
+   "GrassTile": 12,
+   "Rock": "ground_rock.png",
+   "RockTile": 16,
+   "Dirt": "ground_dirt.png",
+   "DirtTile": 8,
+   "Strength": 1.0
+  },
+  "Trails": {
+   "_note": "paths as ribbon meshes (trails() in vale_beauty.py); Crown: path index -> grassy middle strip",
+   "Step": 1.2,
+   "Lift": 0.12,
+   "EdgeLift": 0.03,
+   "Wobble": 0.12,
+   "Stones": 0.06,
+   "Texture": "ground_dirt.png",
+   "Tile": 8,
+   "Strength": 0.8,
+   "Colours": {
+    "Dirt": "c2aa80",
+    "Rut": "a48c64",
+    "Edge": "a9a36e",
+    "Crown": "8f9a52"
+   },
+   "Crown": {
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "Width": {
+    "3": 0.7,
+    "4": 0.7,
+    "5": 0.7
+   }
+  },
+  "TreeStyle": "facet",
+  "Undergrowth": {
+   "_note": "ferns under trees and in forest zones (Ground zone key Ferns)",
+   "Density": 0.35,
+   "Length": 1.8,
+   "Tint": "f8fdf0",
+   "Vary": {
+    "Light": 0.05,
+    "Hue": 0.04
+   }
+  },
+  "Patches": {
+   "_note": "randomised ground patches (ground_patches/patch_props in vale_beauty.py); Mix per zone, _gap for the grassland between zones",
+   "Seed": 17,
+   "Count": 520,
+   "Radius": {
+    "clover": [
+     5,
+     12
+    ],
+    "dry": [
+     7,
+     18
+    ],
+    "bare": [
+     1.8,
+     4.2
+    ],
+    "flowers": [
+     3,
+     7
+    ],
+    "stones": [
+     3,
+     6
+    ]
+   },
+   "Mix": {
+    "_gap": {
+     "clover": 3,
+     "dry": 2,
+     "bare": 1.5,
+     "flowers": 2.5,
+     "stones": 1
+    },
+    "Sunny Meadows": {
+     "clover": 3,
+     "dry": 1.5,
+     "bare": 1.2,
+     "flowers": 3.5,
+     "stones": 0.8
+    },
+    "Mossrock Hills": {
+     "clover": 2,
+     "dry": 1.5,
+     "bare": 1,
+     "flowers": 1.5,
+     "stones": 3.5
+    },
+    "Whisperwood": {
+     "clover": 3,
+     "dry": 0.5,
+     "bare": 2,
+     "flowers": 1,
+     "stones": 2
+    },
+    "Bandit Ridge": {
+     "clover": 1,
+     "dry": 4,
+     "bare": 2.5,
+     "flowers": 1,
+     "stones": 2
+    },
+    "Gatehill": {
+     "clover": 2,
+     "dry": 2,
+     "bare": 1,
+     "flowers": 2,
+     "stones": 3
+    },
+    "Wayfarer's Rest": {
+     "clover": 2.5,
+     "dry": 2,
+     "bare": 1,
+     "flowers": 3,
+     "stones": 1.5
+    }
+   },
+   "Strength": {
+    "clover": 0.8,
+    "dry": 0.6,
+    "bare": 0.9,
+    "stones": 0.25
+   },
+   "Clover": [
+    0.82,
+    0.98,
+    0.78
+   ],
+   "Dry": "c4b46e",
+   "Bare": "9c8662",
+   "Stones": "8f8f84",
+   "CloverGrass": 0.25,
+   "DryThin": 0.35,
+   "DryClumps": 0.6,
+   "CloverFlowers": 0.35,
+   "Beds": 1.0,
+   "BedDensity": 1.6
+  },
+  "Outcrops": {
+   "_note": "big half-buried boulders on slopes and crests with stones at their feet (outcrops() in vale_beauty.py)",
+   "Count": 70,
+   "Scale": [
+    2.6,
+    5.0
+   ],
+   "Bury": 1.6,
+   "PathGap": 6,
+   "Light": 1.2
+  },
+  "Bush": {
+   "_note": "bushes and hedgerows in meadow greens (they read as black holes in light grass in the pines' dark teal)",
+   "Dark": "5f7f44",
+   "Light": "a3bf63"
+  },
+  "PebbleLight": 1.35
  }
 }

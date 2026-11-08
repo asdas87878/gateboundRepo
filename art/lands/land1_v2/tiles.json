@@ -1,0 +1,55 @@
+{
+ "Tiles": [
+  {
+   "File": "terrain_0_0.png",
+   "I0": 0,
+   "J0": 0,
+   "W": 1024,
+   "H": 1024
+  },
+  {
+   "File": "terrain_1_0.png",
+   "I0": 1024,
+   "J0": 0,
+   "W": 742,
+   "H": 1024
+  },
+  {
+   "File": "terrain_0_1.png",
+   "I0": 0,
+   "J0": 1024,
+   "W": 1024,
+   "H": 519
+  },
+  {
+   "File": "terrain_1_1.png",
+   "I0": 1024,
+   "J0": 1024,
+   "W": 742,
+   "H": 519
+  }
+ ],
+ "Border": 400,
+ "Step": 4,
+ "Objects": 10532,
+ "ObjectRows": 208,
+ "Kinds": [
+  "Stone",
+  "Roof",
+  "Wood",
+  "Enemy",
+  "Boss",
+  "Ink",
+  "Rock",
+  "TreeMeadow",
+  "TreeHill",
+  "TreeDark",
+  "TreeDry",
+  "Glow",
+  "FightCircle",
+  "Bridge",
+  "Waystone",
+  "Crop",
+  "Giant"
+ ]
+}

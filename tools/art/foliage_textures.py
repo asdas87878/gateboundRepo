@@ -126,8 +126,41 @@ def leaves(seed=5, size=1024, palette=("2a4f2e", "4f7d3c", "93b35e")):
 	return bleed(img)
 
 
+def grass_tuft(seed=9, w=1024, h=512, blades=70):
+	"""a grass tuft card (u across, v up): tapered curved blades fanning out of the bottom middle, white at the root
+	and tip-tinted so a material can multiply in the ground colour; dark-to-light gradient up each blade"""
+	S = 2
+	W, H = w * S, h * S
+	img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+	d = ImageDraw.Draw(img)
+	r = random.Random(seed)
+	order = sorted(range(blades), key=lambda k: r.random())
+	for k in order:
+		x0 = W / 2 + r.gauss(0, W * 0.09)
+		lean = r.gauss(0, 0.35) + (x0 - W / 2) / (W * 0.25)
+		hgt = H * r.uniform(0.45, 0.97)
+		width = W * r.uniform(0.012, 0.02)
+		steps = 14
+		pts_l, pts_r = [], []
+		for i in range(steps + 1):
+			t = i / steps
+			x = x0 + lean * hgt * 0.5 * t * t
+			y = H - hgt * t
+			hw = width * (1 - t) ** 0.8
+			pts_l.append((x - hw, y))
+			pts_r.append((x + hw, y))
+		shade = r.uniform(0.0, 1.0)
+		for i in range(steps):  # draw as stacked quads so each band gets its gradient value
+			t = (i + 0.5) / steps
+			v = int(255 * (0.45 + 0.55 * t) * (0.85 + 0.15 * shade))
+			d.polygon([pts_l[i], pts_r[i], pts_r[i + 1], pts_l[i + 1]], fill=(v, v, v, 255))
+	img = img.resize((w, h), Image.LANCZOS)
+	return bleed(img)
+
+
 def main():
 	os.makedirs(OUT, exist_ok=True)
+	grass_tuft().save(os.path.join(OUT, "grass_tuft.png"))
 	needles().save(os.path.join(OUT, "needles.png"))
 	leaves().save(os.path.join(OUT, "leaves.png"))
 	leaves(seed=6, palette=("8a3f17", "c9702a", "efb04a")).save(os.path.join(OUT, "leaves_autumn.png"))

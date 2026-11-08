@@ -12,3 +12,22 @@ art/look/*/passes/*/placements.json
 
 # reference study media (downloaded footage, frames): private, never in the repo
 research/
+
+# land beauty passes: keep each pass's sheet.jpg and the final frames; raw renders, depth, logs and the sky cache are
+# rebuilt by tools/blender/vale_beauty.py
+art/lands/*/beauty/_cache/
+art/lands/*/beauty/v*/*/
+art/lands/*/beauty/w*/*/
+art/lands/*/beauty/*/blender_out.txt
+art/lands/*/beauty/*/log.txt
+art/lands/*/beauty/*/*.blend
+art/lands/*/beauty/final/*/beauty.png
+art/lands/*/beauty/final/*/depth.png
+art/lands/*/beauty/final/*/placements.json
+# grass bench, A/B runs and tree comparisons: keep the sheets
+art/style/trees/*.png
+art/style/grass/vale_ab/*/
+art/style/grass/bench1/*.png
+
+# Python build files
+__pycache__/

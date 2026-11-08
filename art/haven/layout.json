@@ -1,0 +1,1098 @@
+{
+ "_note": "The Haven's composition (Proposed 2026-11-06). Studs. Bearings: 0 = north, clockwise. Heights: main island's top = 0. Plain shapes only: this sets sizes and views, concept art adds the detail. Drawn by tools/blender/haven_blockout.py and tools/art/haven_plan.py.",
+ "WalkSpeed": 16,
+ "Player": 5.2,
+ "Main": {
+  "Radius": 180,
+  "Depth": 210,
+  "Plaza": {
+   "Radius": 62,
+   "Height": 10
+  }
+ },
+ "Tower": {
+  "Tiers": [
+   [
+    40,
+    33,
+    80
+   ],
+   [
+    33,
+    27,
+    70
+   ],
+   [
+    27,
+    21,
+    65
+   ],
+   [
+    21,
+    15,
+    55
+   ]
+  ],
+  "Cap": 40
+ },
+ "Arches": {
+  "Radius": 150,
+  "Bearings": [
+   -60,
+   -36,
+   -12,
+   12,
+   36,
+   60
+  ],
+  "Width": 30,
+  "Height": 50,
+  "Post": 7
+ },
+ "Market": {
+  "Radius": 118,
+  "Bearings": [
+   120,
+   150,
+   210,
+   240
+  ],
+  "Stall": 10
+ },
+ "Stream": {
+  "Bearing": 180,
+  "From": 62,
+  "Width": 14,
+  "Fall": 620
+ },
+ "Plots": {
+  "Radius": 85,
+  "Ring": 450,
+  "Depth": 92,
+  "Bearings": [
+   75,
+   105,
+   135,
+   165,
+   195,
+   225,
+   255,
+   285
+  ],
+  "Heights": [
+   10,
+   -8,
+   8,
+   -12,
+   6,
+   -10,
+   12,
+   -6
+  ],
+  "Buildings": [
+   2,
+   5,
+   1,
+   9,
+   3,
+   6,
+   2,
+   4
+  ],
+  "Yours": 195,
+  "SlotRing": 50,
+  "SlotRadius": 14,
+  "CentreRadius": 18,
+  "Slots": 7
+ },
+ "BridgeWidth": 14,
+ "Building": [
+  20,
+  16,
+  12
+ ],
+ "Clouds": -950,
+ "Themes": [
+  {
+   "Name": "Greenreach",
+   "Kind": "grass",
+   "Bearing": -12,
+   "Rock": [
+    0.5,
+    0.41,
+    0.34
+   ],
+   "Lands": [
+    1,
+    5
+   ]
+  },
+  {
+   "Name": "High Meadows",
+   "Kind": "top grass",
+   "Bearing": 12,
+   "Rock": [
+    0.68,
+    0.56,
+    0.38
+   ],
+   "Lands": [
+    6,
+    10
+   ]
+  },
+  {
+   "Name": "Hollowmere",
+   "Kind": "marsh",
+   "Bearing": -36,
+   "Rock": [
+    0.22,
+    0.34,
+    0.36
+   ],
+   "Lands": [
+    11,
+    15
+   ]
+  },
+  {
+   "Name": "Fae Hollow",
+   "Kind": "fae",
+   "Bearing": 36,
+   "Rock": [
+    0.46,
+    0.32,
+    0.6
+   ],
+   "Lands": [
+    16,
+    20
+   ]
+  },
+  {
+   "Name": "Sunscar",
+   "Kind": "desert",
+   "Bearing": -60,
+   "Rock": [
+    0.74,
+    0.4,
+    0.24
+   ],
+   "Lands": [
+    21,
+    25
+   ]
+  },
+  {
+   "Name": "Rimefell",
+   "Kind": "snow",
+   "Bearing": 60,
+   "Rock": [
+    0.72,
+    0.82,
+    0.92
+   ],
+   "Lands": [
+    26,
+    30
+   ]
+  }
+ ],
+ "Lands": [
+  {
+   "Number": 1,
+   "Name": "Verdant Vale",
+   "Theme": "Greenreach",
+   "Bearing": -12,
+   "Distance": 3200,
+   "Radius": 798,
+   "Top": -101,
+   "Colour": [
+    0.42,
+    0.68,
+    0.36
+   ],
+   "Rock": [
+    0.5,
+    0.41,
+    0.34
+   ],
+   "Bits": [
+    [
+     "hills",
+     9,
+     "hill"
+    ],
+    [
+     "giant",
+     1
+    ],
+    [
+     "trees",
+     16,
+     "tree"
+    ],
+    [
+     "falls",
+     1
+    ]
+   ],
+   "Open": true
+  },
+  {
+   "Number": 2,
+   "Name": "Sandbar Meadow",
+   "Theme": "Greenreach",
+   "Bearing": -4,
+   "Distance": 4000,
+   "Radius": 385,
+   "Top": 1456,
+   "Colour": [
+    0.5,
+    0.68,
+    0.38
+   ],
+   "Rock": [
+    0.5,
+    0.41,
+    0.34
+   ],
+   "Bits": [
+    [
+     "patch",
+     7,
+     "sand"
+    ],
+    [
+     "hills",
+     3,
+     "hill"
+    ],
+    [
+     "trees",
+     5,
+     "tree"
+    ]
+   ]
+  },
+  {
+   "Number": 3,
+   "Name": "Mirrorbrook",
+   "Theme": "Greenreach",
+   "Bearing": -25,
+   "Distance": 4640,
+   "Radius": 373,
+   "Top": 902,
+   "Colour": [
+    0.36,
+    0.66,
+    0.42
+   ],
+   "Rock": [
+    0.5,
+    0.41,
+    0.34
+   ],
+   "Bits": [
+    [
+     "patch",
+     5,
+     "water"
+    ],
+    [
+     "hills",
+     4,
+     "hill"
+    ],
+    [
+     "trees",
+     6,
+     "tree"
+    ],
+    [
+     "falls",
+     2
+    ]
+   ]
+  },
+  {
+   "Number": 4,
+   "Name": "Thornwood",
+   "Theme": "Greenreach",
+   "Bearing": -14,
+   "Distance": 5600,
+   "Radius": 333,
+   "Top": 3637,
+   "Colour": [
+    0.3,
+    0.54,
+    0.32
+   ],
+   "Rock": [
+    0.5,
+    0.41,
+    0.34
+   ],
+   "Bits": [
+    [
+     "trees",
+     34,
+     "tree"
+    ]
+   ]
+  },
+  {
+   "Number": 5,
+   "Name": "Oldroot",
+   "Theme": "Greenreach",
+   "Bearing": 0,
+   "Distance": 6400,
+   "Radius": 324,
+   "Top": -515,
+   "Colour": [
+    0.4,
+    0.6,
+    0.3
+   ],
+   "Rock": [
+    0.5,
+    0.41,
+    0.34
+   ],
+   "Bits": [
+    [
+     "stump",
+     1
+    ],
+    [
+     "trees",
+     8,
+     "tree"
+    ]
+   ]
+  },
+  {
+   "Number": 6,
+   "Name": "Brightwheat Downs",
+   "Theme": "High Meadows",
+   "Bearing": 12,
+   "Distance": 4400,
+   "Radius": 579,
+   "Top": 697,
+   "Colour": [
+    0.76,
+    0.66,
+    0.34
+   ],
+   "Rock": [
+    0.68,
+    0.56,
+    0.38
+   ],
+   "Bits": [
+    [
+     "hills",
+     6,
+     "gold"
+    ],
+    [
+     "mill",
+     1
+    ]
+   ]
+  },
+  {
+   "Number": 7,
+   "Name": "Poppyrise",
+   "Theme": "High Meadows",
+   "Bearing": 15,
+   "Distance": 5280,
+   "Radius": 406,
+   "Top": 2241,
+   "Colour": [
+    0.62,
+    0.72,
+    0.38
+   ],
+   "Rock": [
+    0.68,
+    0.56,
+    0.38
+   ],
+   "Bits": [
+    [
+     "patch",
+     12,
+     "red"
+    ],
+    [
+     "hills",
+     4,
+     "hill"
+    ]
+   ]
+  },
+  {
+   "Number": 8,
+   "Name": "Stepfields",
+   "Theme": "High Meadows",
+   "Bearing": 11,
+   "Distance": 5940,
+   "Radius": 353,
+   "Top": 4007,
+   "Colour": [
+    0.58,
+    0.74,
+    0.4
+   ],
+   "Rock": [
+    0.68,
+    0.56,
+    0.38
+   ],
+   "Bits": [
+    [
+     "terraces",
+     4
+    ]
+   ]
+  },
+  {
+   "Number": 9,
+   "Name": "Ringstone Tops",
+   "Theme": "High Meadows",
+   "Bearing": 22,
+   "Distance": 6820,
+   "Radius": 357,
+   "Top": 597,
+   "Colour": [
+    0.66,
+    0.72,
+    0.46
+   ],
+   "Rock": [
+    0.68,
+    0.56,
+    0.38
+   ],
+   "Bits": [
+    [
+     "stones",
+     9
+    ],
+    [
+     "hills",
+     2,
+     "hill"
+    ]
+   ]
+  },
+  {
+   "Number": 10,
+   "Name": "Highwind",
+   "Theme": "High Meadows",
+   "Bearing": 18,
+   "Distance": 7920,
+   "Radius": 360,
+   "Top": 7920,
+   "Colour": [
+    0.7,
+    0.76,
+    0.5
+   ],
+   "Rock": [
+    0.68,
+    0.56,
+    0.38
+   ],
+   "Bits": [
+    [
+     "hills",
+     7,
+     "hill"
+    ],
+    [
+     "trees",
+     3,
+     "tree"
+    ]
+   ]
+  },
+  {
+   "Number": 11,
+   "Name": "Hollowmere",
+   "Theme": "Hollowmere",
+   "Bearing": -36,
+   "Distance": 5600,
+   "Radius": 638,
+   "Top": 196,
+   "Colour": [
+    0.32,
+    0.5,
+    0.48
+   ],
+   "Rock": [
+    0.22,
+    0.34,
+    0.36
+   ],
+   "Bits": [
+    [
+     "patch",
+     4,
+     "water"
+    ],
+    [
+     "trees",
+     12,
+     "willow"
+    ]
+   ]
+  },
+  {
+   "Number": 12,
+   "Name": "Reedwater",
+   "Theme": "Hollowmere",
+   "Bearing": -44,
+   "Distance": 6720,
+   "Radius": 399,
+   "Top": -282,
+   "Colour": [
+    0.36,
+    0.56,
+    0.46
+   ],
+   "Rock": [
+    0.22,
+    0.34,
+    0.36
+   ],
+   "Bits": [
+    [
+     "patch",
+     7,
+     "water"
+    ],
+    [
+     "pines",
+     18,
+     "reed"
+    ]
+   ]
+  },
+  {
+   "Number": 13,
+   "Name": "Lanternbog",
+   "Theme": "Hollowmere",
+   "Bearing": -34,
+   "Distance": 7280,
+   "Radius": 484,
+   "Top": 1815,
+   "Colour": [
+    0.26,
+    0.42,
+    0.4
+   ],
+   "Rock": [
+    0.22,
+    0.34,
+    0.36
+   ],
+   "Bits": [
+    [
+     "trees",
+     9,
+     "willow"
+    ],
+    [
+     "glows",
+     12,
+     "lamp"
+    ]
+   ]
+  },
+  {
+   "Number": 14,
+   "Name": "Drownroot",
+   "Theme": "Hollowmere",
+   "Bearing": -38,
+   "Distance": 8680,
+   "Radius": 425,
+   "Top": 4048,
+   "Colour": [
+    0.28,
+    0.4,
+    0.34
+   ],
+   "Rock": [
+    0.22,
+    0.34,
+    0.36
+   ],
+   "Bits": [
+    [
+     "roots",
+     7
+    ],
+    [
+     "patch",
+     3,
+     "water"
+    ]
+   ]
+  },
+  {
+   "Number": 15,
+   "Name": "Blackmire",
+   "Theme": "Hollowmere",
+   "Bearing": -33,
+   "Distance": 9800,
+   "Radius": 376,
+   "Top": 6862,
+   "Colour": [
+    0.2,
+    0.28,
+    0.3
+   ],
+   "Rock": [
+    0.22,
+    0.34,
+    0.36
+   ],
+   "Bits": [
+    [
+     "patch",
+     6,
+     "mud"
+    ],
+    [
+     "trees",
+     6,
+     "willow"
+    ]
+   ]
+  },
+  {
+   "Number": 16,
+   "Name": "Fae Hollow",
+   "Theme": "Fae Hollow",
+   "Bearing": 36,
+   "Distance": 7000,
+   "Radius": 674,
+   "Top": 1361,
+   "Colour": [
+    0.56,
+    0.42,
+    0.68
+   ],
+   "Rock": [
+    0.46,
+    0.32,
+    0.6
+   ],
+   "Bits": [
+    [
+     "caps",
+     11,
+     "cap"
+    ]
+   ]
+  },
+  {
+   "Number": 17,
+   "Name": "Glowcap Dell",
+   "Theme": "Fae Hollow",
+   "Bearing": 39,
+   "Distance": 8050,
+   "Radius": 535,
+   "Top": 3417,
+   "Colour": [
+    0.44,
+    0.4,
+    0.72
+   ],
+   "Rock": [
+    0.46,
+    0.32,
+    0.6
+   ],
+   "Bits": [
+    [
+     "caps",
+     9,
+     "capblue"
+    ],
+    [
+     "glows",
+     8,
+     "lamp"
+    ]
+   ]
+  },
+  {
+   "Number": 18,
+   "Name": "Moonpetal",
+   "Theme": "Fae Hollow",
+   "Bearing": 32,
+   "Distance": 9100,
+   "Radius": 477,
+   "Top": 159,
+   "Colour": [
+    0.66,
+    0.52,
+    0.78
+   ],
+   "Rock": [
+    0.46,
+    0.32,
+    0.6
+   ],
+   "Bits": [
+    [
+     "patch",
+     10,
+     "petal"
+    ],
+    [
+     "caps",
+     3,
+     "capgold"
+    ]
+   ]
+  },
+  {
+   "Number": 19,
+   "Name": "Thistlecourt",
+   "Theme": "Fae Hollow",
+   "Bearing": 44,
+   "Distance": 10500,
+   "Radius": 403,
+   "Top": 550,
+   "Colour": [
+    0.6,
+    0.36,
+    0.6
+   ],
+   "Rock": [
+    0.46,
+    0.32,
+    0.6
+   ],
+   "Bits": [
+    [
+     "stones",
+     7
+    ],
+    [
+     "spires",
+     4,
+     "stone"
+    ],
+    [
+     "caps",
+     3,
+     "cap"
+    ]
+   ]
+  },
+  {
+   "Number": 20,
+   "Name": "Everdusk",
+   "Theme": "Fae Hollow",
+   "Bearing": 35,
+   "Distance": 12250,
+   "Radius": 556,
+   "Top": 8900,
+   "Colour": [
+    0.36,
+    0.3,
+    0.58
+   ],
+   "Rock": [
+    0.46,
+    0.32,
+    0.6
+   ],
+   "Bits": [
+    [
+     "caps",
+     12,
+     "capgold"
+    ]
+   ]
+  },
+  {
+   "Number": 21,
+   "Name": "Sunscar Expanse",
+   "Theme": "Sunscar",
+   "Bearing": -60,
+   "Distance": 8600,
+   "Radius": 752,
+   "Top": 904,
+   "Colour": [
+    0.8,
+    0.58,
+    0.36
+   ],
+   "Rock": [
+    0.74,
+    0.4,
+    0.24
+   ],
+   "Bits": [
+    [
+     "mesas",
+     7,
+     "mesa"
+    ]
+   ]
+  },
+  {
+   "Number": 22,
+   "Name": "Dunesea",
+   "Theme": "Sunscar",
+   "Bearing": -67,
+   "Distance": 9890,
+   "Radius": 518,
+   "Top": -259,
+   "Colour": [
+    0.88,
+    0.72,
+    0.46
+   ],
+   "Rock": [
+    0.74,
+    0.4,
+    0.24
+   ],
+   "Bits": [
+    [
+     "dunes",
+     12,
+     "dune"
+    ]
+   ]
+  },
+  {
+   "Number": 23,
+   "Name": "Redspire",
+   "Theme": "Sunscar",
+   "Bearing": -56,
+   "Distance": 11180,
+   "Radius": 625,
+   "Top": 3633,
+   "Colour": [
+    0.72,
+    0.4,
+    0.28
+   ],
+   "Rock": [
+    0.74,
+    0.4,
+    0.24
+   ],
+   "Bits": [
+    [
+     "spires",
+     12,
+     "mesa"
+    ]
+   ]
+  },
+  {
+   "Number": 24,
+   "Name": "Glassflats",
+   "Theme": "Sunscar",
+   "Bearing": -62,
+   "Distance": 12900,
+   "Radius": 541,
+   "Top": 7151,
+   "Colour": [
+    0.82,
+    0.78,
+    0.62
+   ],
+   "Rock": [
+    0.74,
+    0.4,
+    0.24
+   ],
+   "Bits": [
+    [
+     "patch",
+     9,
+     "glass"
+    ],
+    [
+     "mesas",
+     2,
+     "mesa"
+    ]
+   ]
+  },
+  {
+   "Number": 25,
+   "Name": "Emberwaste",
+   "Theme": "Sunscar",
+   "Bearing": -50,
+   "Distance": 14620,
+   "Radius": 485,
+   "Top": 766,
+   "Colour": [
+    0.42,
+    0.26,
+    0.24
+   ],
+   "Rock": [
+    0.74,
+    0.4,
+    0.24
+   ],
+   "Bits": [
+    [
+     "mesas",
+     4,
+     "ember"
+    ],
+    [
+     "glows",
+     9,
+     "lava"
+    ]
+   ]
+  },
+  {
+   "Number": 26,
+   "Name": "Rimefell",
+   "Theme": "Rimefell",
+   "Bearing": 60,
+   "Distance": 10500,
+   "Radius": 845,
+   "Top": 2813,
+   "Colour": [
+    0.82,
+    0.88,
+    0.94
+   ],
+   "Rock": [
+    0.72,
+    0.82,
+    0.92
+   ],
+   "Bits": [
+    [
+     "peaks",
+     6,
+     "snow"
+    ]
+   ]
+  },
+  {
+   "Number": 27,
+   "Name": "Frostpine",
+   "Theme": "Rimefell",
+   "Bearing": 64,
+   "Distance": 11760,
+   "Radius": 575,
+   "Top": 616,
+   "Colour": [
+    0.78,
+    0.86,
+    0.9
+   ],
+   "Rock": [
+    0.72,
+    0.82,
+    0.92
+   ],
+   "Bits": [
+    [
+     "pines",
+     26,
+     "pine"
+    ]
+   ]
+  },
+  {
+   "Number": 28,
+   "Name": "Icefall",
+   "Theme": "Rimefell",
+   "Bearing": 57,
+   "Distance": 13125,
+   "Radius": 688,
+   "Top": 6688,
+   "Colour": [
+    0.76,
+    0.88,
+    0.96
+   ],
+   "Rock": [
+    0.72,
+    0.82,
+    0.92
+   ],
+   "Bits": [
+    [
+     "peaks",
+     3,
+     "ice"
+    ],
+    [
+     "falls",
+     3
+    ]
+   ]
+  },
+  {
+   "Number": 29,
+   "Name": "Whitepeak",
+   "Theme": "Rimefell",
+   "Bearing": 63,
+   "Distance": 14700,
+   "Radius": 565,
+   "Top": 11904,
+   "Colour": [
+    0.92,
+    0.95,
+    0.98
+   ],
+   "Rock": [
+    0.72,
+    0.82,
+    0.92
+   ],
+   "Bits": [
+    [
+     "peaks",
+     4,
+     "snow"
+    ]
+   ]
+  },
+  {
+   "Number": 30,
+   "Name": "The Crown",
+   "Theme": "Rimefell",
+   "Bearing": 0,
+   "Distance": 16000,
+   "Radius": 951,
+   "Top": 12057,
+   "Colour": [
+    0.96,
+    0.97,
+    1.0
+   ],
+   "Rock": [
+    0.72,
+    0.82,
+    0.92
+   ],
+   "Bits": [
+    [
+     "crown",
+     1
+    ]
+   ]
+  }
+ ]
+}

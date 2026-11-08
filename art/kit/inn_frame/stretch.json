@@ -1,0 +1,96 @@
+{
+ "Texels": {
+  "Frame": {
+   "sides": {
+    "sq_studs": 1115.9,
+    "off_pct": 12.5,
+    "thinnest_vs_scale": 0.81,
+    "worst_aspect": 2.87
+   },
+   "ends": {
+    "sq_studs": 50.9,
+    "off_pct": 18.5,
+    "thinnest_vs_scale": 0.61,
+    "worst_aspect": 2.21
+   }
+  },
+  "Joinery": {
+   "sides": {
+    "sq_studs": 664.2,
+    "off_pct": 20.1,
+    "thinnest_vs_scale": 0.03,
+    "worst_aspect": 41.57
+   },
+   "ends": {
+    "sq_studs": 60.1,
+    "off_pct": 14.0,
+    "thinnest_vs_scale": 0.63,
+    "worst_aspect": 8.07
+   }
+  }
+ },
+ "Marks": [
+  {
+   "length": 28.6,
+   "uses": 1,
+   "mark_p90_studs": 1.33,
+   "mark_max_studs": 1.88,
+   "marks_per_stud": 0.095,
+   "grain_correlation_studs": 0.61
+  },
+  {
+   "length": 28.6,
+   "uses": 1,
+   "mark_p90_studs": 1.33,
+   "mark_max_studs": 2.08,
+   "marks_per_stud": 0.105,
+   "grain_correlation_studs": 0.61
+  },
+  {
+   "length": 28.6,
+   "uses": 1,
+   "mark_p90_studs": 1.43,
+   "mark_max_studs": 1.63,
+   "marks_per_stud": 0.087,
+   "grain_correlation_studs": 0.61
+  },
+  {
+   "length": 28.6,
+   "uses": 1,
+   "mark_p90_studs": 1.31,
+   "mark_max_studs": 1.35,
+   "marks_per_stud": 0.105,
+   "grain_correlation_studs": 0.61
+  },
+  {
+   "length": 16.3,
+   "uses": 1,
+   "mark_p90_studs": 1.12,
+   "mark_max_studs": 1.22,
+   "marks_per_stud": 0.184,
+   "grain_correlation_studs": 0.57
+  },
+  {
+   "length": 16.3,
+   "uses": 1,
+   "mark_p90_studs": 1.13,
+   "mark_max_studs": 1.27,
+   "marks_per_stud": 0.123,
+   "grain_correlation_studs": 0.57
+  }
+ ],
+ "Off_by_part": {
+  "tile 14x14": 68.9,
+  "Chestnut strip L14.3 w0.36 h0.90": 31.1,
+  "Chestnut strip L2.6 w0.20 h0.17": 18.1,
+  "Chestnut strip L3.8 w0.95 h0.42": 15.1,
+  "Chestnut strip L10.4 w0.34 h0.84": 13.8,
+  "tile 124x124": 13.3,
+  "Chestnut strip L16.3 w0.72 h0.74": 12.6,
+  "tile 64x133": 11.6,
+  "Chestnut strip L28.6 w0.72 h0.74": 11.4,
+  "Chestnut strip L3.6 w0.58 h0.44": 11.2,
+  "Chestnut strip L7.1 w0.70 h0.80": 9.7,
+  "Chestnut strip L2.8 w0.50 h0.36": 7.7
+ }
+}

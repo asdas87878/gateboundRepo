@@ -1,4 +1,4 @@
-"""Study reference footage (docs/style/botw-study.md): sample frames from clips, contact sheets, and the numbers of a
+"""Study reference footage (docs/style/look-direction.md): sample frames from clips, contact sheets, and the numbers of a
 look: value and colour per horizontal band, sky colours, how colour fades with height in the frame (distance), the
 palette, and how shadowed greens differ from sunlit ones.
 
@@ -83,7 +83,7 @@ def sheets(frames, out):
 
 
 def stats(frames, out, pick=None):
-	files = sorted(glob.glob(os.path.join(frames, "*.jpg")))
+	files = sorted(glob.glob(os.path.join(frames, "*.jpg")) + glob.glob(os.path.join(frames, "*.png")))
 	if pick:
 		keep = {ln.strip() for ln in open(pick, encoding="utf-8") if ln.strip() and not ln.startswith("#")}
 		files = [f for f in files if os.path.basename(f)[:-4] in keep]

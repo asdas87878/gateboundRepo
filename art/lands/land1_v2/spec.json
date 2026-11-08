@@ -1,0 +1,1599 @@
+{
+ "_note": "Verdant Vale v2, 20x the area of art/lands/land1 (2026-11-05). x east, y south, studs. Built by tools/art/land_v2.py.",
+ "Size": [
+  6260,
+  5370
+ ],
+ "Border": 400,
+ "Zones": [
+  {
+   "Name": "Wayfarer's Crag",
+   "Levels": "1",
+   "At": [
+    750,
+    4700
+   ],
+   "Radius": [
+    620,
+    520
+   ],
+   "Mat": 0,
+   "Noise": [
+    8,
+    300,
+    "fbm"
+   ],
+   "Tree": [
+    "TreeMeadow",
+    0.1
+   ],
+   "Rock": 0.06,
+   "Camps": 8
+  },
+  {
+   "Name": "Sunny Meadows",
+   "Levels": "1-3",
+   "At": [
+    3050,
+    4400
+   ],
+   "Radius": [
+    1700,
+    830
+   ],
+   "Mat": 0,
+   "Noise": [
+    18,
+    520,
+    "fbm"
+   ],
+   "Tree": [
+    "TreeMeadow",
+    0.13
+   ],
+   "Rock": 0.03,
+   "Camps": 55
+  },
+  {
+   "Name": "Mossrock Hills",
+   "Levels": "3-5",
+   "At": [
+    1050,
+    2750
+   ],
+   "Radius": [
+    950,
+    1200
+   ],
+   "Mat": 0,
+   "Noise": [
+    55,
+    420,
+    "ridged"
+   ],
+   "Terrace": [
+    18,
+    0.45
+   ],
+   "Tree": [
+    "TreeHill",
+    0.14
+   ],
+   "Rock": 0.4,
+   "Camps": 70
+  },
+  {
+   "Name": "Whisperwood",
+   "Levels": "5-7",
+   "At": [
+    2700,
+    1000
+   ],
+   "Radius": [
+    1780,
+    800
+   ],
+   "Mat": 1,
+   "Noise": [
+    16,
+    300,
+    "fbm"
+   ],
+   "Tree": [
+    "TreeDark",
+    0.75
+   ],
+   "Rock": 0.04,
+   "Camps": 90
+  },
+  {
+   "Name": "Bandit Ridge",
+   "Levels": "7-9",
+   "At": [
+    5000,
+    3000
+   ],
+   "Radius": [
+    950,
+    1300
+   ],
+   "Mat": 2,
+   "Noise": [
+    24,
+    260,
+    "ridged"
+   ],
+   "Terrace": [
+    22,
+    0.65
+   ],
+   "Tree": [
+    "TreeDry",
+    0.05
+   ],
+   "Rock": 0.22,
+   "Camps": 90
+  },
+  {
+   "Name": "Gatehill",
+   "Levels": "9-10",
+   "At": [
+    5050,
+    800
+   ],
+   "Radius": [
+    950,
+    740
+   ],
+   "Mat": 3,
+   "Noise": [
+    18,
+    240,
+    "ridged"
+   ],
+   "Tree": [
+    "TreeDry",
+    0.04
+   ],
+   "Rock": 0.2,
+   "Camps": 40
+  }
+ ],
+ "Forms": [
+  {
+   "Kind": "plateau",
+   "At": [
+    750,
+    4700
+   ],
+   "Radius": [
+    540,
+    440
+   ],
+   "Height": 175,
+   "Edge": 0.14
+  },
+  {
+   "Kind": "cone",
+   "At": [
+    2450,
+    4780
+   ],
+   "Radius": [
+    340,
+    280
+   ],
+   "Height": 70,
+   "_": "Windmill Hill"
+  },
+  {
+   "Kind": "cone",
+   "At": [
+    2200,
+    3880
+   ],
+   "Radius": [
+    300,
+    240
+   ],
+   "Height": 60,
+   "_": "Shepherd's Tor"
+  },
+  {
+   "Kind": "cone",
+   "At": [
+    4200,
+    4720
+   ],
+   "Radius": [
+    420,
+    300
+   ],
+   "Height": 55,
+   "_": "Barrow rise"
+  },
+  {
+   "Kind": "ridge",
+   "Line": [
+    [
+     820,
+     2780
+    ],
+    [
+     1230,
+     3370
+    ]
+   ],
+   "Width": 250,
+   "Height": 125,
+   "Edge": 0.45,
+   "_": "the Fallen Colossus: torso"
+  },
+  {
+   "Kind": "cone",
+   "At": [
+    640,
+    2470
+   ],
+   "Radius": [
+    210,
+    210
+   ],
+   "Height": 145,
+   "Power": 0.7,
+   "_": "its head"
+  },
+  {
+   "Kind": "ridge",
+   "Line": [
+    [
+     1040,
+     2680
+    ],
+    [
+     1500,
+     2430
+    ],
+    [
+     1760,
+     2820
+    ]
+   ],
+   "Width": 95,
+   "Height": 95,
+   "Edge": 0.4,
+   "_": "right arm"
+  },
+  {
+   "Kind": "ridge",
+   "Line": [
+    [
+     620,
+     2980
+    ],
+    [
+     470,
+     3430
+    ],
+    [
+     760,
+     3830
+    ]
+   ],
+   "Width": 95,
+   "Height": 95,
+   "Edge": 0.4,
+   "_": "left arm"
+  },
+  {
+   "Kind": "ridge",
+   "Line": [
+    [
+     1230,
+     3370
+    ],
+    [
+     1620,
+     3650
+    ]
+   ],
+   "Width": 130,
+   "Height": 80,
+   "Edge": 0.4,
+   "_": "leg"
+  },
+  {
+   "Kind": "ridge",
+   "Line": [
+    [
+     1080,
+     3480
+    ],
+    [
+     1190,
+     3960
+    ]
+   ],
+   "Width": 120,
+   "Height": 70,
+   "Edge": 0.4,
+   "_": "leg"
+  },
+  {
+   "Kind": "plateau",
+   "At": [
+    2700,
+    1000
+   ],
+   "Radius": [
+    1800,
+    800
+   ],
+   "Height": 90,
+   "Edge": 0.1,
+   "_": "the upper wood, ending in a cliff above the lake"
+  },
+  {
+   "Kind": "cone",
+   "At": [
+    1900,
+    470
+   ],
+   "Radius": [
+    420,
+    330
+   ],
+   "Height": 95,
+   "_": "the Elder's mound"
+  },
+  {
+   "Kind": "ridge",
+   "Line": [
+    [
+     1900,
+     520
+    ],
+    [
+     2400,
+     950
+    ]
+   ],
+   "Width": 46,
+   "Height": 30,
+   "Edge": 0.2,
+   "_": "giant root"
+  },
+  {
+   "Kind": "ridge",
+   "Line": [
+    [
+     1900,
+     520
+    ],
+    [
+     1450,
+     900
+    ]
+   ],
+   "Width": 46,
+   "Height": 30,
+   "Edge": 0.2,
+   "_": "giant root"
+  },
+  {
+   "Kind": "ridge",
+   "Line": [
+    [
+     1900,
+     520
+    ],
+    [
+     2650,
+     420
+    ]
+   ],
+   "Width": 40,
+   "Height": 26,
+   "Edge": 0.2,
+   "_": "giant root"
+  },
+  {
+   "Kind": "ridge",
+   "Line": [
+    [
+     4950,
+     1780
+    ],
+    [
+     5060,
+     2700
+    ],
+    [
+     4950,
+     3300
+    ],
+    [
+     5120,
+     4200
+    ]
+   ],
+   "Width": 360,
+   "Height": 215,
+   "Edge": 0.35,
+   "_": "Bandit Ridge"
+  },
+  {
+   "Kind": "plateau",
+   "At": [
+    4450,
+    2280
+   ],
+   "Radius": [
+    190,
+    170
+   ],
+   "Height": 95,
+   "Edge": 0.22
+  },
+  {
+   "Kind": "plateau",
+   "At": [
+    4400,
+    3560
+   ],
+   "Radius": [
+    230,
+    190
+   ],
+   "Height": 125,
+   "Edge": 0.22
+  },
+  {
+   "Kind": "plateau",
+   "At": [
+    5620,
+    2290
+   ],
+   "Radius": [
+    250,
+    220
+   ],
+   "Height": 155,
+   "Edge": 0.2
+  },
+  {
+   "Kind": "plateau",
+   "At": [
+    5660,
+    3700
+   ],
+   "Radius": [
+    200,
+    190
+   ],
+   "Height": 115,
+   "Edge": 0.22
+  },
+  {
+   "Kind": "cone",
+   "At": [
+    5050,
+    800
+   ],
+   "Radius": [
+    960,
+    720
+   ],
+   "Height": 430,
+   "Power": 1.25,
+   "_": "Gatehill"
+  },
+  {
+   "Kind": "flat",
+   "At": [
+    5050,
+    800
+   ],
+   "Radius": 280,
+   "Slope": 70,
+   "Level": 405,
+   "_": "the Warden's arena"
+  },
+  {
+   "Kind": "flat",
+   "At": [
+    5040,
+    2170
+   ],
+   "Radius": 230,
+   "Slope": 60,
+   "Level": 150,
+   "_": "Redfang's bowl"
+  },
+  {
+   "Kind": "canyon",
+   "Line": [
+    [
+     4150,
+     2900
+    ],
+    [
+     4700,
+     2880
+    ],
+    [
+     5050,
+     2950
+    ],
+    [
+     5400,
+     3000
+    ],
+    [
+     5780,
+     2920
+    ]
+   ],
+   "Width": 52,
+   "Slope": 32,
+   "Level": 34,
+   "_": "Redfang Cut, the way through the ridge"
+  }
+ ],
+ "Rim": {
+  "Wall": 560,
+  "From": 280,
+  "To": 460,
+  "Scale": 1050,
+  "Foothills": 90,
+  "FootIn": 620,
+  "Low": 0.35,
+  "Peak": 0.9,
+  "Seed": 7
+ },
+ "River": {
+  "Width": 58,
+  "Points": [
+   [
+    2000,
+    -300,
+    92
+   ],
+   [
+    2300,
+    400,
+    92
+   ],
+   [
+    2650,
+    1100,
+    90
+   ],
+   [
+    2850,
+    1680,
+    88
+   ],
+   [
+    2900,
+    1770,
+    88
+   ],
+   [
+    2930,
+    1880,
+    2
+   ],
+   [
+    3000,
+    2200,
+    0
+   ],
+   [
+    3060,
+    2360,
+    0
+   ],
+   [
+    3600,
+    3060,
+    0
+   ],
+   [
+    4100,
+    3650,
+    0
+   ],
+   [
+    4700,
+    4150,
+    0
+   ],
+   [
+    5400,
+    4550,
+    0
+   ],
+   [
+    6700,
+    4750,
+    0
+   ]
+  ]
+ },
+ "Hub": {
+  "At": [
+   3130,
+   2750
+  ],
+  "Lake": [
+   520,
+   420
+  ],
+  "Island": 250,
+  "Height": 28,
+  "Keep": [
+   3210,
+   2640
+  ]
+ },
+ "Roads": [
+  {
+   "Name": "Wake road",
+   "Width": 12,
+   "Points": [
+    [
+     750,
+     4700
+    ],
+    [
+     1040,
+     4670
+    ],
+    [
+     1185,
+     4470
+    ],
+    [
+     1250,
+     4790
+    ],
+    [
+     1320,
+     4500
+    ],
+    [
+     1390,
+     4790
+    ],
+    [
+     1520,
+     4640
+    ],
+    [
+     1900,
+     4560
+    ],
+    [
+     2500,
+     4300
+    ],
+    [
+     2950,
+     3950
+    ],
+    [
+     3100,
+     3450
+    ],
+    [
+     3130,
+     3190
+    ],
+    [
+     3130,
+     2960
+    ]
+   ]
+  },
+  {
+   "Name": "Golem road",
+   "Width": 12,
+   "Points": [
+    [
+     2900,
+     2750
+    ],
+    [
+     2600,
+     2750
+    ],
+    [
+     2000,
+     2860
+    ],
+    [
+     1800,
+     2690
+    ],
+    [
+     1560,
+     2240
+    ],
+    [
+     1150,
+     2150
+    ],
+    [
+     1000,
+     1800
+    ],
+    [
+     1120,
+     1500
+    ],
+    [
+     1300,
+     1480
+    ],
+    [
+     1200,
+     1340
+    ],
+    [
+     1800,
+     1150
+    ],
+    [
+     2550,
+     1150
+    ]
+   ]
+  },
+  {
+   "Name": "Colossus lane",
+   "Width": 8,
+   "Points": [
+    [
+     1800,
+     2690
+    ],
+    [
+     1500,
+     3060
+    ],
+    [
+     1420,
+     3420
+    ],
+    [
+     1000,
+     3600
+    ],
+    [
+     1050,
+     4000
+    ],
+    [
+     1400,
+     4150
+    ],
+    [
+     1900,
+     4560
+    ]
+   ]
+  },
+  {
+   "Name": "Falls stair",
+   "Width": 12,
+   "Points": [
+    [
+     3130,
+     2540
+    ],
+    [
+     3130,
+     2320
+    ],
+    [
+     3300,
+     2100
+    ],
+    [
+     3320,
+     1890
+    ],
+    [
+     3520,
+     1800
+    ],
+    [
+     3300,
+     1710
+    ],
+    [
+     3460,
+     1600
+    ],
+    [
+     3100,
+     1300
+    ],
+    [
+     2700,
+     1180
+    ],
+    [
+     2550,
+     1150
+    ]
+   ]
+  },
+  {
+   "Name": "Shrine lane",
+   "Width": 7,
+   "Points": [
+    [
+     3300,
+     2100
+    ],
+    [
+     3030,
+     2010
+    ],
+    [
+     2980,
+     1900
+    ]
+   ]
+  },
+  {
+   "Name": "Elder road",
+   "Width": 9,
+   "Points": [
+    [
+     2550,
+     1150
+    ],
+    [
+     2100,
+     860
+    ],
+    [
+     1900,
+     640
+    ]
+   ]
+  },
+  {
+   "Name": "Wood road east",
+   "Width": 9,
+   "Points": [
+    [
+     3100,
+     1300
+    ],
+    [
+     3350,
+     900
+    ],
+    [
+     3900,
+     1060
+    ],
+    [
+     4300,
+     1480
+    ],
+    [
+     4650,
+     1650
+    ],
+    [
+     4890,
+     1480
+    ]
+   ]
+  },
+  {
+   "Name": "Hub east road",
+   "Width": 12,
+   "Points": [
+    [
+     3360,
+     2750
+    ],
+    [
+     3660,
+     2750
+    ],
+    [
+     4200,
+     2880
+    ],
+    [
+     4700,
+     2880
+    ],
+    [
+     5050,
+     2950
+    ],
+    [
+     5400,
+     3000
+    ],
+    [
+     5560,
+     2980
+    ]
+   ]
+  },
+  {
+   "Name": "Redfang climb",
+   "Width": 9,
+   "Points": [
+    [
+     5560,
+     2980
+    ],
+    [
+     5780,
+     2720
+    ],
+    [
+     5500,
+     2500
+    ],
+    [
+     5340,
+     2300
+    ],
+    [
+     5040,
+     2170
+    ],
+    [
+     4960,
+     1820
+    ],
+    [
+     4890,
+     1480
+    ]
+   ]
+  },
+  {
+   "Name": "Warden's Stair",
+   "Width": 12,
+   "Spiral": {
+    "From": [
+     4890,
+     1480
+    ],
+    "At": [
+     5050,
+     800
+    ],
+    "StartDeg": 100,
+    "Turns": 1.08,
+    "R0": 660,
+    "R1": 300,
+    "End": [
+     5050,
+     850
+    ]
+   }
+  },
+  {
+   "Name": "East lane",
+   "Width": 8,
+   "Points": [
+    [
+     2950,
+     3950
+    ],
+    [
+     3700,
+     4020
+    ],
+    [
+     4300,
+     4300
+    ],
+    [
+     5000,
+     4560
+    ],
+    [
+     5620,
+     3980
+    ],
+    [
+     5760,
+     3300
+    ],
+    [
+     5560,
+     2980
+    ]
+   ]
+  }
+ ],
+ "Story": [
+  [
+   "Wake",
+   750,
+   4700
+  ],
+  [
+   "Brightwater",
+   3130,
+   2960
+  ],
+  [
+   "Mossgate",
+   1560,
+   2240
+  ],
+  [
+   "Rootdeep",
+   1900,
+   640
+  ],
+  [
+   "Redfang's Hold",
+   5040,
+   2170
+  ],
+  [
+   "The Gate",
+   5050,
+   850
+  ]
+ ],
+ "Gate": {
+  "At": [
+   5050,
+   700
+  ]
+ },
+ "Places": [
+  {
+   "Name": "Gate-stone circle (wake)",
+   "At": [
+    750,
+    4700
+   ],
+   "Kind": "circle"
+  },
+  {
+   "Name": "Cliff lookout",
+   "At": [
+    1020,
+    4430
+   ],
+   "Kind": "lookout"
+  },
+  {
+   "Name": "Millford",
+   "At": [
+    1900,
+    4620
+   ],
+   "Kind": "hamlet",
+   "Size": 14
+  },
+  {
+   "Name": "Crossroads Inn",
+   "At": [
+    3010,
+    3960
+   ],
+   "Kind": "inn"
+  },
+  {
+   "Name": "Windmill Hill",
+   "At": [
+    2450,
+    4780
+   ],
+   "Kind": "windmill"
+  },
+  {
+   "Name": "Shepherd's Tor",
+   "At": [
+    2200,
+    3880
+   ],
+   "Kind": "monoliths",
+   "Size": 5
+  },
+  {
+   "Name": "The Ploughlands",
+   "At": [
+    3700,
+    4280
+   ],
+   "Kind": "farms"
+  },
+  {
+   "Name": "Lake Landing",
+   "At": [
+    3560,
+    3240
+   ],
+   "Kind": "hamlet",
+   "Size": 7
+  },
+  {
+   "Name": "Barrow Field",
+   "At": [
+    4200,
+    4720
+   ],
+   "Kind": "monoliths",
+   "Size": 9
+  },
+  {
+   "Name": "Old Tusk's wallow",
+   "At": [
+    3350,
+    4830
+   ],
+   "Kind": "boss",
+   "Boss": "Boss: Old Tusk"
+  },
+  {
+   "Name": "Mossgate towers",
+   "At": [
+    1560,
+    2240
+   ],
+   "Kind": "gatehouse",
+   "Yaw": -0.6
+  },
+  {
+   "Name": "Colossus chest ruins",
+   "At": [
+    1040,
+    3090
+   ],
+   "Kind": "ruins",
+   "Size": 14
+  },
+  {
+   "Name": "Colossus's crown",
+   "At": [
+    640,
+    2470
+   ],
+   "Kind": "ruins",
+   "Size": 7
+  },
+  {
+   "Name": "Rockback's bowl",
+   "At": [
+    760,
+    3480
+   ],
+   "Kind": "boss",
+   "Boss": "Boss: Rockback"
+  },
+  {
+   "Name": "Old Quarry",
+   "At": [
+    1400,
+    1870
+   ],
+   "Kind": "quarry"
+  },
+  {
+   "Name": "Golem Foundry",
+   "At": [
+    640,
+    1950
+   ],
+   "Kind": "foundry"
+  },
+  {
+   "Name": "Row of Hands",
+   "At": [
+    1450,
+    3660
+   ],
+   "Kind": "monoliths",
+   "Size": 11
+  },
+  {
+   "Name": "Lost scout's camp",
+   "At": [
+    2180,
+    1320
+   ],
+   "Kind": "campsite"
+  },
+  {
+   "Name": "The Elder / Rootdeep Hollow",
+   "At": [
+    1900,
+    520
+   ],
+   "Kind": "elder"
+  },
+  {
+   "Name": "Wisp Mere",
+   "At": [
+    1420,
+    930
+   ],
+   "Kind": "mere"
+  },
+  {
+   "Name": "Mushroom ring",
+   "At": [
+    2960,
+    560
+   ],
+   "Kind": "ring"
+  },
+  {
+   "Name": "Hollowhorn's clearing",
+   "At": [
+    3500,
+    620
+   ],
+   "Kind": "boss",
+   "Boss": "Boss: Hollowhorn"
+  },
+  {
+   "Name": "Woodcutters' wreck",
+   "At": [
+    4000,
+    800
+   ],
+   "Kind": "ruins",
+   "Size": 6
+  },
+  {
+   "Name": "Twin Fang shrine",
+   "At": [
+    2980,
+    1885
+   ],
+   "Kind": "shrine"
+  },
+  {
+   "Name": "Canyon gate",
+   "At": [
+    4400,
+    2885
+   ],
+   "Kind": "gatehouse",
+   "Yaw": 1.57
+  },
+  {
+   "Name": "Rope bridge",
+   "At": [
+    5050,
+    2950
+   ],
+   "Kind": "ropebridge"
+  },
+  {
+   "Name": "Redfang's Hold",
+   "At": [
+    5040,
+    2170
+   ],
+   "Kind": "fort"
+  },
+  {
+   "Name": "Crest watchtowers",
+   "At": [
+    5040,
+    2650
+   ],
+   "Kind": "towers"
+  },
+  {
+   "Name": "East mesa hold",
+   "At": [
+    5620,
+    2290
+   ],
+   "Kind": "fort"
+  },
+  {
+   "Name": "South mesa",
+   "At": [
+    4400,
+    3560
+   ],
+   "Kind": "towers"
+  },
+  {
+   "Name": "Dry mine",
+   "At": [
+    5660,
+    3700
+   ],
+   "Kind": "quarry"
+  },
+  {
+   "Name": "Redfang's lookout",
+   "At": [
+    5120,
+    4120
+   ],
+   "Kind": "boss",
+   "Boss": "Boss: Captain Redfang"
+  },
+  {
+   "Name": "Stair camp",
+   "At": [
+    4830,
+    1420
+   ],
+   "Kind": "campsite"
+  },
+  {
+   "Name": "Fallen arch",
+   "At": [
+    4420,
+    900
+   ],
+   "Kind": "ruins",
+   "Size": 8
+  },
+  {
+   "Name": "Bell tower",
+   "At": [
+    5660,
+    760
+   ],
+   "Kind": "bell"
+  },
+  {
+   "Name": "THE GATE: Mossback Warden",
+   "At": [
+    5050,
+    700
+   ],
+   "Kind": "gate"
+  },
+  {
+   "Name": "Brightwater",
+   "At": [
+    3130,
+    2750
+   ],
+   "Kind": "town"
+  },
+  {
+   "Name": "East gate (locked until story step 6)",
+   "At": [
+    3700,
+    2720
+   ],
+   "Kind": "label"
+  },
+  {
+   "Name": "Ferry post",
+   "At": [
+    2300,
+    2860
+   ],
+   "Kind": "hamlet",
+   "Size": 3
+  },
+  {
+   "Name": "Hillstair ruin",
+   "At": [
+    1060,
+    1560
+   ],
+   "Kind": "ruins",
+   "Size": 5
+  },
+  {
+   "Name": "Reed huts",
+   "At": [
+    3240,
+    2250
+   ],
+   "Kind": "hamlet",
+   "Size": 3
+  },
+  {
+   "Name": "Hunter's stand",
+   "At": [
+    3200,
+    1500
+   ],
+   "Kind": "lookout"
+  },
+  {
+   "Name": "Pilgrim shelter",
+   "At": [
+    4640,
+    350
+   ],
+   "Kind": "campsite"
+  },
+  {
+   "Name": "Pilgrim ruin",
+   "At": [
+    5530,
+    1090
+   ],
+   "Kind": "ruins",
+   "Size": 5
+  }
+ ],
+ "Waystones": [
+  [
+   3130,
+   2850
+  ],
+  [
+   760,
+   4620
+  ],
+  [
+   1950,
+   4500
+  ],
+  [
+   2990,
+   3900
+  ],
+  [
+   1850,
+   2750
+  ],
+  [
+   1130,
+   2200
+  ],
+  [
+   1000,
+   3650
+  ],
+  [
+   3340,
+   2130
+  ],
+  [
+   2570,
+   1110
+  ],
+  [
+   1930,
+   700
+  ],
+  [
+   3880,
+   1030
+  ],
+  [
+   4250,
+   2860
+  ],
+  [
+   5510,
+   2960
+  ],
+  [
+   5040,
+   2240
+  ],
+  [
+   4890,
+   1540
+  ],
+  [
+   5180,
+   960
+  ]
+ ],
+ "Views": [
+  {
+   "Name": "wake_overlook",
+   "From": [
+    1020,
+    4430
+   ],
+   "To": [
+    3130,
+    2750
+   ],
+   "Up": 8
+  },
+  {
+   "Name": "meadow_road",
+   "From": [
+    2500,
+    4300
+   ],
+   "To": [
+    3130,
+    2750
+   ],
+   "Up": 6
+  },
+  {
+   "Name": "causeway",
+   "From": [
+    3130,
+    3230
+   ],
+   "To": [
+    3160,
+    2700
+   ],
+   "Up": 6
+  },
+  {
+   "Name": "colossus",
+   "From": [
+    1800,
+    2720
+   ],
+   "To": [
+    800,
+    2800
+   ],
+   "Up": 6
+  },
+  {
+   "Name": "under_falls",
+   "From": [
+    3250,
+    2180
+   ],
+   "To": [
+    2900,
+    1760
+   ],
+   "Up": 6
+  },
+  {
+   "Name": "whisperwood",
+   "From": [
+    2400,
+    1060
+   ],
+   "To": [
+    1900,
+    500
+   ],
+   "Up": 6
+  },
+  {
+   "Name": "redfang_cut",
+   "From": [
+    4300,
+    2885
+   ],
+   "To": [
+    5050,
+    2950
+   ],
+   "Up": 6
+  },
+  {
+   "Name": "stair_gate",
+   "From": [
+    5060,
+    1480
+   ],
+   "To": [
+    5050,
+    700
+   ],
+   "Up": 6
+  }
+ ]
+}

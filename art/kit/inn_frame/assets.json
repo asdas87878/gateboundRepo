@@ -1,0 +1,32 @@
+{
+ "InnFrameTest": {
+  "id": "109118541165762",
+  "sha": "1faa68d03b970bec5ad1505d6b1602dcb43ec5d8",
+  "moderation": "Approved"
+ },
+ "Inn_Frame": {
+  "id": "124380000496010",
+  "sha": "bbeddda315b8bcbb8fbbdb6f426b284a311df384",
+  "moderation": "Reviewing"
+ },
+ "Inn_Joinery": {
+  "id": "123837134383118",
+  "sha": "bf27095dbb2cc9d64df715cd7f7c1e575c069d59",
+  "moderation": "Reviewing"
+ },
+ "Inn_Walls": {
+  "id": "96089090712711",
+  "sha": "91e04e30108f6d870633eecad4223ef13fd94e14",
+  "moderation": "Reviewing"
+ },
+ "Inn_Roof": {
+  "id": "132317113608065",
+  "sha": "895796455045a191c8d3058fe9dc31da979d56c9",
+  "moderation": "Reviewing"
+ },
+ "Inn_Stone": {
+  "id": "126725994657778",
+  "sha": "a4a956850583a00fb9c54f2a9499580af10001a3",
+  "moderation": "Reviewing"
+ }
+}

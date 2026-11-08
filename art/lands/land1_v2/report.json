@@ -1,0 +1,201 @@
+{
+ "BlocksDroppedOffRoads": 25,
+ "Map": [
+  6260,
+  5370
+ ],
+ "Columns": [
+  1543,
+  1766
+ ],
+ "Heights": [
+  -11.0,
+  753.2
+ ],
+ "Objects": 10532,
+ "Trees": 7061,
+ "Rocks": 636,
+ "Camps": {
+  "Wayfarer's Crag": 8,
+  "Sunny Meadows": 55,
+  "Mossrock Hills": 70,
+  "Whisperwood": 90,
+  "Bandit Ridge": 90,
+  "Gatehill": 40
+ },
+ "CampsTotal": 353,
+ "Bridges": 6,
+ "Roads": [
+  {
+   "Name": "Wake road",
+   "Length": 4260,
+   "Seconds": 266,
+   "MaxGrade": 0.3,
+   "Climb": 186
+  },
+  {
+   "Name": "Golem road",
+   "Length": 4520,
+   "Seconds": 282,
+   "MaxGrade": 0.3,
+   "Climb": 113
+  },
+  {
+   "Name": "Colossus lane",
+   "Length": 2724,
+   "Seconds": 170,
+   "MaxGrade": 0.3,
+   "Climb": 151
+  },
+  {
+   "Name": "Falls stair",
+   "Length": 2384,
+   "Seconds": 149,
+   "MaxGrade": 0.3,
+   "Climb": 104
+  },
+  {
+   "Name": "Shrine lane",
+   "Length": 404,
+   "Seconds": 25,
+   "MaxGrade": 0.06,
+   "Climb": 6
+  },
+  {
+   "Name": "Elder road",
+   "Length": 828,
+   "Seconds": 52,
+   "MaxGrade": 0.27,
+   "Climb": 32
+  },
+  {
+   "Name": "Wood road east",
+   "Length": 2300,
+   "Seconds": 144,
+   "MaxGrade": 0.3,
+   "Climb": 98
+  },
+  {
+   "Name": "Hub east road",
+   "Length": 2220,
+   "Seconds": 139,
+   "MaxGrade": 0.3,
+   "Climb": 36
+  },
+  {
+   "Name": "Redfang climb",
+   "Length": 1976,
+   "Seconds": 124,
+   "MaxGrade": 0.3,
+   "Climb": 219
+  },
+  {
+   "Name": "Warden's Stair",
+   "Length": 3504,
+   "Seconds": 219,
+   "MaxGrade": 0.3,
+   "Climb": 345
+  },
+  {
+   "Name": "East lane",
+   "Length": 4072,
+   "Seconds": 254,
+   "MaxGrade": 0.3,
+   "Climb": 121
+  }
+ ],
+ "GateSeenFrom": {
+  "Gate-stone circle (wake)": true,
+  "Cliff lookout": true,
+  "Millford": true,
+  "Crossroads Inn": true,
+  "Windmill Hill": true,
+  "Shepherd's Tor": true,
+  "The Ploughlands": true,
+  "Lake Landing": true,
+  "Barrow Field": true,
+  "Old Tusk's wallow": true,
+  "Mossgate towers": true,
+  "Colossus chest ruins": false,
+  "Colossus's crown": true,
+  "Rockback's bowl": false,
+  "Old Quarry": true,
+  "Golem Foundry": true,
+  "Row of Hands": true,
+  "Lost scout's camp": true,
+  "The Elder / Rootdeep Hollow": true,
+  "Wisp Mere": true,
+  "Mushroom ring": true,
+  "Hollowhorn's clearing": true,
+  "Woodcutters' wreck": true,
+  "Twin Fang shrine": true,
+  "Canyon gate": true,
+  "Rope bridge": false,
+  "Redfang's Hold": true,
+  "Crest watchtowers": true,
+  "East mesa hold": true,
+  "South mesa": true,
+  "Dry mine": false,
+  "Redfang's lookout": true,
+  "Stair camp": false,
+  "Fallen arch": false,
+  "Bell tower": false,
+  "Brightwater": false,
+  "East gate (locked until story step 6)": true,
+  "Ferry post": true,
+  "Hillstair ruin": false,
+  "Reed huts": true,
+  "Hunter's stand": true,
+  "Pilgrim shelter": true,
+  "Pilgrim ruin": false
+ },
+ "QuietestStretchSeconds": {
+  "Wake road": 38,
+  "Golem road": 28,
+  "Colossus lane": 18,
+  "Falls stair": 22,
+  "Shrine lane": 8,
+  "Elder road": 0,
+  "Wood road east": 10,
+  "Hub east road": 12,
+  "Redfang climb": 4,
+  "Warden's Stair": 30,
+  "East lane": 26
+ },
+ "Story": [
+  {
+   "From": "Wake",
+   "To": "Brightwater",
+   "Seconds": 259
+  },
+  {
+   "From": "Brightwater",
+   "To": "Mossgate",
+   "Seconds": 125
+  },
+  {
+   "From": "Mossgate",
+   "To": "Rootdeep",
+   "Seconds": 227
+  },
+  {
+   "From": "Rootdeep",
+   "To": "Redfang's Hold",
+   "Seconds": 278
+  },
+  {
+   "From": "Redfang's Hold",
+   "To": "The Gate",
+   "Seconds": 270
+  }
+ ],
+ "StoryMinutes": 19.3,
+ "WalkFromStartToZoneSeconds": {
+  "Wayfarer's Crag": 0,
+  "Sunny Meadows": 183,
+  "Mossrock Hills": 260,
+  "Whisperwood": 426,
+  "Bandit Ridge": 382,
+  "Gatehill": 765
+ }
+}
