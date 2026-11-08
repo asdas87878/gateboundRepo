@@ -2,7 +2,7 @@
 
 The home of the game: a shared floating island where everyone lands, with a plot for each player around it. The Lands are floating islands visible in the sky from here. Nothing is in Studio yet.
 
-Source: `art/haven/layout.json` (its Lands written by `python tools/art/haven_lands.py`, where the sky is composed). Renders: `blender --background --python tools/blender/haven_blockout.py -- art/haven` writes `art/haven/composition/<View>.png` (about a minute). Plan and review sheet: `python tools/art/haven_plan.py` (`plan.png`, `views_sheet.jpg`). ChatGPT prompts per view: `art/haven/prompts.md`.
+Source: `art/haven/layout.json` (its Lands written by `python tools/art/haven_lands.py`, where the sky is composed). Renders: `blender --background --python tools/blender/haven_blockout.py -- art/haven` writes `art/haven/composition/<View>.png` (about a minute). Plan and review sheet: `python tools/art/haven_plan.py` (`plan.png`, `views_sheet.jpg`). ChatGPT prompts per view: [prompts](../../art/haven/prompts.md).
 
 ## The composition
 An amphitheatre, built so every important spot has a view:

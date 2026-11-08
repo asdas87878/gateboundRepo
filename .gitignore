@@ -36,3 +36,6 @@ __pycache__/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .trash/
+# plugin code is downloaded (reinstall from Obsidian's community plugins); each plugin's settings (data.json) are kept
+.obsidian/plugins/*/*
+!.obsidian/plugins/*/data.json

@@ -6,7 +6,7 @@ kits sit in `ServerStorage`, with shelves to copy from near x 30,000 (select a s
 | Asset | State | Notes |
 |---|---|---|
 | Houses (12) | In Studio. Design chosen ("dark warm stone"), no verdict on Studio colours | `ServerStorage.HouseKit`, [lesson](style/lessons/cottage.md) |
-| Rose Cottage | Blender only, front designed; back and right side plain | `art/kit/rosecottage/README.md` |
+| Rose Cottage | Blender only, front designed; back and right side plain | [notes](../art/kit/rosecottage/README.md) |
 | Cobble kit (edging, border stones, paving) | In Studio | [Cobble kit](style/cobble-kit.md) |
 | Flower beds | In Studio, first pass | [Flower beds](style/flower-beds.md) |
 | Rock pack (50) | In Studio | [Rock pack](style/rock-pack.md) |

@@ -10,6 +10,8 @@
   - one locked camera per set, matched to concept art;
   - edges that fall away, with other islands in view.
 - **The user blocks out Lands by hand** in Studio.
+- **Views (the user on Land 1, 2026-11-06):** too much empty space. Every view needs things that block the line of sight, and grand
+  things in the sky. Before building more, list the assets needed and study the user's reference videos.
 
 ## Ideas on the table (Claude, not agreed)
 - **Keep each Land small:** 2 or 3 fields, one path, one boss.

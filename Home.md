@@ -26,6 +26,7 @@ everything. Pin it in Obsidian.
 - **Places:**
   - [The Lands](docs/design/lands.md): the list of 30, Land 1 and the hub.
   - [The hub](docs/lands/hub.md)
+  - [The Haven](docs/lands/haven.md): the older home-island composition, kept for reference.
 
 ## The look
 - [Art style standard](docs/style/art-style.md): the one standard for every asset. Read it before making anything.
@@ -37,6 +38,13 @@ everything. Pin it in Obsidian.
   - [Cobble kit](docs/style/cobble-kit.md)
   - [Flower beds](docs/style/flower-beds.md)
   - [Roblox lighting](docs/style/roblox-lighting.md)
+  - [Crisp paint](docs/style/crisp-paint.md)
+- **Earlier look studies** (Land 1, 2026-11-02 to 11-06; the art style standard has what's still current):
+  - [Look direction](docs/style/look-direction.md): BotW's light and colour only, close to the first reference.
+  - [Landscape review](docs/style/landscape-review.md): the harsh comparison with good games, and the ranked fixes.
+  - [Ground at a player's feet](docs/style/ground.md)
+  - [Look rules](docs/look-rules.md) and [look passes](docs/look-passes.md): numbers learned by copying the first reference.
+  - [Style notes](docs/style-notes.md): the very first pass.
 
 ## For Claude
 - [CLAUDE.md](CLAUDE.md): the project's instructions, tools and pipelines.
